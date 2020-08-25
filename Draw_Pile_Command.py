@@ -1,0 +1,471 @@
+# Imports all the moduals needed
+from Game_REWIRTE import *
+import Game_REWIRTE
+from Check_Card_Played import *
+import Check_Card_Played as CCP
+from Check_Card_Drawn import *
+from Com1_Behevior import *
+import Com1_Behevior as C1B
+from WelcomeTEST import com_number
+
+# Function draws the player a card
+def draw_card():
+    drawn_card = "" # Creates A String To Store The Drawn Card
+
+    # Checks if it's the players turn and that they played one or more of there cards
+    if Game_REWIRTE.player_turn == True and Game_REWIRTE.card1_played == True or Game_REWIRTE.card2_played == True or Game_REWIRTE.card1_played == True or Game_REWIRTE.card3_played == True or \
+    Game_REWIRTE.card1_played == True or Game_REWIRTE.card4_played == True or Game_REWIRTE.card5_played == True or Game_REWIRTE.card6_played == True or Game_REWIRTE.card7_played == True:
+
+        # Checks if there is a card is the positition in the list
+        if Game_REWIRTE.reserve_cards[0] != " ":
+            drawn_card = Game_REWIRTE.reserve_cards[0] # Sets the draw_card varible to the card in the list positition
+            Game_REWIRTE.reserve_cards[0] = " " # Sets the section in the list to be an empty sring
+
+        # Checks if there is a card is the slot in the list
+        elif Game_REWIRTE.reserve_cards[1] != " ":
+            drawn_card = Game_REWIRTE.reserve_cards[1] # Sets the draw_card varible to the card in the list positition
+            Game_REWIRTE.reserve_cards[1] = " " # Sets the section in the list to be an empty sring
+
+        # Checks if there is a card is the slot in the list
+        elif Game_REWIRTE.reserve_cards[2] != " ":
+            drawn_card = Game_REWIRTE.reserve_cards[2] # Sets the draw_card varible to the card in the list positition
+            Game_REWIRTE.reserve_cards[2] = " " # Sets the section in the list to be an empty sring
+
+        # Checks if there is a card is the slot in the list
+        elif Game_REWIRTE.reserve_cards[3] != " ":
+            drawn_card = Game_REWIRTE.reserve_cards[3] # Sets the draw_card varible to the card in the list positition
+            Game_REWIRTE.reserve_cards[3] = " " # Sets the section in the list to be an empty sring
+
+        # Checks if there is a card is the slot in the list
+        elif Game_REWIRTE.reserve_cards[4] != " ":
+            drawn_card = Game_REWIRTE.reserve_cards[4] # Sets the draw_card varible to the card in the list positition
+            Game_REWIRTE.reserve_cards[4] = " " # Sets the section in the list to be an empty sring
+
+        # Checks if there is a card is the slot in the list
+        elif Game_REWIRTE.reserve_cards[5] != " ":
+            drawn_card = Game_REWIRTE.reserve_cards[5] # Sets the draw_card varible to the card in the list positition
+            Game_REWIRTE.reserve_cards[5] = " " # Sets the section in the list to be an empty sring
+
+        # Checks if there is a card is the slot in the list
+        elif Game_REWIRTE.reserve_cards[6] != " ":
+            drawn_card = Game_REWIRTE.reserve_cards[6] # Sets the draw_card varible to the card in the list positition
+            Game_REWIRTE.reserve_cards[6] = " " # Sets the section in the list to be an empty sring
+
+        # Checks if there is a card is the slot in the list
+        elif Game_REWIRTE.reserve_cards[7] != " ":
+            drawn_card = Game_REWIRTE.reserve_cards[7] # Sets the draw_card varible to the card in the list positition
+            Game_REWIRTE.reserve_cards[7] = " " # Sets the section in the list to be an empty sring
+
+        # Checks if the varible was assinged because the player or com 1 played a see the future
+        elif Check_Card_Played.first_card != " ":
+            drawn_card = Check_Card_Played.first_card # Sets the draw_card varible to the top card seen in the see the future
+            Check_Card_Played.first_card = " " # Re-assings the varible to be an empty string
+
+        # Checks if the varible was assinged because the player or com 1 played a see the future
+        elif Check_Card_Played.second_card != " ":
+            drawn_card = Check_Card_Played.second_card # Sets the draw_card varible to the top card seen in the see the future
+            Check_Card_Played.second_card = " " # Re-assings the varible to be an empty string
+
+        # Checks if the varible was assinged because the player or com 1 played a see the future
+        elif Check_Card_Played.thrid_card != " ":
+            drawn_card = Check_Card_Played.thrid_card # Sets the draw_card varible to the top card seen in the see the future
+            Check_Card_Played.thrid_card = " " # Re-assings the varible to be an empty string
+
+        else:
+            drawn_card = random.choice(Game_REWIRTE.cards) # Randomly draws a card from the cards list
+
+        display_card(drawn_card) # Displys the drawn cards
+
+        messagebox._show("Exploding Kittens Game", "You've drawn a: " + drawn_card) # Tells the player which card they've drawed
+
+        # Checks if the player seclected 1 com player (This isolates com 1 behavor, scince the behavor is best with 1 com player)
+        if com_number == 1:
+                Game_REWIRTE.com1_turn = True # Makes it be com 1's turn
+
+                # Checks if com 1 has played an attack
+                if C1B.card_to_play == "attack":
+                    messagebox.showerror("Exploding Kittens Game", "It is your turn again since com1 has played an attack card") # Tells the player thats it there turn again because com 1 played a attack card
+                    Game_REWIRTE.player_turn = True # Makes it the players turn
+                    C1B.card_to_play = "" # # Sets com 1's card to play to an empty string so the the next time the player gose to draw this if statment dosn't repeate
+                else:
+                    C1B.decied_card_to_play() # Makes it be con 1's turn
+
+    # Checks if it's the players turn, but they have not played any cards
+    elif Game_REWIRTE.player_turn == True:
+        Game_REWIRTE.add_to_reserve_cards() # Adds a card to the players reserve hand
+
+        print(com_number)
+
+        Game_REWIRTE.player_turn = False # Makes it not be the players turn
+
+        # Checks if the player seclected 1 com player (This isolates com 1 behavor, scince the behavor is best with 1 com player)
+        if com_number == 1:
+            Game_REWIRTE.com1_turn = True # Makes it be com 1's turn
+
+                # Checks if com 1 has played an attack
+            if C1B.card_to_play == "attack":
+                messagebox.showerror("Exploding Kittens Game", "It is your turn again since com1 has played an attack card") # Tells the player thats it there turn again because com 1 played a attack card
+                Game_REWIRTE.player_turn = True # Makes it the players turn
+                C1B.card_to_play = "" # # Sets com 1's card to play to an empty string so the the next time the player gose to draw this if statment dosn't repeate
+            else:
+                C1B.decied_card_to_play() # Makes it be con 1's turn
+
+    # Checks if it's not the player's turn
+    elif Game_REWIRTE.player_turn == False:
+        messagebox.showerror('Exploding Kittens Game', "Sorry, it's not your turn") # Tells the player that it's the there turn
+
+# Function displays the drawn card
+def display_card(card_to_display):
+    # Checks if the player played the card
+    if Game_REWIRTE.card1_played == True:
+        print("Card Drawn: " + card_to_display) # Prints the card that was drawn
+
+        # Creates a function to be used when the card is displayed
+        def card1_command():
+            # Checks if its the players turn
+            if Game_REWIRTE.player_turn == True:
+                Game_REWIRTE.discard_pile_text.set(card_to_display + "\n \n \n") # Sets the discard pile display text to the card that you've played
+                show_card1.destroy() # Destroys the card
+
+                Game_REWIRTE.card1_played = True # Sets the bollen from the Game_REWIRTE script to True
+
+                Game_REWIRTE.player_cards[0] = "" # Re-assings the slot in the list to match that the played card
+
+                CCP.check_card_to_play(card_to_display) # Checks the card, so it can do its respected function
+
+            # Checks if com 1 played a favor
+            elif C1B.card_to_play == "favor":
+                favoraction = messagebox.askyesno("Exploding Kittens Game","Are you sure you want to give com1 your " + card_to_display, icon = "warning") # Asks the player for if they a sure they want to give that card to com 1
+
+                # Checks if the player clicked on "yes"
+                if favoraction == True:
+                    messagebox.showinfo("Exploding Kittens Game", "You have given com1 your " + card_to_display) # Tells the player that there card was add to com 1's hand
+
+                    card1_played = True  # Makes the bollen False
+
+                    C1B.card_to_play = "" # Sets com 1's card to play to an empty string so the the next time the player gose to click on another card this if statment dosn't repeate
+
+                    show_card1.destroy() # Destroys the card
+
+                    player_cards[0] = "" # Re-assings the slot in the list to match that the played card
+
+                    draw_card() # Makes com 1 draw a card
+                else:
+                    messagebox.showerror("Exploding Kittens Game", "You have not given your card to com1") # Tells the player that the card that they clicked on wasn't given to com 1
+
+            else:
+                messagebox.showerror('Exploding Kittens Game', "Sorry, it's not your turn") # Tells the player that it's not there turn
+
+        show_card1 = Button(Game_REWIRTE.gameScreen, text = card_to_display, font = "20", command = card1_command) # Creates the card
+        show_card1.place(x = 650, y = 600) # Places the card at x = 650,y = 600
+
+        Game_REWIRTE.card1_played = False # Makes so that the played haven't played card
+
+        Game_REWIRTE.player_turn = False # Makes it so it's not the player's turn
+
+        check_card(card_to_display) # Checks the card that was drawn
+
+        Game_REWIRTE.player_cards[0] = card_to_display # Re-assings the slot in the list to match that the drawed card
+
+    # Checks if the player played the card
+    elif Game_REWIRTE.card2_played == True:
+        print("Card Drawn: " + card_to_display) # Prints the card that was drawn
+
+        # Creates a function to be used when the card is displayed
+        def card2_command():
+            # Checks if it's  the players turn
+            if Game_REWIRTE.player_turn == True:
+                Game_REWIRTE.discard_pile_text.set(card_to_display + "\n \n \n") # Sets the discard pile display text to the card that you've played
+                show_card2.destroy() # Destroys the card
+
+                Game_REWIRTE.card2_played = True # Sets the bollen from the Game_REWIRTE script to True
+
+                Game_REWIRTE.player_cards[1] = "" # Assings the empty slot to the played card
+
+                CCP.check_card_to_play(card_to_display) # Checks the card, so it can do its respected function
+
+            # Checks if com 1 played a favor
+            elif C1B.card_to_play == "favor":
+                favoraction = messagebox.askyesno("Exploding Kittens Game","Are you sure you want to give com1 your " + card_to_display, icon = "warning") # Asks the player for if they a sure they want to give that card to com 1
+
+                # Checks if the player clicked on "yes"
+                if favoraction == True:
+                    messagebox.showinfo("Exploding Kittens Game", "You have given com1 your " + card_to_display) # Tells the player that there card was add to com 1's hand
+
+                    card2_played = True # Sets the bollen from the Game_REWIRTE script to True
+
+                    C1B.card_to_play = "" # Sets com 1's card to play to an empty string so the the next time the player gose to click on another card this if statment dosn't repeate
+
+                    show_card2.destroy() # Destroys the card
+
+                    player_cards[1] = "" # Assings the empty slot to the gaved card
+
+                    draw_card() # Makes com 1 draw a card
+                else:
+                    messagebox.showerror("Exploding Kittens Game", "You have not given your card to com1") # Tells the player that the card that they clicked on wasn't given to com 1
+
+            else:
+                messagebox.showerror('Exploding Kittens Game', "Sorry, it's not your turn") # Tells the player that it's not there turn
+
+        check_card(card_to_display) # Checks the card that was drawed
+        show_card2 = Button(Game_REWIRTE.gameScreen, text = card_to_display, font = "20", command = card2_command) # Creates the card
+        show_card2.place(x = 810, y = 600) # Places the card at x = 810,y = 600
+
+        Game_REWIRTE.card2_played = False # Makes so that the played haven't played card
+
+        Game_REWIRTE.player_turn = False # Makes it so it's not the player's turn
+
+        Game_REWIRTE.player_cards[1] = card_to_display # Re-assings the slot in the list to match that the played card
+
+    # Checks if the player played the card
+    elif Game_REWIRTE.card3_played == True:
+        print("Drawn Card: " + card_to_display) # Prints the card that was drawn
+
+        # Creates a function to be used when the card is displayed
+        def card3_command():
+            # Checks if it's  the players turn
+            if Game_REWIRTE.player_turn == True:
+                Game_REWIRTE.discard_pile_text.set(card_to_display + "\n \n \n") # Sets the discard pile display text to the card that you've played
+                show_card3.destroy() # Destroys the card
+
+                Game_REWIRTE.card3_played = True # Sets the bollen from the Game_REWIRTE script to True
+
+                Game_REWIRTE.player_cards[2] = "" # Assings the empty slot to the played card
+
+                CCP.check_card_to_play(card_to_display) # Checks the card, so it can do its respected function
+
+            # Checks if com 1 played a favor
+            elif C1B.card_to_play == "favor":
+                favoraction = messagebox.askyesno("Exploding Kittens Game","Are you sure you want to give com1 your " + card_to_display, icon = "warning") # Asks the player for if they a sure they want to give that card to com 1
+
+                # Asks the player for if they a sure they want to give that card to com 1
+                if favoraction == True:
+                    messagebox.showinfo("Exploding Kittens Game", "You have given com1 your " + card_to_display) # Tells the player that there card was add to com 1's hand
+
+                    card3_played = True # Sets the bollen from the Game_REWIRTE script to True
+
+                    C1B.card_to_play = "" # Sets com 1's card to play to an empty string so the the next time the player gose to click on another card this if statment dosn't repeate
+
+                    show_card3.destroy() # Destroys the card
+
+                    player_cards[2] = "" # Assings the empty slot to the gaved card
+
+                    draw_card() # Makes com 1 draw a card
+                else:
+                    messagebox.showerror("Exploding Kittens Game", "You have not given your card to com1") # Tells the player that the card that they clicked on wasn't given to com 1
+
+            else:
+                messagebox.showerror('Exploding Kittens Game', "Sorry, it's not your turn") # Tells the player that it's not there turn
+
+
+        check_card(card_to_display) # Checks the card that was drawed
+        show_card3 = Button(Game_REWIRTE.gameScreen, text = card_to_display, font = "20", command = card3_command) # Creates the card
+        show_card3.place(x = 980, y = 600) # Places the card at x = 980,y = 600
+
+        Game_REWIRTE.card3_played = False # Makes so that the played haven't played card
+
+        Game_REWIRTE.player_turn = False # Makes it so it's not the player's turn
+
+        Game_REWIRTE.player_cards[2] = card_to_display # Re-assings the slot in the list to match that the played card
+
+    # Checks if the player played the card
+    elif Game_REWIRTE.card4_played == True:
+        print("Drawn Card: " + card_to_display) # Prints the card that was drawn
+
+        # Creates a function to be used when the card is displayed
+        def card4_command():
+            # Checks if it's  the players turn
+            if Game_REWIRTE.player_turn == True:
+                Game_REWIRTE.discard_pile_text.set(card_to_display + "\n \n \n") # Sets the discard pile display text to the card that you've played
+                show_card4.destroy() # Destroys the card
+
+                Game_REWIRTE.card4_played = True # Sets the bollen from the Game_REWIRTE script to True
+
+                Game_REWIRTE.player_cards[3] = "" # Assings the empty slot to the played card
+
+                CCP.check_card_to_play(card_to_display) # Checks the card, so it can do its respected function
+
+            # Checks if com 1 played a favor
+            elif C1B.card_to_play == "favor":
+                favoraction = messagebox.askyesno("Exploding Kittens Game","Are you sure you want to give com1 your " + card_to_display, icon = "warning") # Asks the player for if they a sure they want to give that card to com 1
+
+                # Checks if the player clicked on "yes"
+                if favoraction == True:
+                    messagebox.showinfo("Exploding Kittens Game", "You have given com1 your " + card_to_display) # Tells the player that there card was add to com 1's hand
+
+                    card4_played = True # Sets the bollen from the Game_REWIRTE script to True
+
+                    C1B.card_to_play = "" # Sets com 1's card to play to an empty string so the the next time the player gose to click on another card this if statment dosn't repeate
+
+                    show_card4.destroy() # Destroys the card
+
+                    player_cards[3] = "" # Assings the empty slot to the gaved card
+
+                    draw_card() # Makes com 1 draw a card
+                else:
+                    messagebox.showerror("Exploding Kittens Game", "You have not given your card to com1") # Tells the player that the card that they clicked on wasn't given to com 1
+
+            else:
+                messagebox.showerror('Exploding Kittens Game', "Sorry, it's not your turn") # Tells the player that it's not there turn
+
+        check_card(card_to_display) # Checks the card that was drawed
+        show_card4 = Button(Game_REWIRTE.gameScreen, text = card_to_display, font = "20", command = card4_command) # Creates the card
+        show_card4.place(x = 1090, y = 600) # Places the card at x = 1090,y = 600
+
+        Game_REWIRTE.card4_played = False # Makes so that the played haven't played card
+
+        Game_REWIRTE.player_turn = False # Makes it so it's not the player's turn
+
+        Game_REWIRTE.player_cards[3] = card_to_display # Re-assings the slot in the list to match that the played card
+
+    # Checks if the player played the card
+    elif Game_REWIRTE.card5_played == True:
+        print("Drawn Card: " + card_to_display) # Prints the card that was drawn
+
+        # Creates a function to be used when the card is displayed
+        def card5_command():
+            # Checks if it's  the players turn
+            if Game_REWIRTE.player_turn == True:
+                Game_REWIRTE.discard_pile_text.set(card_to_display + "\n \n \n") # Sets the discard pile display text to the card that you've played
+                show_card5.destroy() # Destroys the card
+
+                Game_REWIRTE.card5_played = True # Sets the bollen from the Game_REWIRTE script to True
+
+                Game_REWIRTE.player_cards[4] = "" # Assings the empty slot to the played card
+
+                CCP.check_card_to_play(card_to_display) # Checks the card, so it can do its respected function
+
+            # Checks if com 1 played a favor
+            elif C1B.card_to_play == "favor":
+                favoraction = messagebox.askyesno("Exploding Kittens Game","Are you sure you want to give com1 your " + card_to_display, icon = "warning") # Asks the player for if they a sure they want to give that card to com 1
+
+                # Checks if the player clicked on "yes"
+                if favoraction == True:
+                    messagebox.showinfo("Exploding Kittens Game", "You have given com1 your " + card_to_display) # Tells the player that there card was add to com 1's hand
+
+                    card5_played = True # Sets the bollen from the Game_REWIRTE script to True
+
+                    C1B.card_to_play = "" # Sets com 1's card to play to an empty string so the the next time the player gose to click on another card this if statment dosn't repeate
+                    player_cards[3] = "" # Assings the empty slot to the gaved card
+
+                    show_card5.destroy() # Destroys the card
+
+                    draw_card() # Makes com 1 draw a card
+                else:
+                    messagebox.showerror("Exploding Kittens Game", "You have not given your card to com1") # Tells the player that the card that they clicked on wasn't given to com 1
+
+            else:
+                messagebox.showerror('Exploding Kittens Game', "Sorry, it's not your turn") # Tells the player that it's not there turn
+
+        check_card(card_to_display) # Checks the card that was drawed
+        show_card5 = Button(Game_REWIRTE.gameScreen, text = card_to_display, font = "20", command = card5_command) # Creates the card
+        show_card5.place(x = 170, y = 600) # Places the card at x = ,y = 600
+
+        Game_REWIRTE.card5_played = False # Makes so that the played haven't played card
+
+        Game_REWIRTE.player_turn = False # Makes it so it's not the player's turn
+
+        Game_REWIRTE.player_cards[4] = card_to_display # Re-assings the slot in the list to match that the played card
+
+    # Checks if the player played the card
+    elif Game_REWIRTE.card6_played == True:
+        print("Drawn Card: " + card_to_display) # Prints the card that was drawn
+
+        # Creates a function to be used when the card is displayed
+        def card6_command():
+            # Checks if it's  the players turn
+            if Game_REWIRTE.player_turn == True:
+                Game_REWIRTE.discard_pile_text.set(card_to_display + "\n \n \n") # Sets the discard pile display text to the card that you've played
+
+                show_card6.destroy() # Destroys the card
+
+                Game_REWIRTE.card6_played = True # Sets the bollen from the Game_REWIRTE script to True
+
+                Game_REWIRTE.player_cards[5] = "" # Assings the empty slot to the played card
+
+                CCP.check_card_to_play(card_to_display) # Checks the card, so it can do its respected function
+
+            # Checks if com 1 played a favor
+            elif C1B.card_to_play == "favor":
+                favoraction = messagebox.askyesno("Exploding Kittens Game", "Are you sure you want to give com1 your " + card_to_display, icon = "warning") # Asks the player for if they a sure they want to give that card to com 1
+
+                # Checks if the player clicked on "yes"
+                if favoraction == True:
+                    messagebox.showinfo("Exploding Kittens Game", "You have given com1 your " + card_to_display) # Tells the player that there card was add to com 1's hand
+
+                    card6_played = True # Sets the bollen from the Game_REWIRTE script to True
+
+                    C1B.card_to_play = "" # Sets com 1's card to play to an empty string so the the next time the player gose to click on another card this if statment dosn't repeate
+
+                    show_card6.destroy() # Destroys the card
+
+                    player_cards[5] = "" # Assings the empty slot to the gaved card
+
+                    draw_card() # Makes com 1 draw a card
+                else:
+                    messagebox.showerror("Exploding Kittens Game", "You have not given your card to com1") # Tells the player that the card that they clicked on wasn't given to com 1
+
+            else:
+                messagebox.showerror('Exploding Kittens Game', "Sorry, it's not your turn") # Tells the player that it's not there turn
+
+
+        check_card(card_to_display) # Checks the card that was drawed
+        show_card6 = Button(Game_REWIRTE.gameScreen, text = card_to_display, font = "20", command = card6_command) # Creates the card
+        show_card6.place(x = 330, y = 600) # Places the card at x = 330,y = 600
+
+        Game_REWIRTE.card6_played = False # Makes so that the played haven't played card
+
+        Game_REWIRTE.player_turn = False # Makes it so it's not the player's turn
+
+        Game_REWIRTE.player_cards[5] = card_to_display # Re-assings the slot in the list to match that the played card
+
+    # Checks if the player played the card
+    elif Game_REWIRTE.card7_played == True:
+        print("Drawn Card: " + card_to_display) # Prints the card that was drawn
+
+        # Creates a function to be used when the card is displayed
+        def card7_command():
+            # Checks if it's  the players turn
+            if Game_REWIRTE.player_turn == True:
+                Game_REWIRTE.discard_pile_text.set(card_to_display + "\n \n \n") # Sets the discard pile display text to the card that you've played
+
+                show_card7.destroy() # Destroys the card
+
+                Game_REWIRTE.card7_played = True # Sets the bollen from the Game_REWIRTE script to True
+
+                Game_REWIRTE.player_cards[6] = "" # Assings the empty slot to the played card
+
+                CCP.check_card_to_play(card_to_display) # Checks the card, so it can do its respected function
+
+            # Checks if com 1 played a favor
+            elif C1B.card_to_play == "favor":
+                favoraction = messagebox.askyesno("Exploding Kittens Game","Are you sure you want to give com1 your " + card_to_display, icon = "warning") # Asks the player for if they a sure they want to give that card to com 1
+
+                # Checks if the player clicked on "yes"
+                if favoraction == True:
+                    messagebox.showinfo("Exploding Kittens Game", "You have given com1 your " + card_to_display) # Tells the player that there card was add to com 1's hand
+
+                    card7_played = True # Sets the bollen from the Game_REWIRTE script to True
+
+                    C1B.card_to_play = "" # Sets com 1's card to play to an empty string so the the next time the player gose to click on another card this if statment dosn't repeate
+
+                    show_card7.destroy() # Destroys the card
+
+                    player_cards[6] = "" # Assings the empty slot to the gaved card
+
+                    draw_card() # Makes com 1 draw a card
+                else:
+                    messagebox.showerror("Exploding Kittens Game", "You have not given your card to com1") # Tells the player that the card that they clicked on wasn't given to com 1
+
+            else:
+                messagebox.showerror('Exploding Kittens Game', "Sorry, it's not your turn") # Tells the player that it's not there turn
+
+        check_card(card_to_display) # Checks the card that was drawed
+        show_card7 = Button(Game_REWIRTE.gameScreen, text = card_to_display, font = "20", command = card7_command) # Creates the card
+        show_card7.place(x = 490, y = 600) # Places the card at x = 490,y = 600
+
+        Game_REWIRTE.card7_played = False # Makes so that the played haven't played card
+
+        Game_REWIRTE.player_turn = False # Makes it so it's not the player's turn
+
+        Game_REWIRTE.player_cards[6] = card_to_display # Re-assings the slot in the list to match that the played card
