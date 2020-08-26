@@ -1,4 +1,4 @@
-# imports all the moduals needed 
+# imports all the modules needed 
 from tkinter import *
 from tkinter import messagebox
 
@@ -32,17 +32,17 @@ def open_game():
 
     username = name_box.get()
 
-    # Checks if the player inputed the amount of com players and/or ther username
+    # Checks if the player inputted the amount of com players and/or there username
     if com_number == 0:
-        messagebox.showerror('Welcome to Exploding Kittens!', 'You have not selected the ammount of com players')
+        messagebox.showerror('Welcome to Exploding Kittens!', 'You have not selected the amount of com players')
     elif username == "":
         messagebox.showerror('Welcome to Exploding Kittens!', 'You have not entered your username')
     else:
         welcome.destroy()
 
-        import Game_REWIRTE
+        import Game_REWRITE
 
-        Game_REWIRTE
+        Game_REWRITE
 
 # Creates labels
 welcome_label = Label(welcome, text="We will need to set up a few things before you can play", font = "40")
@@ -68,7 +68,7 @@ name_box.insert(0, "EXAMPLE")
 
 # Submit Button
 
-submit_buton = Button(welcome, text="Submit", font="15", command=open_game)
-submit_buton.grid(row=7, column = 0)
+submit_button = Button(welcome, text="Submit", font="15", command=open_game)
+submit_button.grid(row=7, column = 0)
 
 welcome.mainloop()
