@@ -68,7 +68,7 @@ name_box.insert(0, "EXAMPLE")
 
 # Submit Button
 
-submit_button = Button(welcome, text="Submit", font="15", command=open_game)
-submit_button.grid(row=7, column = 0)
+submit_buton = Button(welcome, text="Submit", font="15", command=open_game)
+submit_buton.grid(row=7, column = 0)
 
 welcome.mainloop()
