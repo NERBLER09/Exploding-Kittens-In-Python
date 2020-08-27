@@ -15,7 +15,7 @@
     # Checks if it's  the players turn
     # Sets the discard pile display text to the card that you've played
     # Destroys the card
-    # Sets the bollen from the Game_REWIRTE script to True
+    # Sets the bollen from the Game_REWRITE script to True
     # Assigns the empty slot to the given card
     # Checks the card, so it can do its respected function
 
@@ -23,7 +23,7 @@
     # Asks the player for if they a sure they want to give that card to com 1
     # Checks if the player clicked on "yes"
     # Tells the player that there card was add to com 1's hand
-    # Sets the bollen from the Game_REWIRTE script to True
+    # Sets the bollen from the Game_REWRITE script to True
     # Sets com 1's card to play to an empty string so the next time the player goes to click on another card this if statement doesn't repeat
     # Destroys the card
     # Assigns the empty slot to the given card
@@ -80,7 +80,7 @@
 
     # Creates and places the card at x = , y = 30`
 
-<--- For the get_rid_of_card in the Com1_Behevior Script --->
+<--- For the get_rid_of_card in the Com1_Behavior Script --->
 
     # Checks if the card that com 1 is going to play is equal to com 1 card
     # Makes the card equal to an empty string
