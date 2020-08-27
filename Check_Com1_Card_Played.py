@@ -1,16 +1,16 @@
-# imports all the moduals needed
+# imports all the modules needed
 import random
 from time import sleep
 # from tkinter import *
 import Check_Card_Played
-import Com1_Behevior as C1B
+import Com1_Behavior as C1B
 import Deal_To_Com_Players as DTCP
-import Game_REWIRTE
+import Game_REWRITE
 from Check_Card_Drawn import *
 from Check_Card_Played import *
-from Com1_Behevior import *
+from Com1_Behavior import *
 from Deal_To_Com_Players import *
-from Game_REWIRTE import *
+from Game_REWRITE import *
  
 # Function makes com 1 draw a card and adds that card to com 1 hands
 def draw_card():
@@ -41,16 +41,16 @@ def draw_card():
             Check_Card_Played.second_card = " " # Assigns the card seen from the see the future to be " "
 
         # Checks if com 1 or the player has played a see the future
-        elif Check_Card_Played.thrid_card != " ":
-            DTCP.com1_card1 = Check_Card_Played.thrid_card # Assigns the com 1's card 1 to the drawn card
+        elif Check_Card_Played.third_card != " ":
+            DTCP.com1_card1 = Check_Card_Played.third_card # Assigns the com 1's card 1 to the drawn card
             DTCP.com1_cards[0] = DTCP.com1_card1 # Assigns the part in the list to the drawn card
 
             check_card(DTCP.com1_card1) # Removes the card from the deck
 
-            Check_Card_Played.thrid_card = " " # Assigns the card seen from the see the future to be " "
+            Check_Card_Played.third_card = " " # Assigns the card seen from the see the future to be " "
 
         else:
-            DTCP.com1_card1 = random.choice(Game_REWIRTE.cards) # Assigns the com 1's card 1 to a random choice of the draw pile
+            DTCP.com1_card1 = random.choice(Game_REWRITE.cards) # Assigns the com 1's card 1 to a random choice of the draw pile
             print(DTCP.com1_card1) # Prints the drawn card
             DTCP.com1_cards[0] = DTCP.com1_card1 # Assigns the part in the list to the drawn card
 
@@ -63,8 +63,8 @@ def draw_card():
             C1B.decied_card_to_play() # Calls the function
         else:
             messagebox.showinfo("Exploding Kittens Game", "Com1 has drawn, it's now currently your turn") # Tells the player that com 1 has drawn and that it's there turn
-            Game_REWIRTE.player_turn = True # Makes it the players turns
-            Game_REWIRTE.com1_turn = False # Makes it not be com 1's turns
+            Game_REWRITE.player_turn = True # Makes it the players turns
+            Game_REWRITE.com1_turn = False # Makes it not be com 1's turns
 
         print(DTCP.com1_cards) # Prints com 1's hand 
 
@@ -93,16 +93,16 @@ def draw_card():
             Check_Card_Played.second_card = " " # Assigns the card seen from the see the future to be " "
 
         # Checks if com 1 or the player has played a see the future
-        elif Check_Card_Played.thrid_card != " ":
-            DTCP.com1_card2 = Check_Card_Played.thrid_card # Assigns the com 1's card 2 to the drawn card
+        elif Check_Card_Played.third_card != " ":
+            DTCP.com1_card2 = Check_Card_Played.third_card # Assigns the com 1's card 2 to the drawn card
             DTCP.com1_cards[1] = DTCP.com1_card2 # Assigns the part in the list to the drawn card
 
             check_card(DTCP.com1_card2) # Removes the card from the deck
 
-            Check_Card_Played.thrid_card = " " # Assigns the card seen from the see the future to be " "
+            Check_Card_Played.third_card = " " # Assigns the card seen from the see the future to be " "
 
         else:
-            DTCP.com1_card2 = random.choice(Game_REWIRTE.cards) # Assigns the com 1's card 1 to a random choice of the draw pile
+            DTCP.com1_card2 = random.choice(Game_REWRITE.cards) # Assigns the com 1's card 1 to a random choice of the draw pile
             print(DTCP.com1_card2) # Prints the drawn card
             DTCP.com1_cards[1] = DTCP.com1_card2 # Assigns the part in the list to the drawn card
 
@@ -116,8 +116,8 @@ def draw_card():
             C1B.decied_card_to_play() # Calls the function
         else:
             messagebox.showinfo("Exploding Kittens Game", "Com1 has drawn, it's now currently your turn") # Tells the player that com 1 has drawn and that it's there turn
-            Game_REWIRTE.player_turn = True # Makes it the players turns
-            Game_REWIRTE.com1_turn = False # Makes it not be com 1's turns
+            Game_REWRITE.player_turn = True # Makes it the players turns
+            Game_REWRITE.com1_turn = False # Makes it not be com 1's turns
 
         print(DTCP.com1_cards) # Prints com 1's hand
 
@@ -146,16 +146,16 @@ def draw_card():
             Check_Card_Played.second_card = " " # Assigns the card seen from the see the future to be " "
 
         # Checks if com 1 or the player has played a see the future
-        elif Check_Card_Played.thrid_card != " ":
-            DTCP.com1_card3 = Check_Card_Played.thrid_card # Assigns the com 1's card 3 to the drawn card
+        elif Check_Card_Played.third_card != " ":
+            DTCP.com1_card3 = Check_Card_Played.third_card # Assigns the com 1's card 3 to the drawn card
             DTCP.com1_cards[2] = DTCP.com1_card3 # Assigns the part in the list to the drawn card
 
             check_card(DTCP.com1_card3) # Removes the card from the deck
 
-            Check_Card_Played.thrid_card = " " # Assigns the card seen from the see the future to be " "
+            Check_Card_Played.third_card = " " # Assigns the card seen from the see the future to be " "
 
         else:
-            DTCP.com1_card3 = random.choice(Game_REWIRTE.cards) # Assigns the com 1's card 1 to a random choice of the draw pile
+            DTCP.com1_card3 = random.choice(Game_REWRITE.cards) # Assigns the com 1's card 1 to a random choice of the draw pile
             print(DTCP.com1_card3) # Prints the drawn card
             DTCP.com1_cards[2] = DTCP.com1_card3 # Assigns the part in the list to the drawn card
 
@@ -169,8 +169,8 @@ def draw_card():
             C1B.decied_card_to_play() # Calls the function
         else:
             messagebox.showinfo("Exploding Kittens Game", "Com1 has drawn, it's now currently your turn") # Tells the player that com 1 has drawn and that it's there turn
-            Game_REWIRTE.player_turn = True # Makes it the players turns
-            Game_REWIRTE.com1_turn = False # Makes it not be com 1's turns
+            Game_REWRITE.player_turn = True # Makes it the players turns
+            Game_REWRITE.com1_turn = False # Makes it not be com 1's turns
 
         print(DTCP.com1_cards) # Prints com 1's hand
 
@@ -199,16 +199,16 @@ def draw_card():
             Check_Card_Played.second_card = " " # Assigns the card seen from the see the future to be " "
 
         # Checks if com 1 or the player has played a see the future
-        elif Check_Card_Played.thrid_card != " ":
-            DTCP.com1_card4 = Check_Card_Played.thrid_card # Assigns the com 1's card 3 to the drawn card
+        elif Check_Card_Played.third_card != " ":
+            DTCP.com1_card4 = Check_Card_Played.third_card # Assigns the com 1's card 3 to the drawn card
             DTCP.com1_cards[3] = DTCP.com1_card4 # Assigns the part in the list to the drawn card
 
             check_card(DTCP.com1_card4) # Removes the card from the deck
 
-            Check_Card_Played.thrid_card = " " # Assigns the card seen from the see the future to be " "
+            Check_Card_Played.third_card = " " # Assigns the card seen from the see the future to be " "
 
         else:
-            DTCP.com1_card4 = random.choice(Game_REWIRTE.cards) # Assigns the com 1's card 1 to a random choice of the draw pile
+            DTCP.com1_card4 = random.choice(Game_REWRITE.cards) # Assigns the com 1's card 1 to a random choice of the draw pile
             print(DTCP.com1_card4) # Prints the drawn card
             DTCP.com1_cards[3] = DTCP.com1_card4 # Assigns the part in the list to the drawn card
 
@@ -221,8 +221,8 @@ def draw_card():
             C1B.decied_card_to_play() # Calls the function
         else:
             messagebox.showinfo("Exploding Kittens Game", "Com1 has drawn, it's now currently your turn") # Tells the player that com 1 has drawn and that it's there turn
-            Game_REWIRTE.player_turn = True # Makes it the players turns
-            Game_REWIRTE.com1_turn = False # Makes it not be com 1's turns
+            Game_REWRITE.player_turn = True # Makes it the players turns
+            Game_REWRITE.com1_turn = False # Makes it not be com 1's turns
 
         print(DTCP.com1_cards) # Prints com 1's hand
 
@@ -251,16 +251,16 @@ def draw_card():
             Check_Card_Played.second_card = " " # Assigns the card seen from the see the future to be " "
 
         # Checks if com 1 or the player has played a see the future
-        elif Check_Card_Played.thrid_card != " ":
-            DTCP.com1_card5 = Check_Card_Played.thrid_card # Assigns the com 1's card 3 to the drawn card
+        elif Check_Card_Played.third_card != " ":
+            DTCP.com1_card5 = Check_Card_Played.third_card # Assigns the com 1's card 3 to the drawn card
             DTCP.com1_cards[4] = DTCP.com1_card5 # Assigns the part in the list to the drawn card
 
             check_card(DTCP.com1_card5) # Removes the card from the deck
 
-            Check_Card_Played.thrid_card = " " # Assigns the card seen from the see the future to be " "
+            Check_Card_Played.third_card = " " # Assigns the card seen from the see the future to be " "
 
         else:
-            DTCP.com1_card5 = random.choice(Game_REWIRTE.cards) # Assigns the com 1's card 1 to a random choice of the draw pile
+            DTCP.com1_card5 = random.choice(Game_REWRITE.cards) # Assigns the com 1's card 1 to a random choice of the draw pile
             print(DTCP.com1_card5) # Prints the drawn card
             DTCP.com1_cards[4] = DTCP.com1_card5 # Assigns the part in the list to the drawn card
 
@@ -274,8 +274,8 @@ def draw_card():
             C1B.decied_card_to_play() # Calls the function
         else:
             messagebox.showinfo("Exploding Kittens Game", "Com1 has drawn, it's now currently your turn") # Tells the player that com 1 has drawn and that it's there turn
-            Game_REWIRTE.player_turn = True # Makes it the players turns
-            Game_REWIRTE.com1_turn = False # Makes it not be com 1's turns
+            Game_REWRITE.player_turn = True # Makes it the players turns
+            Game_REWRITE.com1_turn = False # Makes it not be com 1's turns
 
         print(DTCP.com1_cards) # Prints com 1's hand
 
@@ -304,16 +304,16 @@ def draw_card():
             Check_Card_Played.second_card = " " # Assigns the card seen from the see the future to be " "
 
         # Checks if com 1 or the player has played a see the future
-        elif Check_Card_Played.thrid_card != " ":
-            DTCP.com1_card6 = Check_Card_Played.thrid_card # Assigns the com 1's card 3 to the drawn card
+        elif Check_Card_Played.third_card != " ":
+            DTCP.com1_card6 = Check_Card_Played.third_card # Assigns the com 1's card 3 to the drawn card
             DTCP.com1_cards[5] = DTCP.com1_card6 # Assigns the part in the list to the drawn card
 
             check_card(DTCP.com1_card6) # Removes the card from the deck
 
-            Check_Card_Played.thrid_card = " " # Assigns the card seen from the see the future to be " "
+            Check_Card_Played.third_card = " " # Assigns the card seen from the see the future to be " "
 
         else:
-            DTCP.com1_card6 = random.choice(Game_REWIRTE.cards) # Assigns the com 1's card 1 to a random choice of the draw pile
+            DTCP.com1_card6 = random.choice(Game_REWRITE.cards) # Assigns the com 1's card 1 to a random choice of the draw pile
             print(DTCP.com1_card6) # Prints the drawn card
             DTCP.com1_cards[5] = DTCP.com1_card6 # Assigns the part in the list to the drawn card
 
@@ -326,8 +326,8 @@ def draw_card():
             C1B.decied_card_to_play() # Calls the function
         else:
             messagebox.showinfo("Exploding Kittens Game", "Com1 has drawn, it's now currently your turn") # Tells the player that com 1 has drawn and that it's there turn
-            Game_REWIRTE.player_turn = True # Makes it the players turns
-            Game_REWIRTE.com1_turn = False # Makes it not be com 1's turns
+            Game_REWRITE.player_turn = True # Makes it the players turns
+            Game_REWRITE.com1_turn = False # Makes it not be com 1's turns
 
         print(DTCP.com1_cards) # Prints com 1's hand
 
@@ -356,16 +356,16 @@ def draw_card():
             Check_Card_Played.second_card = " " # Assigns the card seen from the see the future to be " "
 
         # Checks if com 1 or the player has played a see the future
-        elif Check_Card_Played.thrid_card != " ":
-            DTCP.com1_card7 = Check_Card_Played.thrid_card # Assigns the com 1's card 3 to the drawn card
+        elif Check_Card_Played.third_card != " ":
+            DTCP.com1_card7 = Check_Card_Played.third_card # Assigns the com 1's card 3 to the drawn card
             DTCP.com1_cards[6] = DTCP.com1_card7 # Assigns the part in the list to the drawn card
 
             check_card(DTCP.com1_card7) # Removes the card from the deck
 
-            Check_Card_Played.thrid_card = " " # Assigns the card seen from the see the future to be " "
+            Check_Card_Played.third_card = " " # Assigns the card seen from the see the future to be " "
 
         else:
-            DTCP.com1_card7 = random.choice(Game_REWIRTE.cards) # Assigns the com 1's card 1 to a random choice of the draw pile
+            DTCP.com1_card7 = random.choice(Game_REWRITE.cards) # Assigns the com 1's card 1 to a random choice of the draw pile
             print(DTCP.com1_card7) # Prints the drawn card
             DTCP.com1_cards[6] = DTCP.com1_card7 # Assigns the part in the list to the drawn card
 
@@ -378,16 +378,16 @@ def draw_card():
             C1B.decied_card_to_play() # Calls the function
         else:
             messagebox.showinfo("Exploding Kittens Game", "Com1 has drawn, it's now currently your turn") # Tells the player that com 1 has drawn and that it's there turn
-            Game_REWIRTE.player_turn = True # Makes it the players turns
-            Game_REWIRTE.com1_turn = False # Makes it not be com 1's turns
+            Game_REWRITE.player_turn = True # Makes it the players turns
+            Game_REWRITE.com1_turn = False # Makes it not be com 1's turns
 
         print(DTCP.com1_cards) # Prints com 1's hand
     
     else:
         print("An error has been encountered") # Prints "An error has been encountered"
         messagebox.showinfo("Exploding Kittens Game", "Com1 has drawn, it's now currently your turn") # Tells the player that com 1 has drawn and that its there turn
-        Game_REWIRTE.player_turn = True # Makes its the players turn
-        Game_REWIRTE.com1_turn = False # Makes it not be com 1's turn
+        Game_REWRITE.player_turn = True # Makes its the players turn
+        Game_REWRITE.com1_turn = False # Makes it not be com 1's turn
 
     C1B.card_to_play = "" # Assigns card_to_play to ""
 
@@ -448,22 +448,22 @@ def get_favor_or_stolen_card(card_to_add):
 
 # Function lets com 1 play 2 matching cat cards and than steal a card from the player than adds it to there hand
 def get_cat_card(com1_cat_card):
-    # Enters a for loop checking if the card pass through in the agument equals to a card in com 1's hand
+    # Enters a for loop checking if the card pass through in the argument equals to a card in com 1's hand
     for cards_in_com1_hand in C1B.com1_cards:
         # Checks if cards_in_com1_hand is equal to the argument passed
         if cards_in_com1_hand == com1_cat_card:
             print("Theres a match") # Prints Theres a match
-            messagebox.showinfo("Exploding Kittens Game", "Com1 has succsesfuly play 2 " + cards_in_com1_hand + " cards") # Tells the player that com 1 has played 2 mathing cat cards
+            messagebox.showinfo("Exploding Kittens Game", "Com1 has successfully play 2 " + cards_in_com1_hand + " cards") # Tells the player that com 1 has played 2 mathing cat cards
 
-            C1B.card_to_play = com1_cat_card # Sets the card_to_play to the argumant passed
+            C1B.card_to_play = com1_cat_card # Sets the card_to_play to the argument passed
 
             C1B.get_rid_of_card() # Gets rid of the second from com 1's hand
 
-            steal_card = random.choice(Game_REWIRTE.player_cards) # Assing a varible to a random choice from the player hand, that will be card com 1 steals from the players hand
+            steal_card = random.choice(Game_REWRITE.player_cards) # Assing a variable to a random choice from the player hand, that will be card com 1 steals from the players hand
 
             # Enters a while loop if steal_card equals to ""
             while steal_card == "":
-                steal_card = random.choice(Game_REWIRTE.player_cards) # Re-assings the varible to a random choice
+                steal_card = random.choice(Game_REWRITE.player_cards) # Re-assigns the variable to a random choice
 
             get_favor_or_stolen_card(steal_card) # Adds the stolen card to the com 1's hand
             messagebox.showerror("Exploding Kittens Game", "Com1 has stolen your " + steal_card) # Tells the user that com 1 has stolen x card from them
@@ -473,7 +473,7 @@ def get_cat_card(com1_cat_card):
 
     # After the loop is compleated and the first cat card that com 1 has played do not have any matching cards in there in there hand
     if cards_in_com1_hand != com1_cat_card:
-        messagebox.showerror("Exploding Kittens Game", 'Com1 has not susessfuly played 2 cat cards') # Tells the player that com 1 has faild to play to matching cat cards
+        messagebox.showerror("Exploding Kittens Game", 'Com1 has not successfully played 2 cat cards') # Tells the player that com 1 has failed to play to matching cat cards
 
 # Checks what card com 1 has played so it can do it's respected function
 def check_com1_card():
@@ -481,40 +481,40 @@ def check_com1_card():
 
     # Checks if com 1 has played an attack card
     if C1B.card_to_play == "skip":
-        sleep(1) # Sleeps the program for 1 second (Makes it like com 1 is chosing a card to play)
+        sleep(1) # Sleeps the program for 1 second (Makes it like com 1 is choosing a card to play)
         messagebox.showinfo("Exploding Kittens Game", "Com1 has skip there turn") # Tells the player that con 1 has skiped there turn
         messagebox.showinfo("Exploding Kittens Game", "It is currently your turn") # Tells the player that it's not there turn
-        Game_REWIRTE.discard_pile_text.set(C1B.card_to_play + "\n \n \n") # Changes the display text of the draw pile
-        Game_REWIRTE.player_turn = True # Sets the players turn to be true
-        Game_REWIRTE.com1_turn = False # Sets com 1's turn to be false
+        Game_REWRITE.discard_pile_text.set(C1B.card_to_play + "\n \n \n") # Changes the display text of the draw pile
+        Game_REWRITE.player_turn = True # Sets the players turn to be true
+        Game_REWRITE.com1_turn = False # Sets com 1's turn to be false
 
     # Checks if com 1 has played an attack card
     elif C1B.card_to_play == "attack":
-        sleep(1) # Sleeps the program for 1 second (Makes it like com 1 is chosing a card to play)
+        sleep(1) # Sleeps the program for 1 second (Makes it like com 1 is choosing a card to play)
         messagebox.showinfo("Exploding Kittens Game", "Com1 has played an attack. Com1 has skiped there turn\nand made you have 2 turns") # Tells the player that com 1 has played an attack card and made you have 2 turns
-        Game_REWIRTE.discard_pile_text.set(C1B.card_to_play + "\n \n \n") # Sets the discard text to "attack"
-        Game_REWIRTE.player_turn = True # Makes it be the players turn
-        Game_REWIRTE.com1_turn = False # Makes it not be com 1's turn
+        Game_REWRITE.discard_pile_text.set(C1B.card_to_play + "\n \n \n") # Sets the discard text to "attack"
+        Game_REWRITE.player_turn = True # Makes it be the players turn
+        Game_REWRITE.com1_turn = False # Makes it not be com 1's turn
 
     # Checks if com 1 has play a favor card
     elif C1B.card_to_play == "favor":
-        sleep(1) # Sleeps the program for 1 second (Makes it like com 1 is chosing a card to play)
-        messagebox.showinfo("Exploding Kittens Game", "Com1 has played a favor, click a card to give to them.") # Tells the player that com 1 has played a favir
-        Game_REWIRTE.discard_pile_text.set(C1B.card_to_play + "\n \n \n") # Sets the discard pile text to the current card that com 1 has played
+        sleep(1) # Sleeps the program for 1 second (Makes it like com 1 is choosing a card to play)
+        messagebox.showinfo("Exploding Kittens Game", "Com1 has played a favor, click a card to give to them.") # Tells the player that com 1 has played a favor
+        Game_REWRITE.discard_pile_text.set(C1B.card_to_play + "\n \n \n") # Sets the discard pile text to the current card that com 1 has played
         C1B.card_to_play = "favor" # Sets card_to_play to "favor"
 
     # Checks if com 1 has player a shuffle card
     elif C1B.card_to_play == "shuffle":
-        sleep(1) # Sleeps the program for 1 second (Makes it like com 1 is chosing a card to play)
+        sleep(1) # Sleeps the program for 1 second (Makes it like com 1 is choosing a card to play)
 
         # Shuffles the deck
-        random.shuffle(Game_REWIRTE.cards)
-        random.shuffle(Game_REWIRTE.cards)
-        random.shuffle(Game_REWIRTE.cards)
-        random.shuffle(Game_REWIRTE.cards)
-        random.shuffle(Game_REWIRTE.cards)
-        random.shuffle(Game_REWIRTE.cards)
-        random.shuffle(Game_REWIRTE.cards)
+        random.shuffle(Game_REWRITE.cards)
+        random.shuffle(Game_REWRITE.cards)
+        random.shuffle(Game_REWRITE.cards)
+        random.shuffle(Game_REWRITE.cards)
+        random.shuffle(Game_REWRITE.cards)
+        random.shuffle(Game_REWRITE.cards)
+        random.shuffle(Game_REWRITE.cards)
 
         messagebox.showinfo("Exploding Kittens Game", "Com1 has shuffled the deck") # Tells the player that com 1 has shuffled the deck
 
@@ -522,23 +522,23 @@ def check_com1_card():
 
     # Checks if com 1 has played a see the future card
     elif C1B.card_to_play == "see the future":
-        sleep(1) # Sleeps the program for 1 second (Makes it like com 1 is chosing a card to play)
+        sleep(1) # Sleeps the program for 1 second (Makes it like com 1 is choosing a card to play)
 
-        # Assings the top 3 cards to a random choice, this will be used to be find the top 3 cards
-        Check_Card_Played.first_card = random.choice(Game_REWIRTE.cards)
-        Check_Card_Played.second_card = random.choice(Game_REWIRTE.cards)
-        Check_Card_Played.thrid_card = random.choice(Game_REWIRTE.cards)
+        # Assigns the top 3 cards to a random choice, this will be used to be find the top 3 cards
+        Check_Card_Played.first_card = random.choice(Game_REWRITE.cards)
+        Check_Card_Played.second_card = random.choice(Game_REWRITE.cards)
+        Check_Card_Played.third_card = random.choice(Game_REWRITE.cards)
 
-        # Prints the top 3 card assinged above
+        # Prints the top 3 card assigned above
         print("--------------")
         print(Check_Card_Played.first_card)
         print(Check_Card_Played.second_card)
-        print(Check_Card_Played.thrid_card)
+        print(Check_Card_Played.third_card)
         print("--------------")
 
         messagebox.showinfo("Exploding Kittens Game", "Com1 has played a see the future") # Tells the player that com 1 has played a see the future card
 
-        Game_REWIRTE.discard_pile_text.set(C1B.card_to_play + "\n \n \n") # Sets the text of the discard pile to the card the com 1 has played
+        Game_REWRITE.discard_pile_text.set(C1B.card_to_play + "\n \n \n") # Sets the text of the discard pile to the card the com 1 has played
 
         draw_card() # Makes com 1 draw a card
 
