@@ -1,12 +1,11 @@
 # imports all the modules needed
-from Game_REWRITE import *
 import Game_REWRITE
-from Deal_To_Com_Players import *
 import Deal_To_Com_Players as DTCP
-from Check_Card_Played import *
-from tkinter import messagebox
+import tkinter as tk
 import random
-from Check_Com1_Card_Played import *
+import Check_Com1_Card_Played as CC1CP
+import Check_Card_Played as CCP
+from tkinter import messagebox
 
 # Creates a string to house the card com 1 is going to play
 card_to_play = ""
@@ -90,4 +89,4 @@ def decied_card_to_play():
 
         get_rid_of_card() # Gets rid the card from com 1's hand
 
-        check_com1_card() # Checks the card to for the respected function
+        CC1CP.check_com1_card() # Checks the card to for the respected function

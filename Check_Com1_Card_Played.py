@@ -1,16 +1,14 @@
 # imports all the modules needed
-import random
+from tkinter import messagebox
 from time import sleep
-# from tkinter import *
-import Check_Card_Played
+import Check_Card_Played as CCP
 import Com1_Behavior as C1B
 import Deal_To_Com_Players as DTCP
 import Game_REWRITE
-from Check_Card_Drawn import *
-from Check_Card_Played import *
-from Com1_Behavior import *
-from Deal_To_Com_Players import *
-from Game_REWRITE import *
+import Deal_To_Com_Players as DTCP
+import Check_Card_Drawn as CCD
+import Game_REWRITE
+import random
  
 # Function makes com 1 draw a card and adds that card to com 1 hands
 def draw_card():
@@ -19,47 +17,47 @@ def draw_card():
     # Checks if card 1 is equal to ""
     if DTCP.com1_card1 == "":
         # Checks if com 1 or the player has played a see the future
-        if Check_Card_Played.first_card != " ":
-            print(Check_Card_Played.first_card) # Prints the top card seen from the see the future
+        if CCP.first_card != " ":
+            print(CCP.first_card) # Prints the top card seen from the see the future
 
-            DTCP.com1_card1 = Check_Card_Played.first_card # Assigns the com 1's card 1 to the drawn card
+            DTCP.com1_card1 = CCP.first_card # Assigns the com 1's card 1 to the drawn card
             DTCP.com1_cards[0] = DTCP.com1_card1 # Assigns the part in the list to the drawn card
 
-            check_card(DTCP.com1_card1) # Removes the card from the deck
+            CCD.check_card(DTCP.com1_card1) # Removes the card from the deck
 
             print(DTCP.com1_cards) # Prints com 1's hand
 
-            Check_Card_Played.first_card = " " # Assigns the card seen from the see the future to be " "
+            CCP.first_card = " " # Assigns the card seen from the see the future to be " "
 
         # Checks if com 1 or the player has played a see the future
-        elif Check_Card_Played.second_card != " ":
-            DTCP.com1_card1 = Check_Card_Played.second_card # Assigns the com 1's card 1 to the drawn card
+        elif CCP.second_card != " ":
+            DTCP.com1_card1 = CCP.second_card # Assigns the com 1's card 1 to the drawn card
             DTCP.com1_cards[0] = DTCP.com1_card1 # Assigns the part in the list to the drawn card
 
-            check_card(DTCP.com1_card1) # Removes the card from the deck
+            CCD.check_card(DTCP.com1_card1) # Removes the card from the deck
 
-            Check_Card_Played.second_card = " " # Assigns the card seen from the see the future to be " "
+            CCP.second_card = " " # Assigns the card seen from the see the future to be " "
 
         # Checks if com 1 or the player has played a see the future
-        elif Check_Card_Played.third_card != " ":
-            DTCP.com1_card1 = Check_Card_Played.third_card # Assigns the com 1's card 1 to the drawn card
+        elif CCP.third_card != " ":
+            DTCP.com1_card1 = CCP.third_card # Assigns the com 1's card 1 to the drawn card
             DTCP.com1_cards[0] = DTCP.com1_card1 # Assigns the part in the list to the drawn card
 
-            check_card(DTCP.com1_card1) # Removes the card from the deck
+            CCD.check_card(DTCP.com1_card1) # Removes the card from the deck
 
-            Check_Card_Played.third_card = " " # Assigns the card seen from the see the future to be " "
+            CCP.third_card = " " # Assigns the card seen from the see the future to be " "
 
         else:
             DTCP.com1_card1 = random.choice(Game_REWRITE.cards) # Assigns the com 1's card 1 to a random choice of the draw pile
             print(DTCP.com1_card1) # Prints the drawn card
             DTCP.com1_cards[0] = DTCP.com1_card1 # Assigns the part in the list to the drawn card
 
-            check_card(DTCP.com1_card1) # Removes the card from the deck
+            CCD.check_card(DTCP.com1_card1) # Removes the card from the deck
 
         # Checks if the player played an attack card
-        if Check_Card_Played.attack_card_played == True:
+        if CCP.attack_card_played == True:
             messagebox.showinfo("Exploding Kittens Game", "It is now Com1 turn again because you played a attack card") # Tells the player that it's com 1's turn again because they played an attack card
-            Check_Card_Played.attack_card_played = False # Re-assigns the bollen to be false
+            CCP.attack_card_played = False # Re-assigns the bollen to be false
             C1B.decied_card_to_play() # Calls the function
         else:
             messagebox.showinfo("Exploding Kittens Game", "Com1 has drawn, it's now currently your turn") # Tells the player that com 1 has drawn and that it's there turn
@@ -71,48 +69,48 @@ def draw_card():
     # Checks if card 2 is equal to ""
     elif DTCP.com1_card2 == "":
         # Checks if com 1 or the player has played a see the future
-        if Check_Card_Played.first_card != " ":
-            print(Check_Card_Played.first_card) # Prints the top card seen from the see the future
+        if CCP.first_card != " ":
+            print(CCP.first_card) # Prints the top card seen from the see the future
 
-            DTCP.com1_card2 = Check_Card_Played.first_card # Assigns the com 1's card 2 to the drawn card
+            DTCP.com1_card2 = CCP.first_card # Assigns the com 1's card 2 to the drawn card
             DTCP.com1_cards[1] = DTCP.com1_card2 # Assigns the part in the list to the drawn card
 
-            check_card(DTCP.com1_card2) # Removes the card from the deck
+            CCD.check_card(DTCP.com1_card2) # Removes the card from the deck
 
             print(DTCP.com1_cards) # Prints com 1's hand
 
-            Check_Card_Played.first_card = " " # Assigns the card seen from the see the future to be " "
+            CCP.first_card = " " # Assigns the card seen from the see the future to be " "
 
         # Checks if com 1 or the player has played a see the future
-        elif Check_Card_Played.second_card != " ":
-            DTCP.com1_card2 = Check_Card_Played.second_card # Assigns the com 1's card 2 to the drawn card
+        elif CCP.second_card != " ":
+            DTCP.com1_card2 = CCP.second_card # Assigns the com 1's card 2 to the drawn card
             DTCP.com1_cards[1] = DTCP.com1_card2 # Assigns the part in the list to the drawn card
 
-            check_card(DTCP.com1_card2) # Removes the card from the deck
+            CCD.check_card(DTCP.com1_card2) # Removes the card from the deck
 
-            Check_Card_Played.second_card = " " # Assigns the card seen from the see the future to be " "
+            CCP.second_card = " " # Assigns the card seen from the see the future to be " "
 
         # Checks if com 1 or the player has played a see the future
-        elif Check_Card_Played.third_card != " ":
-            DTCP.com1_card2 = Check_Card_Played.third_card # Assigns the com 1's card 2 to the drawn card
+        elif CCP.third_card != " ":
+            DTCP.com1_card2 = CCP.third_card # Assigns the com 1's card 2 to the drawn card
             DTCP.com1_cards[1] = DTCP.com1_card2 # Assigns the part in the list to the drawn card
 
-            check_card(DTCP.com1_card2) # Removes the card from the deck
+            CCD.check_card(DTCP.com1_card2) # Removes the card from the deck
 
-            Check_Card_Played.third_card = " " # Assigns the card seen from the see the future to be " "
+            CCP.third_card = " " # Assigns the card seen from the see the future to be " "
 
         else:
             DTCP.com1_card2 = random.choice(Game_REWRITE.cards) # Assigns the com 1's card 1 to a random choice of the draw pile
             print(DTCP.com1_card2) # Prints the drawn card
             DTCP.com1_cards[1] = DTCP.com1_card2 # Assigns the part in the list to the drawn card
 
-            check_card(DTCP.com1_card2) # Removes the card from the deck
+            CCD.check_card(DTCP.com1_card2) # Removes the card from the deck
 
 
         # Checks if the player played an attack card
-        if Check_Card_Played.attack_card_played == True:
+        if CCP.attack_card_played == True:
             messagebox.showinfo("Exploding Kittens Game", "It is now Com1 turn again because you played a attack card") # Tells the player that it's com 1's turn again because they played an attack card
-            Check_Card_Played.attack_card_played = False # Re-assigns the bollen to be false
+            CCP.attack_card_played = False # Re-assigns the bollen to be false
             C1B.decied_card_to_play() # Calls the function
         else:
             messagebox.showinfo("Exploding Kittens Game", "Com1 has drawn, it's now currently your turn") # Tells the player that com 1 has drawn and that it's there turn
@@ -124,48 +122,48 @@ def draw_card():
     # Checks if card 3 is equal to ""
     elif DTCP.com1_card3 == "":
         # Checks if com 1 or the player has played a see the future
-        if Check_Card_Played.first_card != " ":
-            print(Check_Card_Played.first_card) # Prints the top card seen from the see the future
+        if CCP.first_card != " ":
+            print(CCP.first_card) # Prints the top card seen from the see the future
 
-            DTCP.com1_card3 = Check_Card_Played.first_card # Assigns the com 1's card 3 to the drawn card
+            DTCP.com1_card3 = CCP.first_card # Assigns the com 1's card 3 to the drawn card
             DTCP.com1_cards[2] = DTCP.com1_card3 # Assigns the part in the list to the drawn card
 
-            check_card(DTCP.com1_card3) # Removes the card from the deck
+            CCD.check_card(DTCP.com1_card3) # Removes the card from the deck
 
             print(DTCP.com1_cards) # Prints com 1's hand
 
-            Check_Card_Played.first_card = " " # Assigns the card seen from the see the future to be " "
+            CCP.first_card = " " # Assigns the card seen from the see the future to be " "
 
         # Checks if com 1 or the player has played a see the future
-        elif Check_Card_Played.second_card != " ":
-            DTCP.com1_card3 = Check_Card_Played.second_card # Assigns the com 1's card 3 to the drawn card
+        elif CCP.second_card != " ":
+            DTCP.com1_card3 = CCP.second_card # Assigns the com 1's card 3 to the drawn card
             DTCP.com1_cards[2] = DTCP.com1_card3 # Assigns the part in the list to the drawn card
 
-            check_card(DTCP.com1_card3) # Removes the card from the deck
+            CCD.check_card(DTCP.com1_card3) # Removes the card from the deck
 
-            Check_Card_Played.second_card = " " # Assigns the card seen from the see the future to be " "
+            CCP.second_card = " " # Assigns the card seen from the see the future to be " "
 
         # Checks if com 1 or the player has played a see the future
-        elif Check_Card_Played.third_card != " ":
-            DTCP.com1_card3 = Check_Card_Played.third_card # Assigns the com 1's card 3 to the drawn card
+        elif CCP.third_card != " ":
+            DTCP.com1_card3 = CCP.third_card # Assigns the com 1's card 3 to the drawn card
             DTCP.com1_cards[2] = DTCP.com1_card3 # Assigns the part in the list to the drawn card
 
-            check_card(DTCP.com1_card3) # Removes the card from the deck
+            CCD.check_card(DTCP.com1_card3) # Removes the card from the deck
 
-            Check_Card_Played.third_card = " " # Assigns the card seen from the see the future to be " "
+            CCP.third_card = " " # Assigns the card seen from the see the future to be " "
 
         else:
             DTCP.com1_card3 = random.choice(Game_REWRITE.cards) # Assigns the com 1's card 1 to a random choice of the draw pile
             print(DTCP.com1_card3) # Prints the drawn card
             DTCP.com1_cards[2] = DTCP.com1_card3 # Assigns the part in the list to the drawn card
 
-            check_card(DTCP.com1_card3) # Removes the card from the deck
+            CCD.check_card(DTCP.com1_card3) # Removes the card from the deck
 
 
         # Checks if the player played an attack card
-        if Check_Card_Played.attack_card_played == True:
+        if CCP.attack_card_played == True:
             messagebox.showinfo("Exploding Kittens Game", "It is now Com1 turn again because you played a attack card") # Tells the player that it's com 1's turn again because they played an attack card
-            Check_Card_Played.attack_card_played = False # Re-assigns the bollen to be false
+            CCP.attack_card_played = False # Re-assigns the bollen to be false
             C1B.decied_card_to_play() # Calls the function
         else:
             messagebox.showinfo("Exploding Kittens Game", "Com1 has drawn, it's now currently your turn") # Tells the player that com 1 has drawn and that it's there turn
@@ -177,47 +175,47 @@ def draw_card():
     # Checks if card 4 is equal to ""
     elif DTCP.com1_card4 == "":
         # Checks if com 1 or the player has played a see the future
-        if Check_Card_Played.first_card != " ":
-            print(Check_Card_Played.first_card) # Prints the top card seen from the see the future
+        if CCP.first_card != " ":
+            print(CCP.first_card) # Prints the top card seen from the see the future
 
-            DTCP.com1_card4 = Check_Card_Played.first_card # Assigns the com 1's card 3 to the drawn card
+            DTCP.com1_card4 = CCP.first_card # Assigns the com 1's card 3 to the drawn card
             DTCP.com1_cards[3] = DTCP.com1_card4 # Assigns the part in the list to the drawn card
 
-            check_card(DTCP.com1_card4) # Removes the card from the deck
+            CCD.check_card(DTCP.com1_card4) # Removes the card from the deck
 
             print(DTCP.com1_cards) # Prints com 1's hand
 
-            Check_Card_Played.first_card = " " # Assigns the card seen from the see the future to be " "
+            CCP.first_card = " " # Assigns the card seen from the see the future to be " "
 
         # Checks if com 1 or the player has played a see the future
-        elif Check_Card_Played.second_card != " ":
-            DTCP.com1_card4 = Check_Card_Played.second_card # Assigns the com 1's card 3 to the drawn card
+        elif CCP.second_card != " ":
+            DTCP.com1_card4 = CCP.second_card # Assigns the com 1's card 3 to the drawn card
             DTCP.com1_cards[3] = DTCP.com1_card4 # Assigns the part in the list to the drawn card
 
-            check_card(DTCP.com1_card4) # Removes the card from the deck
+            CCD.check_card(DTCP.com1_card4) # Removes the card from the deck
 
-            Check_Card_Played.second_card = " " # Assigns the card seen from the see the future to be " "
+            CCP.second_card = " " # Assigns the card seen from the see the future to be " "
 
         # Checks if com 1 or the player has played a see the future
-        elif Check_Card_Played.third_card != " ":
-            DTCP.com1_card4 = Check_Card_Played.third_card # Assigns the com 1's card 3 to the drawn card
+        elif CCP.third_card != " ":
+            DTCP.com1_card4 = CCP.third_card # Assigns the com 1's card 3 to the drawn card
             DTCP.com1_cards[3] = DTCP.com1_card4 # Assigns the part in the list to the drawn card
 
-            check_card(DTCP.com1_card4) # Removes the card from the deck
+            CCD.check_card(DTCP.com1_card4) # Removes the card from the deck
 
-            Check_Card_Played.third_card = " " # Assigns the card seen from the see the future to be " "
+            CCP.third_card = " " # Assigns the card seen from the see the future to be " "
 
         else:
             DTCP.com1_card4 = random.choice(Game_REWRITE.cards) # Assigns the com 1's card 1 to a random choice of the draw pile
             print(DTCP.com1_card4) # Prints the drawn card
             DTCP.com1_cards[3] = DTCP.com1_card4 # Assigns the part in the list to the drawn card
 
-            check_card(DTCP.com1_card4) # Removes the card from the deck
+            CCD.check_card(DTCP.com1_card4) # Removes the card from the deck
 
         # Checks if the player played an attack card
-        if Check_Card_Played.attack_card_played == True:
+        if CCP.attack_card_played == True:
             messagebox.showinfo("Exploding Kittens Game", "It is now Com1 turn again because you played a attack card") # Tells the player that it's com 1's turn again because they played an attack card
-            Check_Card_Played.attack_card_played = False # Re-assigns the bollen to be false
+            CCP.attack_card_played = False # Re-assigns the bollen to be false
             C1B.decied_card_to_play() # Calls the function
         else:
             messagebox.showinfo("Exploding Kittens Game", "Com1 has drawn, it's now currently your turn") # Tells the player that com 1 has drawn and that it's there turn
@@ -229,48 +227,48 @@ def draw_card():
     # Checks if card 5 is equal to ""
     elif DTCP.com1_card5 == "":
         # Checks if com 1 or the player has played a see the future
-        if Check_Card_Played.first_card != " ":
-            print(Check_Card_Played.first_card) # Prints the top card seen from the see the future
+        if CCP.first_card != " ":
+            print(CCP.first_card) # Prints the top card seen from the see the future
 
-            DTCP.com1_card5 = Check_Card_Played.first_card # Assigns the com 1's card 3 to the drawn card
+            DTCP.com1_card5 = CCP.first_card # Assigns the com 1's card 3 to the drawn card
             DTCP.com1_cards[4] = DTCP.com1_card5 # Assigns the part in the list to the drawn card
 
-            check_card(DTCP.com1_card5) # Removes the card from the deck
+            CCD.check_card(DTCP.com1_card5) # Removes the card from the deck
 
             print(DTCP.com1_cards) # Prints com 1's hand
 
-            Check_Card_Played.first_card = " " # Assigns the card seen from the see the future to be " "
+            CCP.first_card = " " # Assigns the card seen from the see the future to be " "
 
         # Checks if com 1 or the player has played a see the future
-        elif Check_Card_Played.second_card != " ":
-            DTCP.com1_card5 = Check_Card_Played.second_card # Assigns the com 1's card 3 to the drawn card
+        elif CCP.second_card != " ":
+            DTCP.com1_card5 = CCP.second_card # Assigns the com 1's card 3 to the drawn card
             DTCP.com1_cards[4] = DTCP.com1_card5 # Assigns the part in the list to the drawn card
 
-            check_card(DTCP.com1_card5) # Removes the card from the deck
+            CCD.check_card(DTCP.com1_card5) # Removes the card from the deck
 
-            Check_Card_Played.second_card = " " # Assigns the card seen from the see the future to be " "
+            CCP.second_card = " " # Assigns the card seen from the see the future to be " "
 
         # Checks if com 1 or the player has played a see the future
-        elif Check_Card_Played.third_card != " ":
-            DTCP.com1_card5 = Check_Card_Played.third_card # Assigns the com 1's card 3 to the drawn card
+        elif CCP.third_card != " ":
+            DTCP.com1_card5 = CCP.third_card # Assigns the com 1's card 3 to the drawn card
             DTCP.com1_cards[4] = DTCP.com1_card5 # Assigns the part in the list to the drawn card
 
-            check_card(DTCP.com1_card5) # Removes the card from the deck
+            CCD.check_card(DTCP.com1_card5) # Removes the card from the deck
 
-            Check_Card_Played.third_card = " " # Assigns the card seen from the see the future to be " "
+            CCP.third_card = " " # Assigns the card seen from the see the future to be " "
 
         else:
             DTCP.com1_card5 = random.choice(Game_REWRITE.cards) # Assigns the com 1's card 1 to a random choice of the draw pile
             print(DTCP.com1_card5) # Prints the drawn card
             DTCP.com1_cards[4] = DTCP.com1_card5 # Assigns the part in the list to the drawn card
 
-            check_card(DTCP.com1_card5) # Removes the card from the deck
+            CCD.check_card(DTCP.com1_card5) # Removes the card from the deck
 
 
         # Checks if the player played an attack card
-        if Check_Card_Played.attack_card_played == True:
+        if CCP.attack_card_played == True:
             messagebox.showinfo("Exploding Kittens Game", "It is now Com1 turn again because you played a attack card") # Tells the player that it's com 1's turn again because they played an attack card
-            Check_Card_Played.attack_card_played = False # Re-assigns the bollen to be false
+            CCP.attack_card_played = False # Re-assigns the bollen to be false
             C1B.decied_card_to_play() # Calls the function
         else:
             messagebox.showinfo("Exploding Kittens Game", "Com1 has drawn, it's now currently your turn") # Tells the player that com 1 has drawn and that it's there turn
@@ -282,47 +280,47 @@ def draw_card():
     # Checks if card 6 is equal to ""
     elif DTCP.com1_card6 == "":
         # Checks if com 1 or the player has played a see the future
-        if Check_Card_Played.first_card != " ":
-            print(Check_Card_Played.first_card) # Prints the top card seen from the see the future
+        if CCP.first_card != " ":
+            print(CCP.first_card) # Prints the top card seen from the see the future
 
-            DTCP.com1_card6 = Check_Card_Played.first_card # Assigns the com 1's card 3 to the drawn card
+            DTCP.com1_card6 = CCP.first_card # Assigns the com 1's card 3 to the drawn card
             DTCP.com1_cards[5] = DTCP.com1_card6 # Assigns the part in the list to the drawn card
 
-            check_card(DTCP.com1_card6) # Removes the card from the deck
+            CCD.check_card(DTCP.com1_card6) # Removes the card from the deck
 
             print(DTCP.com1_cards) # Prints com 1's hand
 
-            Check_Card_Played.first_card = " " # Assigns the card seen from the see the future to be " "
+            CCP.first_card = " " # Assigns the card seen from the see the future to be " "
 
         # Checks if com 1 or the player has played a see the future
-        elif Check_Card_Played.second_card != " ":
-            DTCP.com1_card6 = Check_Card_Played.second_card # Assigns the com 1's card 3 to the drawn card
+        elif CCP.second_card != " ":
+            DTCP.com1_card6 = CCP.second_card # Assigns the com 1's card 3 to the drawn card
             DTCP.com1_cards[5] = DTCP.com1_card6 # Assigns the part in the list to the drawn card
 
-            check_card(DTCP.com1_card6) # Removes the card from the deck
+            CCD.check_card(DTCP.com1_card6) # Removes the card from the deck
 
-            Check_Card_Played.second_card = " " # Assigns the card seen from the see the future to be " "
+            CCP.second_card = " " # Assigns the card seen from the see the future to be " "
 
         # Checks if com 1 or the player has played a see the future
-        elif Check_Card_Played.third_card != " ":
-            DTCP.com1_card6 = Check_Card_Played.third_card # Assigns the com 1's card 3 to the drawn card
+        elif CCP.third_card != " ":
+            DTCP.com1_card6 = CCP.third_card # Assigns the com 1's card 3 to the drawn card
             DTCP.com1_cards[5] = DTCP.com1_card6 # Assigns the part in the list to the drawn card
 
-            check_card(DTCP.com1_card6) # Removes the card from the deck
+            CCD.check_card(DTCP.com1_card6) # Removes the card from the deck
 
-            Check_Card_Played.third_card = " " # Assigns the card seen from the see the future to be " "
+            CCP.third_card = " " # Assigns the card seen from the see the future to be " "
 
         else:
             DTCP.com1_card6 = random.choice(Game_REWRITE.cards) # Assigns the com 1's card 1 to a random choice of the draw pile
             print(DTCP.com1_card6) # Prints the drawn card
             DTCP.com1_cards[5] = DTCP.com1_card6 # Assigns the part in the list to the drawn card
 
-            check_card(DTCP.com1_card6) # Removes the card from the deck
+            CCD.check_card(DTCP.com1_card6) # Removes the card from the deck
 
         # Checks if the player played an attack card
-        if Check_Card_Played.attack_card_played == True:
+        if CCP.attack_card_played == True:
             messagebox.showinfo("Exploding Kittens Game", "It is now Com1 turn again because you played a attack card") # Tells the player that it's com 1's turn again because they played an attack card
-            Check_Card_Played.attack_card_played = False # Re-assigns the bollen to be false
+            CCP.attack_card_played = False # Re-assigns the bollen to be false
             C1B.decied_card_to_play() # Calls the function
         else:
             messagebox.showinfo("Exploding Kittens Game", "Com1 has drawn, it's now currently your turn") # Tells the player that com 1 has drawn and that it's there turn
@@ -334,47 +332,47 @@ def draw_card():
     # Checks if card 7 is equal to ""
     elif DTCP.com1_card7 == "":
         # Checks if com 1 or the player has played a see the future
-        if Check_Card_Played.first_card != " ":
-            print(Check_Card_Played.first_card) # Prints the top card seen from the see the future
+        if CCP.first_card != " ":
+            print(CCP.first_card) # Prints the top card seen from the see the future
 
-            DTCP.com1_card7 = Check_Card_Played.first_card # Assigns the com 1's card 3 to the drawn card
+            DTCP.com1_card7 = CCP.first_card # Assigns the com 1's card 3 to the drawn card
             DTCP.com1_cards[6] = DTCP.com1_card7 # Assigns the part in the list to the drawn card
 
-            check_card(DTCP.com1_card7) # Removes the card from the deck
+            CCD.check_card(DTCP.com1_card7) # Removes the card from the deck
 
             print(DTCP.com1_cards) # Prints com 1's hand
 
-            Check_Card_Played.first_card = " " # Assigns the card seen from the see the future to be " "
+            CCP.first_card = " " # Assigns the card seen from the see the future to be " "
 
         # Checks if com 1 or the player has played a see the future
-        elif Check_Card_Played.second_card != " ":
-            DTCP.com1_card7 = Check_Card_Played.second_card # Assigns the com 1's card 3 to the drawn card
+        elif CCP.second_card != " ":
+            DTCP.com1_card7 = CCP.second_card # Assigns the com 1's card 3 to the drawn card
             DTCP.com1_cards[6] = DTCP.com1_card7 # Assigns the part in the list to the drawn card
 
-            check_card(DTCP.com1_card7) # Removes the card from the deck
+            CCD.check_card(DTCP.com1_card7) # Removes the card from the deck
 
-            Check_Card_Played.second_card = " " # Assigns the card seen from the see the future to be " "
+            CCP.second_card = " " # Assigns the card seen from the see the future to be " "
 
         # Checks if com 1 or the player has played a see the future
-        elif Check_Card_Played.third_card != " ":
-            DTCP.com1_card7 = Check_Card_Played.third_card # Assigns the com 1's card 3 to the drawn card
+        elif CCP.third_card != " ":
+            DTCP.com1_card7 = CCP.third_card # Assigns the com 1's card 3 to the drawn card
             DTCP.com1_cards[6] = DTCP.com1_card7 # Assigns the part in the list to the drawn card
 
-            check_card(DTCP.com1_card7) # Removes the card from the deck
+            CCD.check_card(DTCP.com1_card7) # Removes the card from the deck
 
-            Check_Card_Played.third_card = " " # Assigns the card seen from the see the future to be " "
+            CCP.third_card = " " # Assigns the card seen from the see the future to be " "
 
         else:
             DTCP.com1_card7 = random.choice(Game_REWRITE.cards) # Assigns the com 1's card 1 to a random choice of the draw pile
             print(DTCP.com1_card7) # Prints the drawn card
             DTCP.com1_cards[6] = DTCP.com1_card7 # Assigns the part in the list to the drawn card
 
-            check_card(DTCP.com1_card7) # Removes the card from the deck
+            CCD.check_card(DTCP.com1_card7) # Removes the card from the deck
 
         # Checks if the player played an attack card
-        if Check_Card_Played.attack_card_played == True:
+        if CCP.attack_card_played == True:
             messagebox.showinfo("Exploding Kittens Game", "It is now Com1 turn again because you played a attack card") # Tells the player that it's com 1's turn again because they played an attack card
-            Check_Card_Played.attack_card_played = False # Re-assigns the bollen to be false
+            CCP.attack_card_played = False # Re-assigns the bollen to be false
             C1B.decied_card_to_play() # Calls the function
         else:
             messagebox.showinfo("Exploding Kittens Game", "Com1 has drawn, it's now currently your turn") # Tells the player that com 1 has drawn and that it's there turn
@@ -449,7 +447,7 @@ def get_favor_or_stolen_card(card_to_add):
 # Function lets com 1 play 2 matching cat cards and than steal a card from the player than adds it to there hand
 def get_cat_card(com1_cat_card):
     # Enters a for loop checking if the card pass through in the argument equals to a card in com 1's hand
-    for cards_in_com1_hand in C1B.com1_cards:
+    for cards_in_com1_hand in DTCP.com1_cards:
         # Checks if cards_in_com1_hand is equal to the argument passed
         if cards_in_com1_hand == com1_cat_card:
             print("Theres a match") # Prints Theres a match
@@ -525,15 +523,15 @@ def check_com1_card():
         sleep(1) # Sleeps the program for 1 second (Makes it like com 1 is choosing a card to play)
 
         # Assigns the top 3 cards to a random choice, this will be used to be find the top 3 cards
-        Check_Card_Played.first_card = random.choice(Game_REWRITE.cards)
-        Check_Card_Played.second_card = random.choice(Game_REWRITE.cards)
-        Check_Card_Played.third_card = random.choice(Game_REWRITE.cards)
+        CCP.first_card = random.choice(Game_REWRITE.cards)
+        CCP.second_card = random.choice(Game_REWRITE.cards)
+        CCP.third_card = random.choice(Game_REWRITE.cards)
 
         # Prints the top 3 card assigned above
         print("--------------")
-        print(Check_Card_Played.first_card)
-        print(Check_Card_Played.second_card)
-        print(Check_Card_Played.third_card)
+        print(CCP.first_card)
+        print(CCP.second_card)
+        print(CCP.third_card)
         print("--------------")
 
         messagebox.showinfo("Exploding Kittens Game", "Com1 has played a see the future") # Tells the player that com 1 has played a see the future card
