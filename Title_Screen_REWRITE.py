@@ -34,8 +34,8 @@ def show_about():
     messagebox.showinfo("About", "Exploding Kittens Game, recreated in python by Noah Beaudin\nVersos: Alpha Build 1\nGithub Page: github.com/nerbler09\nCheck the licence for sharing and use of the source code")
 
 def show_licence_file():
-    # Opens the Licence.rft File In Wordpad
-    webbrowser.open("Licence.rtf")
+    # Opens the Licence.rft File In The Default Webbrowser
+    webbrowser.open("file://Licence/licence.html")
 
 def exit():
     # Quits the game
