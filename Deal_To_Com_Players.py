@@ -32,6 +32,7 @@ com3_card6 = ""
 com3_card7 = ""
 
 com1_cards = [" ", " ", " ", " ", " ", " ", " "]
+com2_cards = [" ", " ", " ", " ", " ", " ", " "]
 
 # Creates a function to be used when the player clicked on one of the com player cards
 def com_card_command(com_card, com_player):
@@ -238,6 +239,15 @@ def com2_amount2():
     
     com2_card7 = random.choice(Game_REWRITE.cards)
     CCD.check_card(com2_card7)
+
+    # Assigns the parts in the com1_cards list to the matching card drawn
+    com2_cards[0] = com2_card1
+    com2_cards[1] = com2_card2
+    com2_cards[2] = com2_card3
+    com2_cards[3] = com2_card4
+    com2_cards[4] = com2_card5
+    com2_cards[5] = com2_card6
+    com2_cards[6] = com2_card7
 
     # Creates and displays com 2's cards
     show_com2_card1 = tk.Button(Game_REWRITE.gameScreen, text = "     ", font = "15", command = lambda: com_card_command(com2_card1, "com2"))
