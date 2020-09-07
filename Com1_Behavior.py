@@ -39,13 +39,14 @@ def get_rid_of_card():
 
     # Checks if the card that com 1 is going to play is equal to com 1 card 6
     elif card_to_play == DTCP.com1_card6:
-        DTCP.com1_card6 = ""
-        DTCP.com1_cards[5] = DTCP.com1_card6
+        DTCP.com1_card6 = "" # Makes the card equal to an empty string
+        DTCP.com1_cards[5] = DTCP.com1_card6 # Makes the slot equal to the com 1 card
 
     # Checks if the card that com 1 is going to play is equal to com 1 card 7
     elif card_to_play == DTCP.com1_card7:
         DTCP.com1_card7 = "" # Makes the card equal to an empty string
         DTCP.com1_cards[6] = DTCP.com1_card7 # Makes the slot equal to the com 1 card
+
     else:
         print("An error has been encountered") # Prints An error has been encountered
 

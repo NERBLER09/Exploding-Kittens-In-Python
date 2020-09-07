@@ -218,6 +218,8 @@ def com1_amount3():
 
 # Creates a function to be called if the player selected 2 com players
 def com2_amount2():
+    global com2_card1, com2_card2, com2_card3, com2_card4, com2_card5, com2_card6, com2_card7, com2_cards
+
     # Draws com 2's card and checks the card that was drawn
     com2_card1 = random.choice(Game_REWRITE.cards)
     CCD.check_card(com2_card1)
