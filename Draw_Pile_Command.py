@@ -78,9 +78,9 @@ def draw_card():
         tk.messagebox._show("Exploding Kittens Game", "You've drawn a: " + drawn_card) # Tells the player which card they've drawn
 
         # Checks if the player selected 1 com player (This isolates com 1 behavior, since the behavior is best with 1 com player)
-        if wt.com_number == 1:
+        if wt.com_number == 1 or 2:
                 Game_REWRITE.com1_turn = True # Makes it be com 1's turn
-
+                Game_REWRITE.com2_turn = True 
                 # Checks if com 1 has played an attack
                 if C1B.card_to_play == "attack":
                     tk.messagebox.showerror("Exploding Kittens Game", "It is your turn again since com1 has played an attack card") # Tells the player thats it there turn again because com 1 played a attack card
@@ -98,8 +98,9 @@ def draw_card():
         Game_REWRITE.player_turn = False # Makes it not be the players turn
 
         # Checks if the player selected 1 com player (This isolates com 1 behavior, since the behavior is best with 1 com player)
-        if wt.com_number == 1:
+        if wt.com_number == 1 or 2:
             Game_REWRITE.com1_turn = True # Makes it be com 1's turn
+            Game_REWRITE.com2_turn = True
 
                 # Checks if com 1 has played an attack
             if C1B.card_to_play == "attack":

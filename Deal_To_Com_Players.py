@@ -150,6 +150,15 @@ def com1_amount2():
     com1_card7 = random.choice(Game_REWRITE.cards)
     CCD.check_card(com1_card7)
 
+    # Assigns the parts in the com1_cards list to the matching card drawn
+    com1_cards[0] = com1_card1
+    com1_cards[1] = com1_card2
+    com1_cards[2] = com1_card3
+    com1_cards[3] = com1_card4
+    com1_cards[4] = com1_card5
+    com1_cards[5] = com1_card6
+    com1_cards[6] = com1_card7
+
     # Creates and displays com 1's cards
     show_com1_card1 = tk.Button(Game_REWRITE.gameScreen, text = "     ", font = "15", command = lambda: com_card_command(com1_card1, "com1"))
     show_com1_card1.place(y =420, x = 80) # Creates and places the card at x = 80, y = 420
