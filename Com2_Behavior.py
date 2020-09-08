@@ -39,6 +39,24 @@ def get_rid_of_card(card_to_remove):
     else:
         print("An error has been encountered")
 
+# Function to check the card com 2 is going to play to check that there not playing an already played card
+def check_card_to_play(card_to_check):
+    global card_to_play
+
+    if card_to_check == "":
+        card_to_play = random.choice(DTCP.com2_cards)
+
+        print(card_to_check)
+
+        check_card_to_play(card_to_play)
+    
+    elif card_to_check == "nope":
+        card_to_play = random.choice(DTCP.com2_cards)
+
+        print(card_to_check)
+
+        check_card_to_play(card_to_play)
+
 # Main function that decides the card com 2 should play
 def decied_card_to_play():
     global card_to_play
