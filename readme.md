@@ -1,7 +1,8 @@
 # Exploding Kittens Recreated In Python
 ---
 ## Overview Of Project
-This is a fan project to recreate in Python Tkinter
+This is a fan project to recreate in Python Tkinter.
+
 Anyone wanting to use the source code to use it to create there own project,
 fill free to clone it, but it would be appreciate if you gave credit
 
