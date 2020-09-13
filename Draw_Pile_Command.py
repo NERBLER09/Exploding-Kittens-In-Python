@@ -98,9 +98,8 @@ def draw_card():
         Game_REWRITE.player_turn = False # Makes it not be the players turn
 
         # Checks if the player selected 1 com player (This isolates com 1 behavior, since the behavior is best with 1 com player)
-        if wt.com_number == 1 or 2:
+        if wt.com_number == 1:
             Game_REWRITE.com1_turn = True # Makes it be com 1's turn
-            Game_REWRITE.com2_turn = True
 
                 # Checks if com 1 has played an attack
             if C1B.card_to_play == "attack":
@@ -109,6 +108,11 @@ def draw_card():
                 C1B.card_to_play = "" # # Sets com 1's card to play to an empty string so the the next time the player goes to draw this if statement doesn't repeat
             else:
                 C1B.decied_card_to_play() # Makes it be con 1's turn
+
+        # Checks if the player selected com 1 and 2 (This makes this so when com 1 draws it's com 2's turn in stead the players)
+        elif wt.com_number == 2:
+            Game_REWRITE.com1_turn = True
+            Game_REWRITE.com2_turn = True
 
     # Checks if it's not the player's turn
     elif Game_REWRITE.player_turn == False:
