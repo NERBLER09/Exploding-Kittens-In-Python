@@ -78,9 +78,8 @@ def draw_card():
         tk.messagebox._show("Exploding Kittens Game", "You've drawn a: " + drawn_card) # Tells the player which card they've drawn
 
         # Checks if the player selected 1 com player (This isolates com 1 behavior, since the behavior is best with 1 com player)
-        if wt.com_number == 1 or 2:
+        if wt.com_number == 1:
                 Game_REWRITE.com1_turn = True # Makes it be com 1's turn
-                Game_REWRITE.com2_turn = True 
                 # Checks if com 1 has played an attack
                 if C1B.card_to_play == "attack":
                     tk.messagebox.showerror("Exploding Kittens Game", "It is your turn again since com1 has played an attack card") # Tells the player thats it there turn again because com 1 played a attack card
@@ -88,6 +87,11 @@ def draw_card():
                     C1B.card_to_play = "" # # Sets com 1's card to play to an empty string so the the next time the player goes to draw this if statement doesn't repeat
                 else:
                     C1B.decied_card_to_play() # Makes it be con 1's turn
+        elif wt.com_number == 2:
+            Game_REWRITE.com2_turn = True
+            Game_REWRITE.com2_turn = True
+
+            C1B.decied_card_to_play()
 
     # Checks if it's the players turn, but they have not played any cards
     elif Game_REWRITE.player_turn == True:
@@ -101,7 +105,7 @@ def draw_card():
         if wt.com_number == 1:
             Game_REWRITE.com1_turn = True # Makes it be com 1's turn
 
-                # Checks if com 1 has played an attack
+            # Checks if com 1 has played an attack
             if C1B.card_to_play == "attack":
                 tk.messagebox.showerror("Exploding Kittens Game", "It is your turn again since com1 has played an attack card") # Tells the player thats it there turn again because com 1 played a attack card
                 Game_REWRITE.player_turn = True # Makes it the players turn
@@ -113,6 +117,7 @@ def draw_card():
         elif wt.com_number == 2:
             Game_REWRITE.com1_turn = True
             Game_REWRITE.com2_turn = True
+            C1B.decied_card_to_play()
 
     # Checks if it's not the player's turn
     elif Game_REWRITE.player_turn == False:
