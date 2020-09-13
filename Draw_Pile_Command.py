@@ -3,9 +3,11 @@ import Game_REWRITE
 import Check_Card_Played as CCP
 import Check_Card_Drawn as CCD
 import Com1_Behavior as C1B
+import Com2_Behavior as C2B
 import WelcomeTEST as wt
 import tkinter as tk
 import random
+from tkinter import messagebox
 
 # Function draws the player a card
 def draw_card():
@@ -82,16 +84,22 @@ def draw_card():
                 Game_REWRITE.com1_turn = True # Makes it be com 1's turn
                 # Checks if com 1 has played an attack
                 if C1B.card_to_play == "attack":
-                    tk.messagebox.showerror("Exploding Kittens Game", "It is your turn again since com1 has played an attack card") # Tells the player thats it there turn again because com 1 played a attack card
+                    messagebox.showerror("Exploding Kittens Game", "It is your turn again since com1 has played an attack card") # Tells the player thats it there turn again because com 1 played a attack card
                     Game_REWRITE.player_turn = True # Makes it the players turn
                     C1B.card_to_play = "" # # Sets com 1's card to play to an empty string so the the next time the player goes to draw this if statement doesn't repeat
                 else:
                     C1B.decied_card_to_play() # Makes it be con 1's turn
         elif wt.com_number == 2:
-            Game_REWRITE.com2_turn = True
+            Game_REWRITE.com1_turn = True
             Game_REWRITE.com2_turn = True
 
-            C1B.decied_card_to_play()
+            # Checks if com 2 played an attack card
+            if C2B.card_to_play == "attack":
+                messagebox.showerror("Exploding Kittens Game", "It is your turn again since com2  has played an attack card")
+                Game_REWRITE.player_turn = True
+                C2B.card_to_play = ""
+            else:
+                C1B.decied_card_to_play()
 
     # Checks if it's the players turn, but they have not played any cards
     elif Game_REWRITE.player_turn == True:
@@ -107,17 +115,24 @@ def draw_card():
 
             # Checks if com 1 has played an attack
             if C1B.card_to_play == "attack":
-                tk.messagebox.showerror("Exploding Kittens Game", "It is your turn again since com1 has played an attack card") # Tells the player thats it there turn again because com 1 played a attack card
+                messagebox.showerror("Exploding Kittens Game", "It is your turn again since com1 has played an attack card") # Tells the player thats it there turn again because com 1 played a attack card
                 Game_REWRITE.player_turn = True # Makes it the players turn
                 C1B.card_to_play = "" # # Sets com 1's card to play to an empty string so the the next time the player goes to draw this if statement doesn't repeat
             else:
                 C1B.decied_card_to_play() # Makes it be con 1's turn
 
-        # Checks if the player selected com 1 and 2 (This makes this so when com 1 draws it's com 2's turn in stead the players)
+        # Checks if the player selected com 1 and 2 (This makes this so when com 1 draws it's com 2's turn instead the players)
         elif wt.com_number == 2:
             Game_REWRITE.com1_turn = True
             Game_REWRITE.com2_turn = True
-            C1B.decied_card_to_play()
+
+            # Checks if com 2 played an attack card
+            if C2B.card_to_play == "attack":
+                messagebox.showerror("Exploding Kittens Game", "It is your turn again since com2  has played an attack card")
+                Game_REWRITE.player_turn = True
+                C2B.card_to_play = ""
+            else:
+                C1B.decied_card_to_play()
 
     # Checks if it's not the player's turn
     elif Game_REWRITE.player_turn == False:
