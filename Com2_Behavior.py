@@ -2,6 +2,7 @@
 import Game_REWRITE
 from tkinter import messagebox
 import Deal_To_Com_Players as DTCP
+import Check_Com2_Card_Played as CC2CP
 import random
 
 card_to_play = ""
@@ -66,8 +67,11 @@ def decied_card_to_play():
 
         print("Com 2's Hand: " + str(DTCP.com2_cards))
 
-        card_to_play = random.choice(DTCP.com2_cards)
+        # card_to_play = random.choice(DTCP.com2_cards)
+        card_to_play  = "skip"
 
         print(card_to_play)
 
         get_rid_of_card(card_to_play)
+
+        CC2CP.check_card_played()
