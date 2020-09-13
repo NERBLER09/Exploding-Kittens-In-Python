@@ -2,6 +2,7 @@
 import tkinter as tk
 from tkinter import messagebox
 import webbrowser
+import os
 
 # Creates the Tk Window
 windows = tk.Tk()
@@ -35,7 +36,7 @@ def show_about():
 
 def show_licence_file():
     # Opens the licence.html File In The Webbrowser
-    webbrowser.open("file:///Licence/licence.html", new = 1)
+    webbrowser.open("file://" + os.path.realpath("Licence/licence.html"), new = 1)
 
 def exit():
     # Quits the game
