@@ -35,7 +35,7 @@ def show_about():
 
 def show_licence_file():
     # Opens the licence.html File In The Webbrowser
-    webbrowser.open("file://Licence/licence.htl")
+    webbrowser.open("file:///Licence/licence.html", new = 1)
 
 def exit():
     # Quits the game
