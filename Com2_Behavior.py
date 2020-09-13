@@ -67,8 +67,7 @@ def decied_card_to_play():
 
         print("Com 2's Hand: " + str(DTCP.com2_cards))
 
-        # card_to_play = random.choice(DTCP.com2_cards)
-        card_to_play  = "skip"
+        card_to_play = random.choice(DTCP.com2_cards)
 
         print(card_to_play)
 
