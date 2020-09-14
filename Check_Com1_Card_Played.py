@@ -543,7 +543,6 @@ def check_com1_card():
         sleep(1) # Sleeps the program for 1 second (Makes it like com 1 is choosing a card to play)
         messagebox.showinfo("Exploding Kittens Game", "Com1 has played a favor, click a card to give to them.") # Tells the player that com 1 has played a favor
         Game_REWRITE.discard_pile_text.set(C1B.card_to_play + "\n \n \n") # Sets the discard pile text to the current card that com 1 has played
-        C1B.card_to_play = "favor" # Sets card_to_play to "favor"
 
     # Checks if com 1 has player a shuffle card
     elif C1B.card_to_play == "shuffle":
