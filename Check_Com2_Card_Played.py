@@ -14,13 +14,18 @@ def check_card_played():
         Game_REWRITE.com2_turn = False
 
     # Checks if com 2 has played an attack card
-    if C2B.card_to_play == "attack":
+    elif C2B.card_to_play == "attack":
         time.sleep(1)
         messagebox.showinfo("Exploding Kittens Game", "Com1 has played an attack. Com 2 has skiped there turn and made you have 2 turns")
         Game_REWRITE.discard_pile_text.set(C2B.card_to_play + "\n\n\n")
         Game_REWRITE.player_turn = True
         Game_REWRITE.com1_turn = False
         Game_REWRITE.com2_turn = False
-
+    
+    # Checks if com 2 has played an favor card
+    elif C2B.card_to_play == "favor":
+        time.sleep(1)
+        messagebox.showinfo("Exploding Kittens Game", "Com 2 has played a favor, click a card to give to them.")
+        Game_REWRITE.discard_pile_text.set(C2B.card_to_play + "\n\n\n")
 
     # TODO Add rest of cards
