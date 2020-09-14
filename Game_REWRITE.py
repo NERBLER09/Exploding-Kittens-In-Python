@@ -7,6 +7,7 @@ import Check_Card_Drawn as CCD
 import Draw_Pile_Command as DPC
 import Deal_To_Com_Players as dtcp
 import Com1_Behavior as C1B
+import Com2_Behavior as C2B
 from Check_Com1_Card_Played import draw_card, get_favor_or_stolen_card
 from tkinter import messagebox
 
@@ -141,6 +142,22 @@ def card1_command():
         else:
             messagebox.showerror("Exploding Kittens Game", "You have not given your card to com1") # Tells the player that the card that they clicked on wasn't given to com 1
     
+    # Checks if com 2 played a favor
+    elif C2B.card_to_play == "favor":
+        favoraction = messagebox.askyesno("Exploding Kittens Game","Are you sure you want to give com1 your " + CARDS_IN_HAND1, icon = "warning")
+
+        # Checks if the player clicked on yes
+        if favoraction == True:
+            messagebox.showinfo("Exploding Kittens Game", "You have given com1 your " + CARDS_IN_HAND1)
+            card1_played = True
+            C2B.card_to_play = ""
+
+            show_card1.destroy()
+            player_cards[0] = ""
+
+        else:
+            messagebox.showerror("Exploding Kittens Game", "You have not given your card to com 2")
+
     else:        
         messagebox.showerror('Exploding Kittens Game', "Sorry, it's not your turn") # Tells the player that it's not there turn
 
@@ -177,6 +194,22 @@ def card2_command():
             draw_card() # Makes com 1 draw a card
         else:
             messagebox.showerror("Exploding Kittens Game", "You have not given your card to com1") # Tells the player that the card that they clicked on wasn't given to com 1
+
+    # Checks if com 2 played a favor
+    elif C2B.card_to_play == "favor":
+        favoraction = messagebox.askyesno("Exploding Kittens Game","Are you sure you want to give com1 your " + CARDS_IN_HAND2, icon = "warning")
+
+        # Checks if the player clicked on yes
+        if favoraction == True:
+            messagebox.showinfo("Exploding Kittens Game", "You have given com1 your " + CARDS_IN_HAND2)
+            card2_played = True
+            C2B.card_to_play = ""
+
+            show_card2.destroy()
+            player_cards[1] = ""
+
+        else:
+            messagebox.showerror("Exploding Kittens Game", "You have not given your card to com 2")
 
     else:        
         messagebox.showerror('Exploding Kittens Game', "Sorry, it's not your turn") # Tells the player that it's not there turn
@@ -215,6 +248,22 @@ def card3_command():
         else:
             messagebox.showerror("Exploding Kittens Game", "You have not given your card to com1") # Tells the player that the card that they clicked on wasn't given to com 1
 
+    # Checks if com 2 played a favor
+    elif C2B.card_to_play == "favor":
+        favoraction = messagebox.askyesno("Exploding Kittens Game","Are you sure you want to give com1 your " + CARDS_IN_HAND3, icon = "warning")
+
+        # Checks if the player clicked on yes
+        if favoraction == True:
+            messagebox.showinfo("Exploding Kittens Game", "You have given com1 your " + CARDS_IN_HAND3)
+            card3_played = True
+            C2B.card_to_play = ""
+
+            show_card3.destroy()
+            player_cards[2] = ""
+
+        else:
+            messagebox.showerror("Exploding Kittens Game", "You have not given your card to com 2")
+
     else:        
         messagebox.showerror('Exploding Kittens Game', "Sorry, it's not your turn") # Tells the player that it's not there turn
 
@@ -252,6 +301,22 @@ def card4_command():
         else:
             messagebox.showerror("Exploding Kittens Game", "You have not given your card to com1") # Tells the player that the card that they clicked on wasn't given to com 1
 
+    # Checks if com 2 played a favor
+    elif C2B.card_to_play == "favor":
+        favoraction = messagebox.askyesno("Exploding Kittens Game","Are you sure you want to give com1 your " + CARDS_IN_HAND4, icon = "warning")
+
+        # Checks if the player clicked on yes
+        if favoraction == True:
+            messagebox.showinfo("Exploding Kittens Game", "You have given com1 your " + CARDS_IN_HAND4)
+            card4_played = True
+            C2B.card_to_play = ""
+
+            show_card4.destroy()
+            player_cards[3] = ""
+
+        else:
+            messagebox.showerror("Exploding Kittens Game", "You have not given your card to com 2")
+
     else:        
         messagebox.showerror('Exploding Kittens Game', "Sorry, it's not your turn") # Tells the player that it's not there turn
 
@@ -286,6 +351,22 @@ def card5_command():
             draw_card() # Makes com 1 draw a card
         else: 
             messagebox.showerror("Exploding Kittens Game", "You have not given your card to com1") # Tells the player that the card that they clicked on wasn't given to com 1
+
+    # Checks if com 2 played a favor
+    elif C2B.card_to_play == "favor":
+        favoraction = messagebox.askyesno("Exploding Kittens Game","Are you sure you want to give com1 your " + CARDS_IN_HAND5, icon = "warning")
+
+        # Checks if the player clicked on yes
+        if favoraction == True:
+            messagebox.showinfo("Exploding Kittens Game", "You have given com1 your " + CARDS_IN_HAND5)
+            card5_played = True
+            C2B.card_to_play = ""
+
+            show_card5.destroy()
+            player_cards[4] = ""
+
+        else:
+            messagebox.showerror("Exploding Kittens Game", "You have not given your card to com 2")
 
     else:        
         messagebox.showerror('Exploding Kittens Game', "Sorry, it's not your turn") # Tells the player that it's not there turn
@@ -325,6 +406,22 @@ def card6_command():
         else:
             messagebox.showerror("Exploding Kittens Game", "You have not given your card to com1") # Tells the player that the card that they clicked on wasn't given to com 1
 
+    # Checks if com 2 played a favor
+    elif C2B.card_to_play == "favor":
+        favoraction = messagebox.askyesno("Exploding Kittens Game","Are you sure you want to give com1 your " + CARDS_IN_HAND6, icon = "warning")
+
+        # Checks if the player clicked on yes
+        if favoraction == True:
+            messagebox.showinfo("Exploding Kittens Game", "You have given com1 your " + CARDS_IN_HAND6)
+            card6_played = True
+            C2B.card_to_play = ""
+
+            show_card6.destroy()
+            player_cards[5] = ""
+
+        else:
+            messagebox.showerror("Exploding Kittens Game", "You have not given your card to com 2")
+
     else:        
         messagebox.showerror('Exploding Kittens Game', "Sorry, it's not your turn") # Tells the player that it's not there turn
 
@@ -363,6 +460,22 @@ def card7_command():
         else:
             messagebox.showerror("Exploding Kittens Game", "You have not given your card to com1") # Tells the player that the card that they clicked on wasn't given to com 1
     
+    # Checks if com 2 played a favor
+    elif C2B.card_to_play == "favor":
+        favoraction = messagebox.askyesno("Exploding Kittens Game","Are you sure you want to give com1 your " + CARDS_IN_HAND7, icon = "warning")
+
+        # Checks if the player clicked on yes
+        if favoraction == True:
+            messagebox.showinfo("Exploding Kittens Game", "You have given com1 your " + CARDS_IN_HAND7)
+            card7_played = True
+            C2B.card_to_play = ""
+
+            show_card7.destroy()
+            player_cards[6] = ""
+
+        else:
+            messagebox.showerror("Exploding Kittens Game", "You have not given your card to com 2")
+
     else:
         messagebox.showerror('Exploding Kittens Game', "Sorry, it's not your turn") # Tells the player that it's not there turn
 
