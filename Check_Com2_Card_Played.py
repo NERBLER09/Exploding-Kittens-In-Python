@@ -1,6 +1,7 @@
 import time
 import Game_REWRITE
 import Com2_Behavior as C2B
+import random
 from tkinter import messagebox
 
 def check_card_played():
@@ -27,5 +28,19 @@ def check_card_played():
         time.sleep(1)
         messagebox.showinfo("Exploding Kittens Game", "Com 2 has played a favor, click a card to give to them.")
         Game_REWRITE.discard_pile_text.set(C2B.card_to_play + "\n\n\n")
+
+    # Checks if com 2 has player a shuffle card
+    elif C2B.card_to_play == "shuffle":
+        time.sleep(1)
+
+        random.shuffle(Game_REWRITE.cards)
+        random.shuffle(Game_REWRITE.cards)
+        random.shuffle(Game_REWRITE.cards)
+        random.shuffle(Game_REWRITE.cards)
+        random.shuffle(Game_REWRITE.cards)
+        random.shuffle(Game_REWRITE.cards)
+        random.shuffle(Game_REWRITE.cards)
+
+        messagebox.showinfo("Exploding Kittens Game", "Com1 has shuffled the deck, it's now your turn.")
 
     # TODO Add rest of cards
