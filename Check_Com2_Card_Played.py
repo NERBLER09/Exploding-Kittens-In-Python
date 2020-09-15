@@ -1,6 +1,7 @@
 import time
 import Game_REWRITE
 import Com2_Behavior as C2B
+import Check_Card_Played as CCP
 import random
 from tkinter import messagebox
 
@@ -42,5 +43,24 @@ def check_card_played():
         random.shuffle(Game_REWRITE.cards)
 
         messagebox.showinfo("Exploding Kittens Game", "Com1 has shuffled the deck, it's now your turn.")
+
+    # Checks if com 2 has played a see the future
+    elif C2B.card_to_play == "see the future":
+        time.sleep(1)
+
+        # Assigns the top 3 cards to a random choice, this will be used to be find the top 3 cards
+        CCP.first_card = random.choice(Game_REWRITE.cards)
+        CCP.second_card = random.choice(Game_REWRITE.cards)
+        CCP.third_card = random.choice(Game_REWRITE.cards)
+
+        # Prints the top 3 card assigned above
+        print("--------------")
+        print(CCP.first_card)
+        print(CCP.second_card)
+        print(CCP.third_card)
+        print("--------------")
+
+        messagebox.showinfo("Exploding Kittens Game", "Com1 has played a see the future")
+        Game_REWRITE.discard_pile_text.set(C2B.card_to_play + "\n \n \n")
 
     # TODO Add rest of cards
