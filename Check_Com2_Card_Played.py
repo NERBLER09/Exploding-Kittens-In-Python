@@ -63,4 +63,8 @@ def check_card_played():
         messagebox.showinfo("Exploding Kittens Game", "Com1 has played a see the future")
         Game_REWRITE.discard_pile_text.set(C2B.card_to_play + "\n \n \n")
 
+    # Checks if com 2 has played a cat card 
+    if C2B.card_to_play == 'potato cat' or 'taco cat' or 'rainbow ralphing cat' or 'beard cat' or 'cattermellon':
+        messagebox.showinfo("Exploding Kittens Game", "Com 2 has played a cat card")
+
     # TODO Add rest of cards
