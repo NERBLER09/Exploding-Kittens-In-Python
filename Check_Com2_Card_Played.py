@@ -60,11 +60,15 @@ def check_card_played():
         print(CCP.third_card)
         print("--------------")
 
-        messagebox.showinfo("Exploding Kittens Game", "Com1 has played a see the future")
+        messagebox.showinfo("Exploding Kittens Game", "Com 2 has played a see the future")
         Game_REWRITE.discard_pile_text.set(C2B.card_to_play + "\n \n \n")
 
     # Checks if com 2 has played a cat card 
     if C2B.card_to_play == 'potato cat' or 'taco cat' or 'rainbow ralphing cat' or 'beard cat' or 'cattermellon':
         messagebox.showinfo("Exploding Kittens Game", "Com 2 has played a cat card")
 
-    # TODO Add rest of cards
+    # TODO Update com 2 to draw card
+
+    Game_REWRITE.player_turn = True
+
+    messagebox.showinfo("Exploding Kittens Game", "It's now currently your turn.")
