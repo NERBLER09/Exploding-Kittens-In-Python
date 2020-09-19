@@ -40,6 +40,8 @@ def get_rid_of_card(card_to_remove):
     else:
         print("An error has been encountered")
 
+    print("Com 2's hand after remove: " + str(DTCP.com2_cards))
+
 # Function to check the card com 2 is going to play to check that there not playing an already played card
 def check_card_to_play(card_to_check):
     global card_to_play
