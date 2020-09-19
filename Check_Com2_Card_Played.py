@@ -20,8 +20,6 @@ def draw_card():
 
         CCD.check_card(DTCP.com2_card1)
 
-        print("After Drawn: " + str(DTCP.com2_cards))
-
     # Checks if DTCP.com2_card2 is equal to ""
     elif DTCP.com2_card2 == "":
         DTCP.com2_card2 = random.choice(Game_REWRITE.cards)
@@ -33,8 +31,6 @@ def draw_card():
         Game_REWRITE.com2_turn = False
 
         CCD.check_card(DTCP.com2_cards)
-
-        print("After Drawn: " + str(DTCP.com2_cards))
 
     # Checks if DTCP.com2_card3 is equal to ""
     elif DTCP.com2_card3 == "":
@@ -48,7 +44,19 @@ def draw_card():
 
         CCD.check_card(DTCP.com2_cards)
 
-        print("After Drawn: " + str(DTCP.com2_cards))
+    # Checks if DTCP.com2_card4 is equal to ""
+    elif DTCP.com2_card4 == "":
+        DTCP.com2_card4 = random.choice(Game_REWRITE.cards)
+        DTCP.com2_cards[3] = DTCP.com2_card2
+
+        messagebox.showinfo("Exploding Kittens Game", "Com 2 has drawn, it's now currently your turn") 
+        Game_REWRITE.player_turn = True 
+        Game_REWRITE.com1_turn = False
+        Game_REWRITE.com2_turn = False
+
+        CCD.check_card(DTCP.com2_cards)
+
+    print("After Drawn: " + str(DTCP.com2_cards))
 
 def check_card_played():
     # Checks if com 2 has played an skip card
