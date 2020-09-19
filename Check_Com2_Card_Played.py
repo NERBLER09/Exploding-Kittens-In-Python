@@ -65,6 +65,18 @@ def draw_card():
         Game_REWRITE.com2_turn = False
 
         CCD.check_card(DTCP.com2_cards)
+    
+    # Checks if DTCP.com2_card6 is equal to ""
+    elif DTCP.com2_card6 == "":
+        DTCP.com2_card6 = random.choice(Game_REWRITE.cards)
+        DTCP.com2_cards[5] = DTCP.com2_card5
+
+        messagebox.showinfo("Exploding Kittens Game", "Com 2 has drawn, it's now currently your turn") 
+        Game_REWRITE.player_turn = True 
+        Game_REWRITE.com1_turn = False
+        Game_REWRITE.com2_turn = False
+
+        CCD.check_card(DTCP.com2_cards)
 
     print("After Drawn: " + str(DTCP.com2_cards))
 
