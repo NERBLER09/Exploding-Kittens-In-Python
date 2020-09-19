@@ -35,7 +35,7 @@ def draw_card():
     # Checks if DTCP.com2_card3 is equal to ""
     elif DTCP.com2_card3 == "":
         DTCP.com2_card3 = random.choice(Game_REWRITE.cards)
-        DTCP.com2_cards[2] = DTCP.com2_card2
+        DTCP.com2_cards[2] = DTCP.com2_card3
 
         messagebox.showinfo("Exploding Kittens Game", "Com 2 has drawn, it's now currently your turn") 
         Game_REWRITE.player_turn = True 
@@ -47,7 +47,17 @@ def draw_card():
     # Checks if DTCP.com2_card4 is equal to ""
     elif DTCP.com2_card4 == "":
         DTCP.com2_card4 = random.choice(Game_REWRITE.cards)
-        DTCP.com2_cards[3] = DTCP.com2_card2
+        DTCP.com2_cards[3] = DTCP.com2_card4
+
+        messagebox.showinfo("Exploding Kittens Game", "Com 2 has drawn, it's now currently your turn") 
+        Game_REWRITE.player_turn = True 
+        Game_REWRITE.com1_turn = False
+        Game_REWRITE.com2_turn = False
+
+    # Checks if DTCP.com2_card5 is equal to ""
+    elif DTCP.com2_card5 == "":
+        DTCP.com2_card5 = random.choice(Game_REWRITE.cards)
+        DTCP.com2_cards[4] = DTCP.com2_card5
 
         messagebox.showinfo("Exploding Kittens Game", "Com 2 has drawn, it's now currently your turn") 
         Game_REWRITE.player_turn = True 
