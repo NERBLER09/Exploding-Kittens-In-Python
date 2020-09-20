@@ -92,6 +92,13 @@ def draw_card():
 
     print("After Drawn: " + str(DTCP.com2_cards))
 
+# Function lets com 2 play 2 matching cat cards and than steal a card from the player or com 2, than adds it to there hand
+def get_cat_card(com1_cat_card):
+    # Enters a for loop checking if the card pass through in the argument equals to a card in com 2's hand
+    for cards_in_com1_hand in DTCP.com2_cards:
+        # TODO Add rest of code
+        break
+
 def check_card_played():
     # Checks if com 2 has played an skip card
     if C2B.card_to_play == "skip":
@@ -159,6 +166,8 @@ def check_card_played():
     # Checks if com 2 has played a cat card 
     elif C2B.card_to_play == 'potato cat' or 'taco cat' or 'rainbow ralphing cat' or 'beard cat' or 'cattermellon':
         messagebox.showinfo("Exploding Kittens Game", "Com 2 has played a cat card")
+
+        get_cat_card(C2B.card_to_play)
 
         draw_card()
 
