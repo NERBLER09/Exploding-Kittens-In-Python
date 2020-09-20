@@ -7,6 +7,7 @@ import Deal_To_Com_Players as DTCP
 import Com1_Behavior as C1B
 import Check_Com1_Card_Played as CC1CP
 import Check_Card_Played as CCP
+from tkinter import simpledialog, messagebox
 
 # Creates all the variables needed
 message_box1 = ' '
@@ -690,73 +691,73 @@ def steal_card():
 
     # Checks if the player selected 1 com player
     if com_number == 1:
-        tk.messagebox.showwarning('Cat Cards', 'Click a card under Com 1 (Closing is required, but you can still get a card.)') # Tells the player to click a card under com 1 and that they can steal a card
+        messagebox.showwarning('Cat Cards', 'Click a card under Com 1 (Closing is required, but you can still get a card.)') # Tells the player to click a card under com 1 and that they can steal a card
 
     # Checks if the player selected 2 com player
     elif com_number == 2:
-        message_box2 = tk.simpledialog.askstring('Cat Cards', 'Enter the com player you want to steal from (1 or 2)') # Asks if the player who they want to steal from
+        message_box2 = simpledialog.askstring('Cat Cards', 'Enter the com player you want to steal from (1 or 2)') # Asks if the player who they want to steal from
 
         # If the player entered a number larger or smaller then 1-3 or a string
         if message_box2 > '2' or message_box2 < '1':
-            tk.messagebox.showerror('Cat Cards', 'You entered a larger number than what was expected or was a not a number.\nPlease try agin') # Tells the user that they inputted somthing that was not expected
+            messagebox.showerror('Cat Cards', 'You entered a larger number than what was expected or was a not a number.\nPlease try agin') # Tells the user that they inputted somthing that was not expected
 
             steal_card() # repeats the function
 
         # Checks if the player inputted "1" as there input
         elif message_box2 == '1':
-            tk.messagebox.showwarning('Cat Cards', 'Click a card under Com 1 (Closing is required, but you can still get a card.)') # Tells the player to click a card under com 1 and that they can steal a card
+            messagebox.showwarning('Cat Cards', 'Click a card under Com 1 (Closing is required, but you can still get a card.)') # Tells the player to click a card under com 1 and that they can steal a card
 
         # Checks if the player inputted "2" as there input
         elif message_box2 == '2':
-            tk.messagebox.showwarning('Cat Cards', 'Click a card under Com 2 (Closing is required, but you can still get a card.)') # Tells the player to click a card under com 2 and that they can steal a card
+            messagebox.showwarning('Cat Cards', 'Click a card under Com 2 (Closing is required, but you can still get a card.)') # Tells the player to click a card under com 2 and that they can steal a card
 
     # Checks if the player selected 3 com players
     elif com_number == 3:
-        message_box2 = tk.simpledialog.askstring('Cat Cards', 'Enter the com player you want to steal from (1, 2, or 3)') # Asks the player who they want to steal a card from
+        message_box2 = simpledialog.askstring('Cat Cards', 'Enter the com player you want to steal from (1, 2, or 3)') # Asks the player who they want to steal a card from
 
         # Checks if the player inputted a number less than 1 or larger then 3 or a string
         if message_box2 > '3' or message_box2 < '1':
-            tk.messagebox.showerror('Cat Cards', 'You entered a larger number than what was expected or was a not a number.\nPlease try agin') # Tells the player that they inputted a number that was not expected
+            messagebox.showerror('Cat Cards', 'You entered a larger number than what was expected or was a not a number.\nPlease try agin') # Tells the player that they inputted a number that was not expected
 
             steal_card() # repeats the function
 
         # Checks if the player inputted "1" as there target
         elif message_box2 == '1':
-            tk.messagebox.showwarning('Cat Cards', 'Click a card under Com 1 (Closing is required, but you can still get a card.)') # Tells the player to click a card under com 1
+            messagebox.showwarning('Cat Cards', 'Click a card under Com 1 (Closing is required, but you can still get a card.)') # Tells the player to click a card under com 1
 
         # Checks if the player inputted "2" as there target
         elif message_box2 == '2':
-            tk.messagebox.showwarning('Cat Cards', 'Click a card under Com 2 (Closing is required, but you can still get a card.)') # Tells the player to click a card under com 2
+            messagebox.showwarning('Cat Cards', 'Click a card under Com 2 (Closing is required, but you can still get a card.)') # Tells the player to click a card under com 2
 
         # Checks if the player inputted "3" as there target
         elif message_box2 == '3':
-            tk.messagebox.showwarning('Cat Cards', 'Click a card under Com 3 (Closing is required, but you can still get a card.)') # Tells the player to click a card under com 3
+            messagebox.showwarning('Cat Cards', 'Click a card under Com 3 (Closing is required, but you can still get a card.)') # Tells the player to click a card under com 3
 
 def get_favor():
     # Checks if the player selected 3 com players
     if com_number == 3:
-        message_box1 = tk.simpledialog.askstring('Favor', 'Please enter the com player you want to ask (1, 2, 3)') # Asks the com player who they want to get a favor from
+        message_box1 = simpledialog.askstring('Favor', 'Please enter the com player you want to ask (1, 2, 3)') # Asks the com player who they want to get a favor from
 
         # If the player entered a number larger or smaller then 1-3 or a string
         if message_box1 > '3' or message_box1 < '1':
-            tk.messagebox.showerror('Favor', 'You entered a larger number than what was expected or was a not a number.\nPlease try agin') # Tells the player that they've enter a larger or smaller number than what wan expected
+            messagebox.showerror('Favor', 'You entered a larger number than what was expected or was a not a number.\nPlease try agin') # Tells the player that they've enter a larger or smaller number than what wan expected
 
             get_favor() # repeats the function
 
         # Checks if the player want to get a favor from com 3
         elif message_box1 == '3':
             favor_card = random.choice(Game_REWRITE.cards) # Creates a string from a random choice from the cards list
-            tk.messagebox._show('Favor', 'Com 3 has given you a ' + favor_card) # Tells the player has given them the card selected in the favor_card
+            messagebox._show('Favor', 'Com 3 has given you a ' + favor_card) # Tells the player has given them the card selected in the favor_card
             display_favored_card(favor_card) # Displays the favor
         # Checks if the player want to get a favor from com 2
         elif message_box1 == '2':
             favor_card = random.choice(Game_REWRITE.cards)  # Creates a string from a random choice from the cards list
-            tk.messagebox._show('Favor', 'Com 2 has given you a ' + favor_card) # Tells the player has given them the card selected in the favor_card
+            messagebox._show('Favor', 'Com 2 has given you a ' + favor_card) # Tells the player has given them the card selected in the favor_card
             display_favored_card(favor_card) # Displays the favor
         # Checks if the player want to get a favor from com 1
         elif message_box1 == '1':
             favor_card = random.choice(Game_REWRITE.cards) # Creates a string from a random choice from the cards list
-            tk.messagebox._show('Favor', 'Com 1 has given you a ' + favor_card) # Tells the player has given them the card selected in the favor_card
+            messagebox._show('Favor', 'Com 1 has given you a ' + favor_card) # Tells the player has given them the card selected in the favor_card
             display_favored_card(favor_card) # Displays the favor
 
     # Checks if the player selected 1 com player
@@ -767,7 +768,7 @@ def get_favor():
 
     # Checks if the player selected 2 com player
     elif com_number == 2:
-        message_box1 = tk.simpledialog.askstring('Favor', 'Please enter the com player you want to ask (1 or 2)') # Asks the com player who they want to get a favor from
+        message_box1 = simpledialog.askstring('Favor', 'Please enter the com player you want to ask (1 or 2)') # Asks the com player who they want to get a favor from
 
         # If the player entered a number larger or smaller then 1-3 or a string
         if message_box1 > '2' or message_box1 < '1':
