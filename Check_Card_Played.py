@@ -857,6 +857,12 @@ def check_card_to_play(card_to_check):
 
         tk.messagebox.showinfo('See The Future', 'Top card: ' + first_card + " Middle card: " + second_card + " Bottom card: " + third_card)
 
+    # Checks if the player played a nope card
+    elif card_to_check == "nope":
+        print("Player played a nope card")
+
+        # TODO Add code to cancel what card com 1, 2 or 3 played
+
     # If the player played a cat card run the function below
     elif card_to_check == 'potato cat' or 'taco cat' or 'rainbow ralphing \n cat' or 'beard cat' or 'cattermellon':
         cat_card_function(card_to_check)

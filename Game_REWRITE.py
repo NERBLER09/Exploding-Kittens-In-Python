@@ -513,7 +513,6 @@ show_com_players()
 
 ## Chose + Show cards       
 CARDS_IN_HAND1 = random.choice(cards)
-# CARDS_IN_HAND1 = "attack"
 CCD.check_card(CARDS_IN_HAND1) # Checks the card drawn
 
 CARDS_IN_HAND2 = random.choice(cards)
