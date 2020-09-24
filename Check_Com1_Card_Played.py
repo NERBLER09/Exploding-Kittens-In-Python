@@ -489,10 +489,6 @@ def get_cat_card(com1_cat_card):
             print("Theres a match") # Prints Theres a match
             messagebox.showinfo("Exploding Kittens Game", "Com1 has successfully play 2 " + cards_in_com1_hand + " cards") # Tells the player that com 1 has played 2 mathing cat cards
 
-            C1B.card_to_play = com1_cat_card # Sets the card_to_play to the argument passed
-
-            C1B.get_rid_of_card() # Gets rid of the second from com 1's hand
-
             steal_card = random.choice(Game_REWRITE.player_cards) # Assing a variable to a random choice from the player hand, that will be card com 1 steals from the players hand
 
             # Enters a while loop if steal_card equals to ""
