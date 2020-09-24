@@ -101,6 +101,24 @@ def get_cat_card(com2_cat_card):
             print("Theres a match")
             messagebox.showinfo("Exploding Kittens Game", "Com 2 has successfully play 2 " + cards_in_com2_hand + " cards")
 
+            steal_card = random.choice(Game_REWRITE.player_cards) # Assing a variable to a random choice from the player hand, that will be card com 2 steals
+
+            # Enters a while loop if steal_card equals to ""
+            while steal_card == "":
+                steal_card = random.choice(Game_REWRITE.player_cards)
+
+            # TODO Make com 2 add stolen card to there hand
+            messagebox.showerror("Exploding Kittens Game", "Com 2 has stolen your " + steal_card) # Tells the user that com 1 has stolen x card from them
+            break
+        
+        # Prints if there is no current match 
+        else:
+            print("Theres not currently a match")
+
+    # Tells the played that com 2 hasn't played 2 matching cat cards
+    if cards_in_com2_hand != com2_cat_card:
+        messagebox.showerror("Exploding Kittens Game", 'Com 1 has not successfully played 2 cat cards')
+
 def check_card_played():
     # Checks if com 2 has played an skip card
     if C2B.card_to_play == "skip":
