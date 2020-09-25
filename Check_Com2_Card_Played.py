@@ -93,6 +93,45 @@ def draw_card():
 
     print("After Drawn: " + str(DTCP.com2_cards))
 
+# Function adds the card gotten from a favor or a card stolen from a cat card to there hand
+def add_favor_or_stolen_card(card_to_add):
+    # TODO Add rest of code in if/elif/else statements
+
+    # Adds the card to there 1st card slot
+    if DTCP.com2_card1 == "":
+        pass
+
+    # Adds the card to there 2st card slot
+    elif DTCP.com2_card2 == "":
+        pass
+
+    # Adds the card to there 3st card slot
+    elif DTCP.com2_card3 == "":
+        pass
+
+    # Adds the card to there 3st card slot
+    elif DTCP.com2_card3 == "":
+        pass
+
+    # Adds the card to there 4st card slot
+    elif DTCP.com2_card4 == "":
+        pass
+
+    # Adds the card to there 5st card slot
+    elif DTCP.com2_card5 == "":
+        pass
+
+    # Adds the card to there 6st card slot
+    elif DTCP.com2_card6 == "":
+        pass
+
+    # Adds the card to there 7st card slot
+    elif DTCP.com2_card7 == "":
+        pass
+
+    else:
+        print("An error has been encountered.")
+
 # Function lets com 2 play 2 matching cat cards and than steal a card from the player or com 2, than adds it to there hand
 def get_cat_card(com2_cat_card):
     # Enters a for loop checking if the card pass through in the argument equals to a card in com 2's hand
