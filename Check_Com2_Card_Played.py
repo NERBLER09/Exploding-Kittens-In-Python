@@ -7,6 +7,7 @@ import Check_Card_Drawn as CCD
 import random
 from tkinter import messagebox
 
+# Draws a card for com 2
 def draw_card():
     # Checks if DTCP.com2_card1 is equal to ""
     if DTCP.com2_card1 == "":
