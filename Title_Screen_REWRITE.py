@@ -20,13 +20,7 @@ def play_button_clicked():
 
         import WelcomeTEST
         WelcomeTEST
-    else:
-        tk.messagebox.showinfo("Exploding Kittens Main Menu", "The window will now close")
-
-        windows.destroy()
-
-        quit()        
-
+        
 def web_clicked():
     webbrowser.open('https://explodingkittens.com/how-to-play') # Opens the how to play web site
 
