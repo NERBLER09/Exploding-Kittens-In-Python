@@ -150,7 +150,7 @@ def get_cat_card(com2_cat_card):
             while steal_card == "":
                 steal_card = random.choice(Game_REWRITE.player_cards)
 
-            # TODO Make com 2 add stolen card to there hand
+            add_favor_or_stolen_card(steal_card)
             messagebox.showerror("Exploding Kittens Game", "Com 2 has stolen your " + steal_card) # Tells the user that com 1 has stolen x card from them
             break
         
