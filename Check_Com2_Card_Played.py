@@ -99,35 +99,38 @@ def add_favor_or_stolen_card(card_to_add):
 
     # Adds the card to there 1st card slot
     if DTCP.com2_card1 == "":
-        pass
+        DTCP.com2_card1 = card_to_add 
+        DTCP.com2_cards[0] = DTCP.com2_card1
 
     # Adds the card to there 2st card slot
     elif DTCP.com2_card2 == "":
-        pass
+        DTCP.com2_card2 = card_to_add 
+        DTCP.com2_cards[0] = DTCP.com2_card2
 
     # Adds the card to there 3st card slot
     elif DTCP.com2_card3 == "":
-        pass
-
-    # Adds the card to there 3st card slot
-    elif DTCP.com2_card3 == "":
-        pass
+        DTCP.com2_card3 = card_to_add 
+        DTCP.com2_cards[0] = DTCP.com2_card3
 
     # Adds the card to there 4st card slot
     elif DTCP.com2_card4 == "":
-        pass
+        DTCP.com2_card4 = card_to_add 
+        DTCP.com2_cards[0] = DTCP.com2_card4
 
     # Adds the card to there 5st card slot
     elif DTCP.com2_card5 == "":
-        pass
+        DTCP.com2_card5 = card_to_add 
+        DTCP.com2_cards[0] = DTCP.com2_card5
 
     # Adds the card to there 6st card slot
     elif DTCP.com2_card6 == "":
-        pass
+        DTCP.com2_card6 = card_to_add 
+        DTCP.com2_cards[0] = DTCP.com2_card6
 
     # Adds the card to there 7st card slot
     elif DTCP.com2_card7 == "":
-        pass
+        DTCP.com2_card7 = card_to_add 
+        DTCP.com2_cards[0] = DTCP.com2_card7
 
     else:
         print("An error has been encountered.")
