@@ -32,6 +32,14 @@ def show_licence_file():
     # Opens the licence.html File In The Webbrowser
     webbrowser.open("file://" + os.path.realpath("Licence/licence.html"), new = 1)
 
+# Opens My Github page
+def open_github():
+    webbrowser.open("https://github.com/nerbler09")
+
+# Opens the Github repo
+def open_github_repo():
+    webbrowser.open("https://github.com/nerbler09/exploding-kittens-in-python.git")
+
 def exit():
     # Quits the game
     windows.destroy()
@@ -57,6 +65,8 @@ option_menu.add_command(label = "Quit", command = exit)
 
 help_menu = tk.Menu(title_menu)
 title_menu.add_cascade(label = "Help", menu = help_menu)
+help_menu.add_cascade(label = "Github Page", command = open_github)
+help_menu.add_cascade(label = "Github Repo", command = open_github_repo)
 help_menu.add_command(label = "Open About", command = show_about)
 help_menu.add_command(label = "Open Licence File", command = show_licence_file)
 
