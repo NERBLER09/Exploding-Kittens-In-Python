@@ -95,8 +95,6 @@ def draw_card():
 
 # Function adds the card gotten from a favor or a card stolen from a cat card to there hand
 def add_favor_or_stolen_card(card_to_add):
-    # TODO Add rest of code in if/elif/else statements
-
     # Adds the card to there 1st card slot
     if DTCP.com2_card1 == "":
         DTCP.com2_card1 = card_to_add 
