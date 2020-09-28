@@ -581,7 +581,7 @@ draw_pile.place(x = 400, y = 200)
 discard_pile_text = tk.StringVar()
 discard_pile = tk.Label(gameScreen, textvariable = discard_pile_text, font = "Arial 30", bg  = "red")
 discard_pile.place(x = 800, y = 200)
-discard_pile_text.set("Discard \n \n Text")
+discard_pile_text.set("Discard \n \n Pile")
 
 # Quit button
 quit_button = tk.Button(gameScreen, text = "QUIT", command = exit_app)
