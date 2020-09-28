@@ -92,6 +92,7 @@ def draw_card():
         CCD.check_card(DTCP.com2_cards)
 
     print("After Drawn: " + str(DTCP.com2_cards))
+    Game_REWRITE.player_turn = True
 
 # Function adds the card gotten from a favor or a card stolen from a cat card to there hand
 def add_favor_or_stolen_card(card_to_add):
@@ -184,8 +185,6 @@ def check_card_played():
         time.sleep(1)
         messagebox.showinfo("Exploding Kittens Game", "Com 2 has played a favor, click a card to give to them.")
         Game_REWRITE.discard_pile_text.set(C2B.card_to_play + "\n\n\n")
-
-        draw_card()
  
     # Checks if com 2 has player a shuffle card
     elif C2B.card_to_play == "shuffle":
@@ -230,9 +229,3 @@ def check_card_played():
         get_cat_card(C2B.card_to_play)
 
         draw_card()
-
-    # TODO Update com 2 to draw card
-
-    Game_REWRITE.player_turn = True
-
-    messagebox.showinfo("Exploding Kittens Game", "It's now currently your turn.")

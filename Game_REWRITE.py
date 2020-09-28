@@ -8,6 +8,7 @@ import Draw_Pile_Command as DPC
 import Deal_To_Com_Players as dtcp
 import Com1_Behavior as C1B
 import Com2_Behavior as C2B
+import Check_Com2_Card_Played as CC2CP
 from Check_Com1_Card_Played import draw_card, get_favor_or_stolen_card
 from tkinter import messagebox
 
@@ -155,6 +156,8 @@ def card1_command():
             show_card1.destroy()
             player_cards[0] = ""
 
+            CC2CP.draw_card()
+
         else:
             messagebox.showerror("Exploding Kittens Game", "You have not given your card to com 2")
 
@@ -207,6 +210,8 @@ def card2_command():
 
             show_card2.destroy()
             player_cards[1] = ""
+
+            CC2CP.draw_card()
 
         else:
             messagebox.showerror("Exploding Kittens Game", "You have not given your card to com 2")
@@ -261,6 +266,8 @@ def card3_command():
             show_card3.destroy()
             player_cards[2] = ""
 
+            CC2CP.draw_card()
+
         else:
             messagebox.showerror("Exploding Kittens Game", "You have not given your card to com 2")
 
@@ -314,6 +321,8 @@ def card4_command():
             show_card4.destroy()
             player_cards[3] = ""
 
+            CC2CP.draw_card()
+
         else:
             messagebox.showerror("Exploding Kittens Game", "You have not given your card to com 2")
 
@@ -365,6 +374,8 @@ def card5_command():
             show_card5.destroy()
             player_cards[4] = ""
 
+            CC2CP.draw_card()
+
         else:
             messagebox.showerror("Exploding Kittens Game", "You have not given your card to com 2")
 
@@ -403,6 +414,9 @@ def card6_command():
             player_cards[5] = "" # Assigns the empty slot to the gave card
 
             draw_card() # Makes com 1 draw a card
+
+            CC2CP.draw_card()
+
         else:
             messagebox.showerror("Exploding Kittens Game", "You have not given your card to com1") # Tells the player that the card that they clicked on wasn't given to com 1
 
@@ -472,6 +486,8 @@ def card7_command():
 
             show_card7.destroy()
             player_cards[6] = ""
+
+            CC2CP.draw_card()
 
         else:
             messagebox.showerror("Exploding Kittens Game", "You have not given your card to com 2")
