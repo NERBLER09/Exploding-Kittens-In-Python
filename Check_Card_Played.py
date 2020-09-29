@@ -30,13 +30,13 @@ attack_card_played = False
 def display_favored_card(favored_card):
     # Checks if the player played card 1
     if Game_REWRITE.card1_played == True:
-        CARDS_IN_HAND1 = favored_card # Creates a variables from the argument pass through when the function was called
+        Game_REWRITE.CARDS_IN_HAND1 = favored_card # Creates a variables from the argument pass through when the function was called
 
         # Creates a function to be used when the card is shown
         def card1_command():
             # Checks if its the players turn
             if Game_REWRITE.player_turn == True:
-                Game_REWRITE.discard_pile_text.set(CARDS_IN_HAND1 + "\n \n \n") # Sets the discard pile display text to the card that you've played
+                Game_REWRITE.discard_pile_text.set(Game_REWRITE.CARDS_IN_HAND1 + "\n \n \n") # Sets the discard pile display text to the card that you've played
                 show_card1.destroy() # Destroys the card
 
                 Game_REWRITE.card1_played = True # Sets the bollen from the Game_REWRITE script to True
@@ -47,11 +47,11 @@ def display_favored_card(favored_card):
 
             # Checks if com 1 played a favor
             elif C1B.card_to_play == "favor":
-                favoraction = messagebox.askyesno("Exploding Kittens Game","Are you sure you want to give com1 your " + CARDS_IN_HAND1, icon = "warning") # Asks the player for if they a sure they want to give that card to com 1
+                favoraction = messagebox.askyesno("Exploding Kittens Game","Are you sure you want to give com1 your " + Game_REWRITE.CARDS_IN_HAND1, icon = "warning") # Asks the player for if they a sure they want to give that card to com 1
 
                 # Checks if the player clicked on "yes"
                 if favoraction == True:
-                    messagebox.showinfo("Exploding Kittens Game", "You have given com1 your " + CARDS_IN_HAND1) # Tells the player that there card was add to com 1's hand
+                    messagebox.showinfo("Exploding Kittens Game", "You have given com1 your " + Game_REWRITE.CARDS_IN_HAND1) # Tells the player that there card was add to com 1's hand
 
                     Game_REWRITE.card1_played = True  # Makes the bollen False
 
@@ -67,11 +67,11 @@ def display_favored_card(favored_card):
 
             # Checks if com 2 played a favor
             elif C2B.card_to_play == "favor":
-                favoraction = messagebox.askyesno("Exploding Kittens Game","Are you sure you want to give com1 your " + CARDS_IN_HAND1, icon = "warning")
+                favoraction = messagebox.askyesno("Exploding Kittens Game","Are you sure you want to give com1 your " + Game_REWRITE.CARDS_IN_HAND1, icon = "warning")
 
                 # Checks if the player clicked on yes
                 if favoraction == True:
-                    messagebox.showinfo("Exploding Kittens Game", "You have given com1 your " + CARDS_IN_HAND1)
+                    messagebox.showinfo("Exploding Kittens Game", "You have given com1 your " + Game_REWRITE.CARDS_IN_HAND1)
                     card1_played = True
                     C2B.card_to_play = ""
 
@@ -91,17 +91,17 @@ def display_favored_card(favored_card):
 
         Game_REWRITE.card1_played = False # Makes so that the played haven't played card 1
 
-        Game_REWRITE.player_cards[0] = CARDS_IN_HAND1 # Assigns the empty slot to the gave card
+        Game_REWRITE.player_cards[0] = Game_REWRITE.CARDS_IN_HAND1 # Assigns the empty slot to the gave card
 
     # Checks if the player played card 2
     elif Game_REWRITE.card2_played == True:
-        CARDS_IN_HAND2 = favored_card # Creates a variable from the argument pass through when the function was called
+        Game_REWRITE.CARDS_IN_HAND2 = favored_card # Creates a variable from the argument pass through when the function was called
 
         # Creates a function to be used when the card is shown
         def card2_command():
             # Checks if it's  the players turn
             if Game_REWRITE.player_turn == True:
-                Game_REWRITE.discard_pile_text.set(CARDS_IN_HAND2 + "\n \n \n") # Sets the discard pile display text to the card that you've played
+                Game_REWRITE.discard_pile_text.set(Game_REWRITE.CARDS_IN_HAND2 + "\n \n \n") # Sets the discard pile display text to the card that you've played
                 show_card2.destroy() # Destroys the card
 
                 Game_REWRITE.card2_played = True # Sets the bollen from the Game_REWRITE script to True
@@ -112,11 +112,11 @@ def display_favored_card(favored_card):
 
             # Checks if com 1 played a favor
             elif C1B.card_to_play == "favor":
-                favoraction = messagebox.askyesno("Exploding Kittens Game","Are you sure you want to give com1 your " + CARDS_IN_HAND2, icon = "warning") # Asks the player for if they a sure they want to give that card to com 1
+                favoraction = messagebox.askyesno("Exploding Kittens Game","Are you sure you want to give com1 your " + Game_REWRITE.CARDS_IN_HAND2, icon = "warning") # Asks the player for if they a sure they want to give that card to com 1
 
                 # Checks if the player clicked on "yes"
                 if favoraction == True:
-                    messagebox.showinfo("Exploding Kittens Game", "You have given com1 your " + CARDS_IN_HAND2) # Tells the player that there card was add to com 1's hand
+                    messagebox.showinfo("Exploding Kittens Game", "You have given com1 your " + Game_REWRITE.CARDS_IN_HAND2) # Tells the player that there card was add to com 1's hand
 
                     Game_REWRITE.card2_played = True # Sets the bollen from the Game_REWRITE script to True
 
@@ -132,11 +132,11 @@ def display_favored_card(favored_card):
 
             # Checks if com 2 played a favor
             elif C2B.card_to_play == "favor":
-                favoraction = messagebox.askyesno("Exploding Kittens Game","Are you sure you want to give com1 your " + CARDS_IN_HAND2, icon = "warning")
+                favoraction = messagebox.askyesno("Exploding Kittens Game","Are you sure you want to give com1 your " + Game_REWRITE.CARDS_IN_HAND2, icon = "warning")
 
                 # Checks if the player clicked on yes
                 if favoraction == True:
-                    messagebox.showinfo("Exploding Kittens Game", "You have given com1 your " + CARDS_IN_HAND2)
+                    messagebox.showinfo("Exploding Kittens Game", "You have given com1 your " + Game_REWRITE.CARDS_IN_HAND2)
                     card2_played = True
                     C2B.card_to_play = ""
 
@@ -156,17 +156,17 @@ def display_favored_card(favored_card):
 
         Game_REWRITE.card2_played = False # Makes so that the played haven't played card 2
 
-        Game_REWRITE.player_cards[1] = CARDS_IN_HAND2 # Assigns the empty slot to the gave card
+        Game_REWRITE.player_cards[1] = Game_REWRITE.CARDS_IN_HAND2 # Assigns the empty slot to the gave card
 
     # Checks if the player played card 3
     elif Game_REWRITE.card3_played == True:
-        CARDS_IN_HAND3 = favored_card # Creates a variable from the argument pass through when the function was called
+        Game_REWRITE.CARDS_IN_HAND3 = favored_card # Creates a variable from the argument pass through when the function was called
 
         # Creates a function to be used when the card is shown
         def card3_command():
             # Checks if it's  the players turn
             if Game_REWRITE.player_turn == True:
-                Game_REWRITE.discard_pile_text.set(CARDS_IN_HAND3 + "\n \n \n") # Sets the discard pile display text to the card that you've played
+                Game_REWRITE.discard_pile_text.set(Game_REWRITE.CARDS_IN_HAND3 + "\n \n \n") # Sets the discard pile display text to the card that you've played
                 show_card3.destroy() # Destroys the card
 
                 Game_REWRITE.card3_played = True # Sets the bollen from the Game_REWRITE script to True
@@ -177,11 +177,11 @@ def display_favored_card(favored_card):
 
             # Checks if com 1 played a favor
             elif C1B.card_to_play == "favor":
-                favoraction = messagebox.askyesno("Exploding Kittens Game","Are you sure you want to give com1 your " + CARDS_IN_HAND3, icon = "warning") # Asks the player for if they a sure they want to give that card to com 1
+                favoraction = messagebox.askyesno("Exploding Kittens Game","Are you sure you want to give com1 your " + Game_REWRITE.CARDS_IN_HAND3, icon = "warning") # Asks the player for if they a sure they want to give that card to com 1
 
                 # Asks the player for if they a sure they want to give that card to com 1
                 if favoraction == True:
-                    messagebox.showinfo("Exploding Kittens Game", "You have given com1 your " + CARDS_IN_HAND3) # Tells the player that there card was add to com 1's hand
+                    messagebox.showinfo("Exploding Kittens Game", "You have given com1 your " + Game_REWRITE.CARDS_IN_HAND3) # Tells the player that there card was add to com 1's hand
 
                     Game_REWRITE.card3_played = True # Sets the bollen from the Game_REWRITE script to True
 
@@ -197,11 +197,11 @@ def display_favored_card(favored_card):
 
             # Checks if com 2 played a favor
             elif C2B.card_to_play == "favor":
-                favoraction = messagebox.askyesno("Exploding Kittens Game","Are you sure you want to give com1 your " + CARDS_IN_HAND3, icon = "warning")
+                favoraction = messagebox.askyesno("Exploding Kittens Game","Are you sure you want to give com1 your " + Game_REWRITE.CARDS_IN_HAND3, icon = "warning")
 
                 # Checks if the player clicked on yes
                 if favoraction == True:
-                    messagebox.showinfo("Exploding Kittens Game", "You have given com1 your " + CARDS_IN_HAND3)
+                    messagebox.showinfo("Exploding Kittens Game", "You have given com1 your " + Game_REWRITE.CARDS_IN_HAND3)
                     card3_played = True
                     C2B.card_to_play = ""
 
@@ -221,17 +221,17 @@ def display_favored_card(favored_card):
 
         Game_REWRITE.card3_played = False # Makes so that the played haven't played card
 
-        Game_REWRITE.player_cards[2] = CARDS_IN_HAND3 # Re-assigns the slot in the list to match that the played card
+        Game_REWRITE.player_cards[2] = Game_REWRITE.CARDS_IN_HAND3 # Re-assigns the slot in the list to match that the played card
 
     # Checks if the player played card 4
     elif Game_REWRITE.card4_played == True:
-        CARDS_IN_HAND4 = favored_card # Creates a variable from the argument pass through when the function was called
+        Game_REWRITE.CARDS_IN_HAND4 = favored_card # Creates a variable from the argument pass through when the function was called
 
         # Creates a function to be used when the card is shown
         def card4_command():
             # Checks if it's  the players turn
             if Game_REWRITE.player_turn == True:
-                Game_REWRITE.discard_pile_text.set(CARDS_IN_HAND4 + "\n \n \n") # Sets the discard pile display text to the card that you've played
+                Game_REWRITE.discard_pile_text.set(Game_REWRITE.CARDS_IN_HAND4 + "\n \n \n") # Sets the discard pile display text to the card that you've played
                 show_card4.destroy() # Destroys the card
 
                 Game_REWRITE.card4_played = True # Sets the bollen from the Game_REWRITE script to True
@@ -242,11 +242,11 @@ def display_favored_card(favored_card):
 
             # Checks if com 1 played a favor
             elif C1B.card_to_play == "favor":
-                favoraction = messagebox.askyesno("Exploding Kittens Game","Are you sure you want to give com1 your " + CARDS_IN_HAND4, icon = "warning") # Asks the player for if they a sure they want to give that card to com 1
+                favoraction = messagebox.askyesno("Exploding Kittens Game","Are you sure you want to give com1 your " + Game_REWRITE.CARDS_IN_HAND4, icon = "warning") # Asks the player for if they a sure they want to give that card to com 1
 
                 # Checks if the player clicked on "yes"
                 if favoraction == True:
-                    messagebox.showinfo("Exploding Kittens Game", "You have given com1 your " + CARDS_IN_HAND4) # Tells the player that there card was add to com 1's hand
+                    messagebox.showinfo("Exploding Kittens Game", "You have given com1 your " + Game_REWRITE.CARDS_IN_HAND4) # Tells the player that there card was add to com 1's hand
 
                     Game_REWRITE.card4_played = True # Sets the bollen from the Game_REWRITE script to True
 
@@ -262,11 +262,11 @@ def display_favored_card(favored_card):
 
             # Checks if com 2 played a favor
             elif C2B.card_to_play == "favor":
-                favoraction = messagebox.askyesno("Exploding Kittens Game","Are you sure you want to give com1 your " + CARDS_IN_HAND4, icon = "warning")
+                favoraction = messagebox.askyesno("Exploding Kittens Game","Are you sure you want to give com1 your " + Game_REWRITE.CARDS_IN_HAND4, icon = "warning")
 
                 # Checks if the player clicked on yes
                 if favoraction == True:
-                    messagebox.showinfo("Exploding Kittens Game", "You have given com1 your " + CARDS_IN_HAND4)
+                    messagebox.showinfo("Exploding Kittens Game", "You have given com1 your " + Game_REWRITE.CARDS_IN_HAND4)
                     card4_played = True
                     C2B.card_to_play = ""
 
@@ -286,17 +286,17 @@ def display_favored_card(favored_card):
 
         Game_REWRITE.card4_played = False # Makes so that the played haven't played card
 
-        Game_REWRITE.player_cards[3] = CARDS_IN_HAND4 # Re-assigns the slot in the list to match that the played card
+        Game_REWRITE.player_cards[3] = Game_REWRITE.CARDS_IN_HAND4 # Re-assigns the slot in the list to match that the played card
 
     # Checks if the player played card 5
     elif Game_REWRITE.card5_played == True:
-        CARDS_IN_HAND5 = favored_card # Creates a variable from the argument pass through when the function was called
+        Game_REWRITE.CARDS_IN_HAND5 = favored_card # Creates a variable from the argument pass through when the function was called
 
         # Creates a function to be used when the card is shown
         def card5_command():
             # Checks if it's  the players turn
             if Game_REWRITE.player_turn == True:
-                Game_REWRITE.discard_pile_text.set(CARDS_IN_HAND5 + "\n \n \n") # Sets the discard pile display text to the card that you've played
+                Game_REWRITE.discard_pile_text.set(Game_REWRITE.CARDS_IN_HAND5 + "\n \n \n") # Sets the discard pile display text to the card that you've played
                 show_card5.destroy() # Destroys the card
 
                 Game_REWRITE.card5_played = True # Sets the bollen from the Game_REWRITE script to True
@@ -306,11 +306,11 @@ def display_favored_card(favored_card):
 
             # Checks if com 1 played a favor
             elif C1B.card_to_play == "favor":
-                favoraction = messagebox.askyesno("Exploding Kittens Game","Are you sure you want to give com1 your " + CARDS_IN_HAND5, icon = "warning") # Asks the player for if they a sure they want to give that card to com 1
+                favoraction = messagebox.askyesno("Exploding Kittens Game","Are you sure you want to give com1 your " + Game_REWRITE.CARDS_IN_HAND5, icon = "warning") # Asks the player for if they a sure they want to give that card to com 1
 
                 # Checks if the player clicked on "yes"
                 if favoraction == True:
-                    messagebox.showinfo("Exploding Kittens Game", "You have given com1 your " + CARDS_IN_HAND5) # Tells the player that there card was add to com 1's hand
+                    messagebox.showinfo("Exploding Kittens Game", "You have given com1 your " + Game_REWRITE.CARDS_IN_HAND5) # Tells the player that there card was add to com 1's hand
 
                     Game_REWRITE.card5_played = True # Sets the bollen from the Game_REWRITE script to True
 
@@ -325,11 +325,11 @@ def display_favored_card(favored_card):
 
             # Checks if com 2 played a favor
             elif C2B.card_to_play == "favor":
-                favoraction = messagebox.askyesno("Exploding Kittens Game","Are you sure you want to give com1 your " + CARDS_IN_HAND5, icon = "warning")
+                favoraction = messagebox.askyesno("Exploding Kittens Game","Are you sure you want to give com1 your " + Game_REWRITE.CARDS_IN_HAND5, icon = "warning")
 
                 # Checks if the player clicked on yes
                 if favoraction == True:
-                    messagebox.showinfo("Exploding Kittens Game", "You have given com1 your " + CARDS_IN_HAND5)
+                    messagebox.showinfo("Exploding Kittens Game", "You have given com1 your " + Game_REWRITE.CARDS_IN_HAND5)
                     card5_played = True
                     C2B.card_to_play = ""
 
@@ -349,17 +349,17 @@ def display_favored_card(favored_card):
 
         Game_REWRITE.card5_played = False # Makes so that the played haven't played card
 
-        Game_REWRITE.player_cards[4] = CARDS_IN_HAND5 # Re-assigns the slot in the list to match that the played card
+        Game_REWRITE.player_cards[4] = Game_REWRITE.CARDS_IN_HAND5 # Re-assigns the slot in the list to match that the played card
 
     # Checks if the player played card 6
     elif Game_REWRITE.card6_played == True:
-        CARDS_IN_HAND6 = favored_card # Creates a variable from the argument pass through when the function was called
+        Game_REWRITE.CARDS_IN_HAND6 = favored_card # Creates a variable from the argument pass through when the function was called
 
         # Creates a function to be used when the card is shown
         def card6_command():
             # Checks if it's  the players turn
             if Game_REWRITE.player_turn == True:
-                Game_REWRITE.discard_pile_text.set(CARDS_IN_HAND6 + "\n \n \n") # Sets the discard pile display text to the card that you've played
+                Game_REWRITE.discard_pile_text.set(Game_REWRITE.CARDS_IN_HAND6 + "\n \n \n") # Sets the discard pile display text to the card that you've played
 
                 show_card6.destroy() # Destroys the card
 
@@ -371,11 +371,11 @@ def display_favored_card(favored_card):
 
             # Checks if com 1 played a favor
             elif C1B.card_to_play == "favor":
-                favoraction = messagebox.askyesno("Exploding Kittens Game", "Are you sure you want to give com1 your " + CARDS_IN_HAND6, icon = "warning") # Asks the player for if they a sure they want to give that card to com 1
+                favoraction = messagebox.askyesno("Exploding Kittens Game", "Are you sure you want to give com1 your " + Game_REWRITE.CARDS_IN_HAND6, icon = "warning") # Asks the player for if they a sure they want to give that card to com 1
 
                 # Checks if the player clicked on "yes"
                 if favoraction == True:
-                    messagebox.showinfo("Exploding Kittens Game", "You have given com1 your " + CARDS_IN_HAND6) # Tells the player that there card was add to com 1's hand
+                    messagebox.showinfo("Exploding Kittens Game", "You have given com1 your " + Game_REWRITE.CARDS_IN_HAND6) # Tells the player that there card was add to com 1's hand
 
                     Game_REWRITE.card6_played = True # Sets the bollen from the Game_REWRITE script to True
 
@@ -391,11 +391,11 @@ def display_favored_card(favored_card):
             
             # Checks if com 2 played a favor
             elif C2B.card_to_play == "favor":
-                favoraction = messagebox.askyesno("Exploding Kittens Game","Are you sure you want to give com1 your " + CARDS_IN_HAND6, icon = "warning")
+                favoraction = messagebox.askyesno("Exploding Kittens Game","Are you sure you want to give com1 your " + Game_REWRITE.CARDS_IN_HAND6, icon = "warning")
 
                 # Checks if the player clicked on yes
                 if favoraction == True:
-                    messagebox.showinfo("Exploding Kittens Game", "You have given com1 your " + CARDS_IN_HAND6)
+                    messagebox.showinfo("Exploding Kittens Game", "You have given com1 your " + Game_REWRITE.CARDS_IN_HAND6)
                     card6_played = True
                     C2B.card_to_play = ""
 
@@ -413,11 +413,11 @@ def display_favored_card(favored_card):
 
         Game_REWRITE.card6_played = False # Makes so that the played haven't played card
 
-        Game_REWRITE.player_cards[5] = CARDS_IN_HAND6 # Re-assigns the slot in the list to match that the played card
+        Game_REWRITE.player_cards[5] = Game_REWRITE.CARDS_IN_HAND6 # Re-assigns the slot in the list to match that the played card
 
     # Checks if the player played card 7
     elif Game_REWRITE.card7_played == True:
-        CARDS_IN_HAND7 = favored_card # Creates a variable from the argument pass through when the function was called
+        Game_REWRITE.CARDS_IN_HAND7 = favored_card # Creates a variable from the argument pass through when the function was called
 
         # Creates a function to be used when the card is shown
         def card7_command():
@@ -435,11 +435,11 @@ def display_favored_card(favored_card):
 
             # Checks if com 1 played a favor
             elif C1B.card_to_play == "favor":
-                favoraction = messagebox.askyesno("Exploding Kittens Game","Are you sure you want to give com1 your " + CARDS_IN_HAND7, icon = "warning") # Asks the player for if they a sure they want to give that card to com 1
+                favoraction = messagebox.askyesno("Exploding Kittens Game","Are you sure you want to give com1 your " + Game_REWRITE.CARDS_IN_HAND7, icon = "warning") # Asks the player for if they a sure they want to give that card to com 1
 
                 # Checks if the player clicked on "yes"
                 if favoraction == True:
-                    messagebox.showinfo("Exploding Kittens Game", "You have given com1 your " + CARDS_IN_HAND7) # Tells the player that there card was add to com 1's hand
+                    messagebox.showinfo("Exploding Kittens Game", "You have given com1 your " + Game_REWRITE.CARDS_IN_HAND7) # Tells the player that there card was add to com 1's hand
 
                     Game_REWRITE.card7_played = True # Sets the bollen from the Game_REWRITE script to True
 
@@ -455,11 +455,11 @@ def display_favored_card(favored_card):
 
             # Checks if com 2 played a favor
             elif C2B.card_to_play == "favor":
-                favoraction = messagebox.askyesno("Exploding Kittens Game","Are you sure you want to give com1 your " + CARDS_IN_HAND7, icon = "warning")
+                favoraction = messagebox.askyesno("Exploding Kittens Game","Are you sure you want to give com1 your " + Game_REWRITE.CARDS_IN_HAND7, icon = "warning")
 
                 # Checks if the player clicked on yes
                 if favoraction == True:
-                    messagebox.showinfo("Exploding Kittens Game", "You have given com1 your " + CARDS_IN_HAND7)
+                    messagebox.showinfo("Exploding Kittens Game", "You have given com1 your " + Game_REWRITE.CARDS_IN_HAND7)
                     card7_played = True
                     C2B.card_to_play = ""
 
@@ -479,18 +479,18 @@ def display_favored_card(favored_card):
 
         Game_REWRITE.card7_played = False # Makes so that the played haven't played card
 
-        Game_REWRITE.player_cards[6] = CARDS_IN_HAND7 # Re-assigns the slot in the list to match that the played card
+        Game_REWRITE.player_cards[6] = Game_REWRITE.CARDS_IN_HAND7 # Re-assigns the slot in the list to match that the played card
 
 def displayed_stolen_card(stolen_card):
     # Checks if the player played card 1
     if Game_REWRITE.card1_played == True:
-        CARDS_IN_HAND1 = stolen_card # Creates a variable from the argument pass through when the function was called
+        Game_REWRITE.CARDS_IN_HAND1 = stolen_card # Creates a variable from the argument pass through when the function was called
 
         # Creates a function to be used when the card is shown
         def card1_command():
             # Checks if its the players turn
             if Game_REWRITE.player_turn == True:
-                Game_REWRITE.discard_pile_text.set(CARDS_IN_HAND1 + "\n \n \n") # Sets the discard pile display text to the card that you've played
+                Game_REWRITE.discard_pile_text.set(Game_REWRITE.CARDS_IN_HAND1 + "\n \n \n") # Sets the discard pile display text to the card that you've played
                 show_card1.destroy() # Destroys the card
 
                 Game_REWRITE.card1_played = True # Sets the bollen from the Game_REWRITE script to True
@@ -501,11 +501,11 @@ def displayed_stolen_card(stolen_card):
 
             # Checks if com 1 played a favor
             elif C1B.card_to_play == "favor":
-                favoraction = messagebox.askyesno("Exploding Kittens Game","Are you sure you want to give com1 your " + CARDS_IN_HAND1, icon = "warning") # Asks the player for if they a sure they want to give that card to com 1
+                favoraction = messagebox.askyesno("Exploding Kittens Game","Are you sure you want to give com1 your " + Game_REWRITE.CARDS_IN_HAND1, icon = "warning") # Asks the player for if they a sure they want to give that card to com 1
 
                 # Checks if the player clicked on "yes"
                 if favoraction == True:
-                    messagebox.showinfo("Exploding Kittens Game", "You have given com1 your " + CARDS_IN_HAND1) # Tells the player that there card was add to com 1's hand
+                    messagebox.showinfo("Exploding Kittens Game", "You have given com1 your " + Game_REWRITE.CARDS_IN_HAND1) # Tells the player that there card was add to com 1's hand
 
                     Game_REWRITE.card1_played = True  # Makes the bollen False
 
@@ -519,6 +519,24 @@ def displayed_stolen_card(stolen_card):
                 else:
                     messagebox.showerror("Exploding Kittens Game", "You have not given your card to com1") # Tells the player that the card that they clicked on wasn't given to com 1
 
+            # Checks if com 2 played a favor
+            elif C2B.card_to_play == "favor":
+                favoraction = messagebox.askyesno("Exploding Kittens Game","Are you sure you want to give com1 your " + Game_REWRITE.CARDS_IN_HAND1, icon = "warning")
+
+                # Checks if the player clicked on yes
+                if favoraction == True:
+                    messagebox.showinfo("Exploding Kittens Game", "You have given com1 your " + Game_REWRITE.CARDS_IN_HAND1)
+                    card1_played = True
+                    C2B.card_to_play = ""
+
+                    show_card1.destroy()
+                    player_cards[0] = ""
+
+                    CC2CP.draw_card()
+
+                else:
+                    messagebox.showerror("Exploding Kittens Game", "You have not given your card to com 2")
+
             else:
                 messagebox.showerror('Exploding Kittens Game', "Sorry, it's not your turn") # Tells the player that it's not there turn
 
@@ -527,17 +545,17 @@ def displayed_stolen_card(stolen_card):
 
         Game_REWRITE.card1_played = False # Makes so that the played haven't played card 1
 
-        Game_REWRITE.player_cards[0] = CARDS_IN_HAND1 # Assigns the empty slot to the gave card
+        Game_REWRITE.player_cards[0] = Game_REWRITE.CARDS_IN_HAND1 # Assigns the empty slot to the gave card
 
     # Checks if the player played card 2
     elif Game_REWRITE.card2_played == True:
-        CARDS_IN_HAND2 = stolen_card # Creates a variable from the argument pass through when the function was called
+        Game_REWRITE.CARDS_IN_HAND2 = stolen_card # Creates a variable from the argument pass through when the function was called
 
         # Creates a function to be used when the card is shown
         def card2_command():
             # Checks if it's  the players turn
             if Game_REWRITE.player_turn == True:
-                Game_REWRITE.discard_pile_text.set(CARDS_IN_HAND2 + "\n \n \n") # Sets the discard pile display text to the card that you've played
+                Game_REWRITE.discard_pile_text.set(Game_REWRITE.CARDS_IN_HAND2 + "\n \n \n") # Sets the discard pile display text to the card that you've played
                 show_card2.destroy() # Destroys the card
 
                 Game_REWRITE.card2_played = True # Sets the bollen from the Game_REWRITE script to True
@@ -548,11 +566,11 @@ def displayed_stolen_card(stolen_card):
 
             # Checks if com 1 played a favor
             elif C1B.card_to_play == "favor":
-                favoraction = messagebox.askyesno("Exploding Kittens Game","Are you sure you want to give com1 your " + CARDS_IN_HAND2, icon = "warning") # Asks the player for if they a sure they want to give that card to com 1
+                favoraction = messagebox.askyesno("Exploding Kittens Game","Are you sure you want to give com1 your " + Game_REWRITE.CARDS_IN_HAND2, icon = "warning") # Asks the player for if they a sure they want to give that card to com 1
 
                 # Checks if the player clicked on "yes"
                 if favoraction == True:
-                    messagebox.showinfo("Exploding Kittens Game", "You have given com1 your " + CARDS_IN_HAND2) # Tells the player that there card was add to com 1's hand
+                    messagebox.showinfo("Exploding Kittens Game", "You have given com1 your " + Game_REWRITE.CARDS_IN_HAND2) # Tells the player that there card was add to com 1's hand
 
                     Game_REWRITE.card2_played = True # Sets the bollen from the Game_REWRITE script to True
 
@@ -566,6 +584,24 @@ def displayed_stolen_card(stolen_card):
                 else:
                     messagebox.showerror("Exploding Kittens Game", "You have not given your card to com1") # Tells the player that the card that they clicked on wasn't given to com 1
 
+            # Checks if com 2 played a favor
+            elif C2B.card_to_play == "favor":
+                favoraction = messagebox.askyesno("Exploding Kittens Game","Are you sure you want to give com1 your " + Game_REWRITE.CARDS_IN_HAND2, icon = "warning")
+
+                # Checks if the player clicked on yes
+                if favoraction == True:
+                    messagebox.showinfo("Exploding Kittens Game", "You have given com1 your " + Game_REWRITE.CARDS_IN_HAND2)
+                    card2_played = True
+                    C2B.card_to_play = ""
+
+                    show_card2.destroy()
+                    player_cards[1] = ""
+
+                    CC2CP.draw_card()
+
+                else:
+                    messagebox.showerror("Exploding Kittens Game", "You have not given your card to com 2")
+
             else:
                 messagebox.showerror('Exploding Kittens Game', "Sorry, it's not your turn") # Tells the player that it's not there turn
 
@@ -574,17 +610,17 @@ def displayed_stolen_card(stolen_card):
 
         Game_REWRITE.card2_played = False # Makes so that the played haven't played card 2
 
-        Game_REWRITE.player_cards[1] = CARDS_IN_HAND2 # Re-assigns the slot in the list to match that the played card
+        Game_REWRITE.player_cards[1] = Game_REWRITE.CARDS_IN_HAND2 # Re-assigns the slot in the list to match that the played card
 
     # Checks if the player played card 3
     elif Game_REWRITE.card3_played == True:
-        CARDS_IN_HAND3 = stolen_card # Creates a variable from the argument pass through when the function was called
+        Game_REWRITE.CARDS_IN_HAND3 = stolen_card # Creates a variable from the argument pass through when the function was called
 
         # Creates a function to be used when the card is shown
         def card3_command():
             # Checks if it's  the players turn
             if Game_REWRITE.player_turn == True:
-                Game_REWRITE.discard_pile_text.set(CARDS_IN_HAND3 + "\n \n \n") # Sets the discard pile display text to the card that you've played
+                Game_REWRITE.discard_pile_text.set(Game_REWRITE.CARDS_IN_HAND3 + "\n \n \n") # Sets the discard pile display text to the card that you've played
                 show_card3.destroy() # Destroys the card
 
                 Game_REWRITE.card3_played = True # Sets the bollen from the Game_REWRITE script to True
@@ -595,11 +631,11 @@ def displayed_stolen_card(stolen_card):
 
             # Checks if com 1 played a favor
             elif C1B.card_to_play == "favor":
-                favoraction = messagebox.askyesno("Exploding Kittens Game","Are you sure you want to give com1 your " + CARDS_IN_HAND3, icon = "warning") # Asks the player for if they a sure they want to give that card to com 1
+                favoraction = messagebox.askyesno("Exploding Kittens Game","Are you sure you want to give com1 your " + Game_REWRITE.CARDS_IN_HAND3, icon = "warning") # Asks the player for if they a sure they want to give that card to com 1
 
                 # Asks the player for if they a sure they want to give that card to com 1
                 if favoraction == True:
-                    messagebox.showinfo("Exploding Kittens Game", "You have given com1 your " + CARDS_IN_HAND3) # Tells the player that there card was add to com 1's hand
+                    messagebox.showinfo("Exploding Kittens Game", "You have given com1 your " + Game_REWRITE.CARDS_IN_HAND3) # Tells the player that there card was add to com 1's hand
 
                     Game_REWRITE.card3_played = True # Sets the bollen from the Game_REWRITE script to True
 
@@ -613,6 +649,24 @@ def displayed_stolen_card(stolen_card):
                 else:
                     messagebox.showerror("Exploding Kittens Game", "You have not given your card to com1") # Tells the player that the card that they clicked on wasn't given to com 1
 
+            # Checks if com 2 played a favor
+            elif C2B.card_to_play == "favor":
+                favoraction = messagebox.askyesno("Exploding Kittens Game","Are you sure you want to give com1 your " + Game_REWRITE.CARDS_IN_HAND3, icon = "warning")
+
+                # Checks if the player clicked on yes
+                if favoraction == True:
+                    messagebox.showinfo("Exploding Kittens Game", "You have given com1 your " + Game_REWRITE.CARDS_IN_HAND3)
+                    card3_played = True
+                    C2B.card_to_play = ""
+
+                    show_card3.destroy()
+                    player_cards[2] = ""
+
+                    CC2CP.draw_card()
+
+                else:
+                    messagebox.showerror("Exploding Kittens Game", "You have not given your card to com 2")
+
             else:
                 messagebox.showerror('Exploding Kittens Game', "Sorry, it's not your turn") # Tells the player that it's not there turn
 
@@ -621,17 +675,17 @@ def displayed_stolen_card(stolen_card):
 
         Game_REWRITE.card3_played = False # Makes so that the played haven't played card
 
-        Game_REWRITE.player_cards[2] = CARDS_IN_HAND3 # Re-assigns the slot in the list to match that the played card
+        Game_REWRITE.player_cards[2] = Game_REWRITE.CARDS_IN_HAND3 # Re-assigns the slot in the list to match that the played card
 
     # Checks if the player played card 4
     elif Game_REWRITE.card4_played == True:
-        CARDS_IN_HAND4 = stolen_card # Creates a variable from the argument pass through when the function was called
+        Game_REWRITE.CARDS_IN_HAND4 = stolen_card # Creates a variable from the argument pass through when the function was called
 
         # Creates a function to be used when the card is shown
         def card4_command():
             # Checks if it's  the players turn
             if Game_REWRITE.player_turn == True:
-                Game_REWRITE.discard_pile_text.set(CARDS_IN_HAND4 + "\n \n \n") # Sets the discard pile display text to the card that you've played
+                Game_REWRITE.discard_pile_text.set(Game_REWRITE.CARDS_IN_HAND4 + "\n \n \n") # Sets the discard pile display text to the card that you've played
                 show_card4.destroy() # Destroys the card
 
                 Game_REWRITE.card4_played = True # Sets the bollen from the Game_REWRITE script to True
@@ -642,11 +696,11 @@ def displayed_stolen_card(stolen_card):
 
             # Checks if com 1 played a favor
             elif C1B.card_to_play == "favor":
-                favoraction = messagebox.askyesno("Exploding Kittens Game","Are you sure you want to give com1 your " + CARDS_IN_HAND4, icon = "warning") # Asks the player for if they a sure they want to give that card to com 1
+                favoraction = messagebox.askyesno("Exploding Kittens Game","Are you sure you want to give com1 your " + Game_REWRITE.CARDS_IN_HAND4, icon = "warning") # Asks the player for if they a sure they want to give that card to com 1
 
                 # Checks if the player clicked on "yes"
                 if favoraction == True:
-                    messagebox.showinfo("Exploding Kittens Game", "You have given com1 your " + CARDS_IN_HAND4) # Tells the player that there card was add to com 1's hand
+                    messagebox.showinfo("Exploding Kittens Game", "You have given com1 your " + Game_REWRITE.CARDS_IN_HAND4) # Tells the player that there card was add to com 1's hand
 
                     Game_REWRITE.card4_played = True # Sets the bollen from the Game_REWRITE script to True
 
@@ -660,6 +714,24 @@ def displayed_stolen_card(stolen_card):
                 else:
                     messagebox.showerror("Exploding Kittens Game", "You have not given your card to com1") # Tells the player that the card that they clicked on wasn't given to com 1
 
+            # Checks if com 2 played a favor
+            elif C2B.card_to_play == "favor":
+                favoraction = messagebox.askyesno("Exploding Kittens Game","Are you sure you want to give com1 your " + Game_REWRITE.CARDS_IN_HAND4, icon = "warning")
+
+                # Checks if the player clicked on yes
+                if favoraction == True:
+                    messagebox.showinfo("Exploding Kittens Game", "You have given com1 your " + Game_REWRITE.CARDS_IN_HAND4)
+                    card4_played = True
+                    C2B.card_to_play = ""
+
+                    show_card4.destroy()
+                    player_cards[3] = ""
+
+                    CC2CP.draw_card()
+
+                else:
+                    messagebox.showerror("Exploding Kittens Game", "You have not given your card to com 2")
+
             else:
                 messagebox.showerror('Exploding Kittens Game', "Sorry, it's not your turn") # Tells the player that it's not there turn
 
@@ -668,17 +740,17 @@ def displayed_stolen_card(stolen_card):
 
         Game_REWRITE.card4_played = False # Makes so that the played haven't played card
 
-        Game_REWRITE.player_cards[3] = CARDS_IN_HAND4 # Re-assigns the slot in the list to match that the played card
+        Game_REWRITE.player_cards[3] = Game_REWRITE.CARDS_IN_HAND4 # Re-assigns the slot in the list to match that the played card
 
     # Checks if the player played card 5
     elif Game_REWRITE.card5_played == True:
-        CARDS_IN_HAND5 = stolen_card # Creates a variable from the argument pass through when the function was called
+        Game_REWRITE.CARDS_IN_HAND5 = stolen_card # Creates a variable from the argument pass through when the function was called
 
         # Creates a function to be used when the card is shown
         def card5_command():
             # Checks if it's  the players turn
             if Game_REWRITE.player_turn == True:
-                Game_REWRITE.discard_pile_text.set(CARDS_IN_HAND5 + "\n \n \n") # Sets the discard pile display text to the card that you've played
+                Game_REWRITE.discard_pile_text.set(Game_REWRITE.CARDS_IN_HAND5 + "\n \n \n") # Sets the discard pile display text to the card that you've played
                 show_card5.destroy() # Destroys the card
 
                 Game_REWRITE.card5_played = True # Sets the bollen from the Game_REWRITE script to True
@@ -688,11 +760,11 @@ def displayed_stolen_card(stolen_card):
 
             # Checks if com 1 played a favor
             elif C1B.card_to_play == "favor":
-                favoraction = messagebox.askyesno("Exploding Kittens Game","Are you sure you want to give com1 your " + CARDS_IN_HAND5, icon = "warning") # Asks the player for if they a sure they want to give that card to com 1
+                favoraction = messagebox.askyesno("Exploding Kittens Game","Are you sure you want to give com1 your " + Game_REWRITE.CARDS_IN_HAND5, icon = "warning") # Asks the player for if they a sure they want to give that card to com 1
 
                 # Checks if the player clicked on "yes"
                 if favoraction == True:
-                    messagebox.showinfo("Exploding Kittens Game", "You have given com1 your " + CARDS_IN_HAND5) # Tells the player that there card was add to com 1's hand
+                    messagebox.showinfo("Exploding Kittens Game", "You have given com1 your " + Game_REWRITE.CARDS_IN_HAND5) # Tells the player that there card was add to com 1's hand
 
                     Game_REWRITE.card5_played = True # Sets the bollen from the Game_REWRITE script to True
 
@@ -705,6 +777,24 @@ def displayed_stolen_card(stolen_card):
                 else:
                     messagebox.showerror("Exploding Kittens Game", "You have not given your card to com1") # Tells the player that the card that they clicked on wasn't given to com 1
 
+            # Checks if com 2 played a favor
+            elif C2B.card_to_play == "favor":
+                favoraction = messagebox.askyesno("Exploding Kittens Game","Are you sure you want to give com1 your " + Game_REWRITE.CARDS_IN_HAND5, icon = "warning")
+
+                # Checks if the player clicked on yes
+                if favoraction == True:
+                    messagebox.showinfo("Exploding Kittens Game", "You have given com1 your " + Game_REWRITE.CARDS_IN_HAND5)
+                    card5_played = True
+                    C2B.card_to_play = ""
+
+                    show_card5.destroy()
+                    player_cards[4] = ""
+
+                    CC2CP.draw_card()
+
+                else:
+                    messagebox.showerror("Exploding Kittens Game", "You have not given your card to com 2")
+
             else:
                 messagebox.showerror('Exploding Kittens Game', "Sorry, it's not your turn") # Tells the player that it's not there turn
 
@@ -713,11 +803,11 @@ def displayed_stolen_card(stolen_card):
 
         Game_REWRITE.card5_played = False # Makes so that the played haven't played card
 
-        Game_REWRITE.player_cards[4] = CARDS_IN_HAND5 # Re-assigns the slot in the list to match that the played card
+        Game_REWRITE.player_cards[4] = Game_REWRITE.CARDS_IN_HAND5 # Re-assigns the slot in the list to match that the played card
 
     # Checks if the player played card 6
     elif Game_REWRITE.card6_played == True:
-        CARDS_IN_HAND6 = stolen_card # Creates a variable from the argument pass through when the function was called
+        Game_REWRITE.CARDS_IN_HAND6 = stolen_card # Creates a variable from the argument pass through when the function was called
 
         # Creates a function to be used when the card is shown
         def card6_command():
@@ -735,11 +825,11 @@ def displayed_stolen_card(stolen_card):
 
             # Checks if com 1 played a favor
             elif C1B.card_to_play == "favor":
-                favoraction = messagebox.askyesno("Exploding Kittens Game", "Are you sure you want to give com1 your " + CARDS_IN_HAND6, icon = "warning") # Asks the player for if they a sure they want to give that card to com 1
+                favoraction = messagebox.askyesno("Exploding Kittens Game", "Are you sure you want to give com1 your " + Game_REWRITE.CARDS_IN_HAND6, icon = "warning") # Asks the player for if they a sure they want to give that card to com 1
 
                 # Checks if the player clicked on "yes"
                 if favoraction == True:
-                    messagebox.showinfo("Exploding Kittens Game", "You have given com1 your " + CARDS_IN_HAND6) # Tells the player that there card was add to com 1's hand
+                    messagebox.showinfo("Exploding Kittens Game", "You have given com1 your " + Game_REWRITE.CARDS_IN_HAND6) # Tells the player that there card was add to com 1's hand
 
                     Game_REWRITE.card6_played = True # Sets the bollen from the Game_REWRITE script to True
 
@@ -753,6 +843,22 @@ def displayed_stolen_card(stolen_card):
                 else:
                     messagebox.showerror("Exploding Kittens Game", "You have not given your card to com1") # Tells the player that the card that they clicked on wasn't given to com 1
 
+            # Checks if com 2 played a favor
+            elif C2B.card_to_play == "favor":
+                favoraction = messagebox.askyesno("Exploding Kittens Game","Are you sure you want to give com1 your " + Game_REWRITE.CARDS_IN_HAND6, icon = "warning")
+
+                # Checks if the player clicked on yes
+                if favoraction == True:
+                    messagebox.showinfo("Exploding Kittens Game", "You have given com1 your " + Game_REWRITE.CARDS_IN_HAND6)
+                    card6_played = True
+                    C2B.card_to_play = ""
+
+                    show_card6.destroy()
+                    player_cards[5] = ""
+
+                else:
+                    messagebox.showerror("Exploding Kittens Game", "You have not given your card to com 2")
+
             else:
                 messagebox.showerror('Exploding Kittens Game', "Sorry, it's not your turn") # Tells the player that it's not there turn
 
@@ -761,11 +867,11 @@ def displayed_stolen_card(stolen_card):
 
         Game_REWRITE.card6_played = False # Makes so that the played haven't played card
 
-        Game_REWRITE.player_cards[5] = CARDS_IN_HAND6 # Re-assigns the slot in the list to match that the played card
+        Game_REWRITE.player_cards[5] = Game_REWRITE.CARDS_IN_HAND6 # Re-assigns the slot in the list to match that the played card
 
     # Checks if the player played card 7
     elif Game_REWRITE.card7_played == True:
-        CARDS_IN_HAND7 = stolen_card # Creates a variable from the argument pass through when the function was called
+        Game_REWRITE.CARDS_IN_HAND7 = stolen_card # Creates a variable from the argument pass through when the function was called
 
         # Creates a function to be used when the card is shown
         def card7_command():
@@ -783,13 +889,11 @@ def displayed_stolen_card(stolen_card):
 
             # Checks if com 1 played a favor
             elif C1B.card_to_play == "favor":
-                favoraction = messagebox.askyesno("Exploding Kittens Game","Are you sure you want to give com1 your " + CARDS_IN_HAND7, icon = "warning") # Asks the player for if they a sure they want to give that card to com 1
+                favoraction = messagebox.askyesno("Exploding Kittens Game","Are you sure you want to give com1 your " + Game_REWRITE.CARDS_IN_HAND7, icon = "warning") # Asks the player for if they a sure they want to give that card to com 1
 
                 # Checks if the player clicked on "yes"
                 if favoraction == True:
-                    messagebox.showinfo("Exploding Kittens Game", "You have given com1 your " + CARDS_IN_HAND7) # Tells the player that there card was add to com 1's hand
-
-                    Game_REWRITE.card7_played = True # Sets the bollen from the Game_REWRITE script to True
+                    messagebox.showinfo("Exploding Kittens Game", "You have given com1 your " + Game_REWRITE.CARDS_IN_HAND7) # Tells the player that there card was add to com 1's hand
 
                     C1B.card_to_play = "" # Sets com 1's card to play to an empty string so the the next time the player goes to click on another card this if statement doesn't repeat
 
@@ -801,6 +905,24 @@ def displayed_stolen_card(stolen_card):
                 else:
                     messagebox.showerror("Exploding Kittens Game", "You have not given your card to com1") # Tells the player that the card that they clicked on wasn't given to com 1
 
+            # Checks if com 2 played a favor
+            elif C2B.card_to_play == "favor":
+                favoraction = messagebox.askyesno("Exploding Kittens Game","Are you sure you want to give com1 your " + Game_REWRITE.CARDS_IN_HAND7, icon = "warning")
+
+                # Checks if the player clicked on yes
+                if favoraction == True:
+                    messagebox.showinfo("Exploding Kittens Game", "You have given com1 your " + Game_REWRITE.CARDS_IN_HAND7)
+                    card7_played = True
+                    C2B.card_to_play = ""
+
+                    show_card7.destroy()
+                    player_cards[6] = ""
+
+                    CC2CP.draw_card()
+
+                else:
+                    messagebox.showerror("Exploding Kittens Game", "You have not given your card to com 2")
+
             else:
                 messagebox.showerror('Exploding Kittens Game', "Sorry, it's not your turn") # Tells the player that it's not there turn
 
@@ -809,7 +931,7 @@ def displayed_stolen_card(stolen_card):
 
         Game_REWRITE.card7_played = False # Makes so that the played haven't played card
 
-        Game_REWRITE.player_cards[6] = CARDS_IN_HAND7 # Re-assigns the slot in the list to match that the played card
+        Game_REWRITE.player_cards[6] = Game_REWRITE.CARDS_IN_HAND7 # Re-assigns the slot in the list to match that the played card
 
 def steal_card():
     global message_box2 # Creates a global variable to be used in the Deal_To_Com_Players.py file
