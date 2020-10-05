@@ -159,6 +159,8 @@ def card1_command():
             show_card1.destroy()
             player_cards[0] = ""
 
+            CC2CP.add_favor_or_stolen_card(CARDS_IN_HAND1)
+
             CC2CP.draw_card()
 
         else:
@@ -215,6 +217,8 @@ def card2_command():
 
             show_card2.destroy()
             player_cards[1] = ""
+
+            CC2CP.add_favor_or_stolen_card(CARDS_IN_HAND2)
 
             CC2CP.draw_card()
 
@@ -273,6 +277,8 @@ def card3_command():
             show_card3.destroy()
             player_cards[2] = ""
 
+            CC2CP.add_favor_or_stolen_card(CARDS_IN_HAND3)
+
             CC2CP.draw_card()
 
         else:
@@ -330,6 +336,8 @@ def card4_command():
             show_card4.destroy()
             player_cards[3] = ""
 
+            CC2CP.add_favor_or_stolen_card(CARDS_IN_HAND4)
+
             CC2CP.draw_card()
 
         else:
@@ -384,6 +392,8 @@ def card5_command():
 
             show_card5.destroy()
             player_cards[4] = ""
+
+            CC2CP.add_favor_or_stolen_card(CARDS_IN_HAND5)
 
             CC2CP.draw_card()
 
@@ -443,6 +453,8 @@ def card6_command():
             show_card6.destroy()
             player_cards[5] = ""
 
+            CC2CP.add_favor_or_stolen_card(CARDS_IN_HAND6)
+
             CC2CP.draw_card()
         else:
             messagebox.showerror("Exploding Kittens Game", "You have not given your card to com 2")
@@ -499,6 +511,8 @@ def card7_command():
 
             show_card7.destroy()
             player_cards[6] = ""
+
+            CC2CP.add_favor_or_stolen_card(CARDS_IN_HAND7)
 
             CC2CP.draw_card()
 
