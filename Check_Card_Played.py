@@ -61,6 +61,8 @@ def display_favored_card(favored_card):
 
                     Game_REWRITE.player_cards[0] = "" # Re-assigns the slot in the list to match that the played card
 
+                    CC1CP.get_favor_or_stolen_card(Game_REWRITE.CARDS_IN_HAND1)
+
                     CC1CP.draw_card() # Makes com 1 draw a card
                 else:
                     messagebox.showerror("Exploding Kittens Game", "You have not given your card to com1") # Tells the player that the card that they clicked on wasn't given to com 1
@@ -77,6 +79,8 @@ def display_favored_card(favored_card):
 
                     show_card1.destroy()
                     player_cards[0] = ""
+
+                    CC2CP.add_favor_or_stolen_card(Game_REWRITE.CARDS_IN_HAND1)
 
                     CC2CP.draw_card()
 
@@ -126,6 +130,8 @@ def display_favored_card(favored_card):
 
                     Game_REWRITE.player_cards[1] = "" # Assigns the empty slot to the gave card
 
+                    CC1CP.get_favor_or_stolen_card(Game_REWRITE.CARDS_IN_HAND2)
+
                     CC1CP.draw_card() # Makes com 1 draw a card
                 else:
                     messagebox.showerror("Exploding Kittens Game", "You have not given your card to com1") # Tells the player that the card that they clicked on wasn't given to com 1
@@ -142,6 +148,8 @@ def display_favored_card(favored_card):
 
                     show_card2.destroy()
                     player_cards[1] = ""
+
+                    CC2CP.add_favor_or_stolen_card(Game_REWRITE.CARDS_IN_HAND2)
 
                     CC2CP.draw_card()
 
@@ -191,6 +199,8 @@ def display_favored_card(favored_card):
 
                     Game_REWRITE.player_cards[2] = "" # Assigns the empty slot to the gave card
 
+                    CC1CP.get_favor_or_stolen_card(Game_REWRITE.CARDS_IN_HAND1)
+
                     CC1CP.draw_card() # Makes com 1 draw a card
                 else:
                     messagebox.showerror("Exploding Kittens Game", "You have not given your card to com1") # Tells the player that the card that they clicked on wasn't given to com 1
@@ -207,6 +217,8 @@ def display_favored_card(favored_card):
 
                     show_card3.destroy()
                     player_cards[2] = ""
+
+                    CC2CP.add_favor_or_stolen_card(Game_REWRITE.CARDS_IN_HAND3)
 
                     CC2CP.draw_card()
 
@@ -256,6 +268,8 @@ def display_favored_card(favored_card):
 
                     Game_REWRITE.player_cards[3] = "" # Assigns the empty slot to the gave card
 
+                    CC1CP.get_favor_or_stolen_card(Game_REWRITE.CARDS_IN_HAND4)
+
                     CC1CP.draw_card() # Makes com 1 draw a card
                 else:
                     messagebox.showerror("Exploding Kittens Game", "You have not given your card to com1") # Tells the player that the card that they clicked on wasn't given to com 1
@@ -272,6 +286,8 @@ def display_favored_card(favored_card):
 
                     show_card4.destroy()
                     player_cards[3] = ""
+
+                    CC2CP.add_favor_or_stolen_card(Game_REWRITE.CARDS_IN_HAND4)
 
                     CC2CP.draw_card()
 
@@ -319,6 +335,8 @@ def display_favored_card(favored_card):
 
                     show_card5.destroy() # Destroys the card
 
+                    CC1CP.get_favor_or_stolen_card(Game_REWRITE.CARDS_IN_HAND5)
+
                     CC1CP.draw_card() # Makes com 1 draw a card
                 else:
                     messagebox.showerror("Exploding Kittens Game", "You have not given your card to com1") # Tells the player that the card that they clicked on wasn't given to com 1
@@ -335,6 +353,8 @@ def display_favored_card(favored_card):
 
                     show_card5.destroy()
                     player_cards[4] = ""
+
+                    CC2CP.add_favor_or_stolen_card(Game_REWRITE.CARDS_IN_HAND6)
 
                     CC2CP.draw_card()
 
@@ -385,6 +405,8 @@ def display_favored_card(favored_card):
 
                     Game_REWRITE.player_cards[5] = "" # Assigns the empty slot to the gave card
 
+                    CC1CP.get_favor_or_stolen_card(Game_REWRITE.CARDS_IN_HAND6)
+
                     CC1CP.draw_card() # Makes com 1 draw a card
                 else:
                     messagebox.showerror("Exploding Kittens Game", "You have not given your card to com1") # Tells the player that the card that they clicked on wasn't given to com 1
@@ -401,6 +423,10 @@ def display_favored_card(favored_card):
 
                     show_card6.destroy()
                     player_cards[5] = ""
+
+                    CC2CP.add_favor_or_stolen_card(Game_REWRITE.CARDS_IN_HAND6)
+
+                    CC2CP.draw_card()
 
                 else:
                     messagebox.showerror("Exploding Kittens Game", "You have not given your card to com 2")
@@ -449,6 +475,8 @@ def display_favored_card(favored_card):
 
                     Game_REWRITE.player_cards[6] = "" # Assigns the empty slot to the gave card
 
+                    CC1CP.get_favor_or_stolen_card(Game_REWRITE.CARDS_IN_HAND7)
+
                     CC1CP.draw_card() # Makes com 1 draw a card
                 else:
                     messagebox.showerror("Exploding Kittens Game", "You have not given your card to com1") # Tells the player that the card that they clicked on wasn't given to com 1
@@ -465,6 +493,8 @@ def display_favored_card(favored_card):
 
                     show_card7.destroy()
                     player_cards[6] = ""
+
+                    CC2CP.add_favor_or_stolen_card(Game_REWRITE.CARDS_IN_HAND7)
 
                     CC2CP.draw_card()
 
@@ -515,6 +545,8 @@ def displayed_stolen_card(stolen_card):
 
                     Game_REWRITE.player_cards[0] = "" # Re-assigns the slot in the list to match that the played card
 
+                    CC1CP.get_favor_or_stolen_card(Game_REWRITE.CARDS_IN_HAND1)
+
                     CC1CP.draw_card() # Makes com 1 draw a card
                 else:
                     messagebox.showerror("Exploding Kittens Game", "You have not given your card to com1") # Tells the player that the card that they clicked on wasn't given to com 1
@@ -531,6 +563,8 @@ def displayed_stolen_card(stolen_card):
 
                     show_card1.destroy()
                     player_cards[0] = ""
+
+                    CC2CP.add_favor_or_stolen_card(Game_REWRITE.CARDS_IN_HAND1)
 
                     CC2CP.draw_card()
 
@@ -580,6 +614,8 @@ def displayed_stolen_card(stolen_card):
 
                     Game_REWRITE.player_cards[1] = "" # Assigns the empty slot to the gave card
 
+                    CC1CP.get_favor_or_stolen_card(Game_REWRITE.CARDS_IN_HAND2)
+
                     CC1CP.draw_card() # Makes com 1 draw a card
                 else:
                     messagebox.showerror("Exploding Kittens Game", "You have not given your card to com1") # Tells the player that the card that they clicked on wasn't given to com 1
@@ -596,6 +632,8 @@ def displayed_stolen_card(stolen_card):
 
                     show_card2.destroy()
                     player_cards[1] = ""
+
+                    CC2CP.add_favor_or_stolen_card(Game_REWRITE.CARDS_IN_HAND2)
 
                     CC2CP.draw_card()
 
@@ -645,6 +683,8 @@ def displayed_stolen_card(stolen_card):
 
                     Game_REWRITE.player_cards[2] = "" # Assigns the empty slot to the gave card
 
+                    CC1CP.get_favor_or_stolen_card(Game_REWRITE.CARDS_IN_HAND3)
+
                     CC1CP.draw_card() # Makes com 1 draw a card
                 else:
                     messagebox.showerror("Exploding Kittens Game", "You have not given your card to com1") # Tells the player that the card that they clicked on wasn't given to com 1
@@ -661,6 +701,8 @@ def displayed_stolen_card(stolen_card):
 
                     show_card3.destroy()
                     player_cards[2] = ""
+
+                    CC2CP.add_favor_or_stolen_card(Game_REWRITE.CARDS_IN_HAND3)
 
                     CC2CP.draw_card()
 
@@ -710,6 +752,8 @@ def displayed_stolen_card(stolen_card):
 
                     Game_REWRITE.player_cards[3] = "" # Assigns the empty slot to the gave card
 
+                    CC1CP.get_favor_or_stolen_card(Game_REWRITE.CARDS_IN_HAND4)
+
                     CC1CP.draw_card() # Makes com 1 draw a card
                 else:
                     messagebox.showerror("Exploding Kittens Game", "You have not given your card to com1") # Tells the player that the card that they clicked on wasn't given to com 1
@@ -726,6 +770,8 @@ def displayed_stolen_card(stolen_card):
 
                     show_card4.destroy()
                     player_cards[3] = ""
+
+                    CC2CP.add_favor_or_stolen_card(Game_REWRITE.CARDS_IN_HAND4)
 
                     CC2CP.draw_card()
 
@@ -773,6 +819,8 @@ def displayed_stolen_card(stolen_card):
 
                     show_card5.destroy() # Destroys the card
 
+                    CC1CP.get_favor_or_stolen_card(Game_REWRITE.CARDS_IN_HAND5)
+
                     CC1CP.draw_card() # Makes com 1 draw a card
                 else:
                     messagebox.showerror("Exploding Kittens Game", "You have not given your card to com1") # Tells the player that the card that they clicked on wasn't given to com 1
@@ -789,6 +837,8 @@ def displayed_stolen_card(stolen_card):
 
                     show_card5.destroy()
                     player_cards[4] = ""
+
+                    CC2CP.add_favor_or_stolen_card(Game_REWRITE.CARDS_IN_HAND5)
 
                     CC2CP.draw_card()
 
@@ -839,6 +889,8 @@ def displayed_stolen_card(stolen_card):
 
                     Game_REWRITE.player_cards[5] = "" # Assigns the empty slot to the gave card
 
+                    CC1CP.get_favor_or_stolen_card(Game_REWRITE.CARDS_IN_HAND6)
+
                     CC1CP.draw_card() # Makes com 1 draw a card
                 else:
                     messagebox.showerror("Exploding Kittens Game", "You have not given your card to com1") # Tells the player that the card that they clicked on wasn't given to com 1
@@ -855,6 +907,10 @@ def displayed_stolen_card(stolen_card):
 
                     show_card6.destroy()
                     player_cards[5] = ""
+
+                    CC2CP.add_favor_or_stolen_card(Game_REWRITE.CARDS_IN_HAND6)
+
+                    CC2CP.draw_card()
 
                 else:
                     messagebox.showerror("Exploding Kittens Game", "You have not given your card to com 2")
@@ -901,6 +957,8 @@ def displayed_stolen_card(stolen_card):
 
                     Game_REWRITE.player_cards[6] = "" # Assigns the empty slot to the gave card
 
+                    CC1CP.get_favor_or_stolen_card(Game_REWRITE.CARDS_IN_HAND7)
+
                     CC1CP.draw_card() # Makes com 1 draw a card
                 else:
                     messagebox.showerror("Exploding Kittens Game", "You have not given your card to com1") # Tells the player that the card that they clicked on wasn't given to com 1
@@ -917,6 +975,8 @@ def displayed_stolen_card(stolen_card):
 
                     show_card7.destroy()
                     player_cards[6] = ""
+
+                    CC2CP.add_favor_or_stolen_card(Game_REWRITE.CARDS_IN_HAND7)
 
                     CC2CP.draw_card()
 
