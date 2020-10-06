@@ -78,7 +78,7 @@ def display_favored_card(favored_card):
                     C2B.card_to_play = ""
 
                     show_card1.destroy()
-                    player_cards[0] = ""
+                    Game_REWRITE.player_cards[0] = ""
 
                     CC2CP.add_favor_or_stolen_card(Game_REWRITE.CARDS_IN_HAND1)
 
@@ -147,7 +147,7 @@ def display_favored_card(favored_card):
                     C2B.card_to_play = ""
 
                     show_card2.destroy()
-                    player_cards[1] = ""
+                    Game_REWRITE.player_cards[1] = ""
 
                     CC2CP.add_favor_or_stolen_card(Game_REWRITE.CARDS_IN_HAND2)
 
@@ -216,7 +216,7 @@ def display_favored_card(favored_card):
                     C2B.card_to_play = ""
 
                     show_card3.destroy()
-                    player_cards[2] = ""
+                    Game_REWRITE.player_cards[2] = ""
 
                     CC2CP.add_favor_or_stolen_card(Game_REWRITE.CARDS_IN_HAND3)
 
@@ -285,7 +285,7 @@ def display_favored_card(favored_card):
                     C2B.card_to_play = ""
 
                     show_card4.destroy()
-                    player_cards[3] = ""
+                    Game_REWRITE.player_cards[3] = ""
 
                     CC2CP.add_favor_or_stolen_card(Game_REWRITE.CARDS_IN_HAND4)
 
@@ -352,7 +352,7 @@ def display_favored_card(favored_card):
                     C2B.card_to_play = ""
 
                     show_card5.destroy()
-                    player_cards[4] = ""
+                    Game_REWRITE.player_cards[4] = ""
 
                     CC2CP.add_favor_or_stolen_card(Game_REWRITE.CARDS_IN_HAND6)
 
@@ -422,7 +422,7 @@ def display_favored_card(favored_card):
                     C2B.card_to_play = ""
 
                     show_card6.destroy()
-                    player_cards[5] = ""
+                    Game_REWRITE.player_cards[5] = ""
 
                     CC2CP.add_favor_or_stolen_card(Game_REWRITE.CARDS_IN_HAND6)
 
@@ -492,7 +492,7 @@ def display_favored_card(favored_card):
                     C2B.card_to_play = ""
 
                     show_card7.destroy()
-                    player_cards[6] = ""
+                    Game_REWRITE.player_cards[6] = ""
 
                     CC2CP.add_favor_or_stolen_card(Game_REWRITE.CARDS_IN_HAND7)
 
