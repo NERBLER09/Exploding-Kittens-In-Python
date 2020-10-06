@@ -21,6 +21,12 @@ def draw_card():
 
         CCD.check_card(DTCP.com2_card1)
 
+        # Checks if the player played an attack card
+        if CCP.attack_card_played == True:
+            messagebox.showinfo("Exploding Kittens Game", "It is now com 2 turn again because you played a attack card")
+            CCP.attack_card_played = False 
+            C2B.decied_card_to_play() 
+
     # Checks if DTCP.com2_card2 is equal to ""
     elif DTCP.com2_card2 == "":
         DTCP.com2_card2 = random.choice(Game_REWRITE.cards)
@@ -33,6 +39,12 @@ def draw_card():
 
         CCD.check_card(DTCP.com2_cards)
 
+        # Checks if the player played an attack card
+        if CCP.attack_card_played == True:
+            messagebox.showinfo("Exploding Kittens Game", "It is now com 2 turn again because you played a attack card")
+            CCP.attack_card_played = False 
+            C2B.decied_card_to_play()
+
     # Checks if DTCP.com2_card3 is equal to ""
     elif DTCP.com2_card3 == "":
         DTCP.com2_card3 = random.choice(Game_REWRITE.cards)
@@ -44,6 +56,12 @@ def draw_card():
         Game_REWRITE.com2_turn = False
 
         CCD.check_card(DTCP.com2_cards)
+
+        # Checks if the player played an attack card
+        if CCP.attack_card_played == True:
+            messagebox.showinfo("Exploding Kittens Game", "It is now com 2 turn again because you played a attack card")
+            CCP.attack_card_played = False 
+            C2B.decied_card_to_play()
 
     # Checks if DTCP.com2_card4 is equal to ""
     elif DTCP.com2_card4 == "":
@@ -66,6 +84,12 @@ def draw_card():
         Game_REWRITE.com2_turn = False
 
         CCD.check_card(DTCP.com2_cards)
+
+        # Checks if the player played an attack card
+        if CCP.attack_card_played == True:
+            messagebox.showinfo("Exploding Kittens Game", "It is now com 2 turn again because you played a attack card")
+            CCP.attack_card_played = False 
+            C2B.decied_card_to_play()
     
     # Checks if DTCP.com2_card6 is equal to ""
     elif DTCP.com2_card6 == "":
@@ -79,6 +103,12 @@ def draw_card():
 
         CCD.check_card(DTCP.com2_cards)
 
+        # Checks if the player played an attack card
+        if CCP.attack_card_played == True:
+            messagebox.showinfo("Exploding Kittens Game", "It is now com 2 turn again because you played a attack card")
+            CCP.attack_card_played = False 
+            C2B.decied_card_to_play()
+
     # Checks if DTCP.com2_card7 is equal to ""
     elif DTCP.com2_card7 == "":
         DTCP.com2_card7 = random.choice(Game_REWRITE.cards)
@@ -90,6 +120,12 @@ def draw_card():
         Game_REWRITE.com2_turn = False
 
         CCD.check_card(DTCP.com2_cards)
+
+        # Checks if the player played an attack card
+        if CCP.attack_card_played == True:
+            messagebox.showinfo("Exploding Kittens Game", "It is now com 2 turn again because you played a attack card")
+            CCP.attack_card_played = False 
+            C2B.decied_card_to_play()
 
     print("After Drawn: " + str(DTCP.com2_cards))
     Game_REWRITE.player_turn = True
