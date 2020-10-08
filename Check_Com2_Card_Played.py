@@ -11,15 +11,39 @@ from tkinter import messagebox
 def draw_card():
     # Checks if DTCP.com2_card1 is equal to ""
     if DTCP.com2_card1 == "":
-        DTCP.com2_card1 = random.choice(Game_REWRITE.cards)
-        DTCP.com2_cards[0] = DTCP.com2_card1
+        # Checks if com 1, com 2 or the player has played a see the future
+        if CCP.first_card != " ":
+            # Adds the cards to com 2's hand
+            DTCP.com2_card1 = CCP.first_card
+            DTCP.com2_cards[0] = DTCP.com2_card1
 
-        messagebox.showinfo("Exploding Kittens Game", "Com 2 has drawn, it's now currently your turn") 
-        Game_REWRITE.player_turn = True 
-        Game_REWRITE.com1_turn = False
-        Game_REWRITE.com2_turn = False
+            CCD.check_card(DTCP.com2_card1)
 
-        CCD.check_card(DTCP.com2_card1)
+            CCP.first_card = " "
+
+        elif CCP.second_card != " ":
+            # Adds the cards to com 2's hand
+            DTCP.com2_card1 = CCP.first_card
+            DTCP.com2_cards[0] = DTCP.com2_card1
+
+            CCD.check_card(DTCP.com2_card1)
+
+            CCP.second_card = " "
+
+        elif CCP.third_card != " ":
+            # Adds the cards to com 2's hand
+            DTCP.com2_card1 = CCP.first_card
+            DTCP.com2_cards[0] = DTCP.com2_card1
+
+            CCD.check_card(DTCP.com2_card1)
+
+            CCP.third_card = " "
+
+        else:  
+            # Draws card from draw pile then adds to com 2's hand
+            DTCP.com2_card1 = random.choice(Game_REWRITE.cards)
+            DTCP.com2_cards[0] = DTCP.com2_card1
+            CCD.check_card(DTCP.com2_card1)
 
         # Checks if the player played an attack card
         if CCP.attack_card_played == True:
@@ -27,105 +51,306 @@ def draw_card():
             CCP.attack_card_played = False 
             C2B.decied_card_to_play() 
 
+        else:
+            # Tells the player that its there turn
+            messagebox.showinfo("Exploding Kittens Game", "Com 2 has drawn, it's now currently your turn") 
+            Game_REWRITE.player_turn = True 
+            Game_REWRITE.com1_turn = False
+            Game_REWRITE.com2_turn = False
+
     # Checks if DTCP.com2_card2 is equal to ""
     elif DTCP.com2_card2 == "":
-        DTCP.com2_card2 = random.choice(Game_REWRITE.cards)
-        DTCP.com2_cards[1] = DTCP.com2_card2
+        # Checks if com 1, com 2 or the player has played a see the future
+        if CCP.first_card != " ":
+            # Adds the cards to com 2's hand
+            DTCP.com2_card2 = CCP.first_card
+            DTCP.com2_cards[1] = DTCP.com2_card2
 
-        messagebox.showinfo("Exploding Kittens Game", "Com 2 has drawn, it's now currently your turn") 
-        Game_REWRITE.player_turn = True 
-        Game_REWRITE.com1_turn = False
-        Game_REWRITE.com2_turn = False
+            CCD.check_card(DTCP.com2_card2)
 
-        CCD.check_card(DTCP.com2_cards)
+            CCP.first_card = " "
+
+        elif CCP.second_card != " ":
+            # Adds the cards to com 2's hand
+            DTCP.com2_card2 = CCP.first_card
+            DTCP.com2_cards[1] = DTCP.com2_card2
+
+            CCD.check_card(DTCP.com1_card2)
+
+            CCP.second_card = " "
+
+        elif CCP.third_card != " ":
+            # Adds the cards to com 2's hand
+            DTCP.com2_card2 = CCP.first_card
+            DTCP.com2_cards[1] = DTCP.com2_card2
+
+            CCD.check_card(DTCP.com1_card2)
+
+            CCP.third_card = " "
+
+        else:  
+            # Draws card from draw pile then adds to com 2's hand
+            DTCP.com2_card2 = random.choice(Game_REWRITE.cards)
+            DTCP.com2_cards[1] = DTCP.com2_card2
+            CCD.check_card(DTCP.com2_card2)
 
         # Checks if the player played an attack card
         if CCP.attack_card_played == True:
             messagebox.showinfo("Exploding Kittens Game", "It is now com 2 turn again because you played a attack card")
             CCP.attack_card_played = False 
             C2B.decied_card_to_play()
+
+        else:
+            # Tells the player that its there turn
+            messagebox.showinfo("Exploding Kittens Game", "Com 2 has drawn, it's now currently your turn") 
+            Game_REWRITE.player_turn = True 
+            Game_REWRITE.com1_turn = False
+            Game_REWRITE.com2_turn = False
 
     # Checks if DTCP.com2_card3 is equal to ""
     elif DTCP.com2_card3 == "":
-        DTCP.com2_card3 = random.choice(Game_REWRITE.cards)
-        DTCP.com2_cards[2] = DTCP.com2_card3
+        # Checks if com 1, com 2 or the player has played a see the future
+        if CCP.first_card != " ":
+            # Adds the cards to com 2's hand
+            DTCP.com2_card1 = CCP.first_card
+            DTCP.com2_cards[0] = DTCP.com2_card1
 
-        messagebox.showinfo("Exploding Kittens Game", "Com 2 has drawn, it's now currently your turn") 
-        Game_REWRITE.player_turn = True 
-        Game_REWRITE.com1_turn = False
-        Game_REWRITE.com2_turn = False
+            CCD.check_card(DTCP.com1_card1)
 
-        CCD.check_card(DTCP.com2_cards)
+            CCP.first_card = " "
+
+        elif CCP.second_card != " ":
+            # Adds the cards to com 2's hand
+            DTCP.com2_card1 = CCP.first_card
+            DTCP.com2_cards[0] = DTCP.com2_card1
+
+            CCD.check_card(DTCP.com1_card1)
+
+            CCP.second_card = " "
+
+        elif CCP.third_card != " ":
+            # Adds the cards to com 2's hand
+            DTCP.com2_card1 = CCP.first_card
+            DTCP.com2_cards[0] = DTCP.com2_card1
+
+            CCD.check_card(DTCP.com1_card1)
+
+            CCP.third_card = " "
+
+        else:  
+            # Draws card from draw pile then adds to com 2's hand
+            DTCP.com2_card1 = random.choice(Game_REWRITE.cards)
+            DTCP.com2_cards[0] = DTCP.com2_card1
+            CCD.check_card(DTCP.com2_card1)
 
         # Checks if the player played an attack card
         if CCP.attack_card_played == True:
             messagebox.showinfo("Exploding Kittens Game", "It is now com 2 turn again because you played a attack card")
             CCP.attack_card_played = False 
             C2B.decied_card_to_play()
+
+        else:
+            # Tells the player that its there turn
+            messagebox.showinfo("Exploding Kittens Game", "Com 2 has drawn, it's now currently your turn") 
+            Game_REWRITE.player_turn = True 
+            Game_REWRITE.com1_turn = False
+            Game_REWRITE.com2_turn = False
 
     # Checks if DTCP.com2_card4 is equal to ""
     elif DTCP.com2_card4 == "":
-        DTCP.com2_card4 = random.choice(Game_REWRITE.cards)
-        DTCP.com2_cards[3] = DTCP.com2_card4
+        # Checks if com 1, com 2 or the player has played a see the future
+        if CCP.first_card != " ":
+            # Adds the cards to com 2's hand
+            DTCP.com2_card4 = CCP.first_card
+            DTCP.com2_cards[3] = DTCP.com2_card4
 
-        messagebox.showinfo("Exploding Kittens Game", "Com 2 has drawn, it's now currently your turn") 
-        Game_REWRITE.player_turn = True 
-        Game_REWRITE.com1_turn = False
-        Game_REWRITE.com2_turn = False
+            CCD.check_card(DTCP.com1_card4)
+
+            CCP.first_card = " "
+
+        elif CCP.second_card != " ":
+            # Adds the cards to com 2's hand
+            DTCP.com2_card4 = CCP.first_card
+            DTCP.com2_cards[3] = DTCP.com2_card4
+
+            CCD.check_card(DTCP.com1_card4)
+
+            CCP.second_card = " "
+
+        elif CCP.third_card != " ":
+            # Adds the cards to com 2's hand
+            DTCP.com2_card4 = CCP.first_card
+            DTCP.com2_cards[3] = DTCP.com2_card4
+
+            CCD.check_card(DTCP.com1_card4)
+
+            CCP.third_card = " "
+
+        else:  
+            # Draws card from draw pile then adds to com 2's hand
+            DTCP.com2_card4 = random.choice(Game_REWRITE.cards)
+            DTCP.com2_cards[3] = DTCP.com2_card4
+            CCD.check_card(DTCP.com2_card4)
+
+        # Checks if the player played an attack card
+        if CCP.attack_card_played == True:
+            messagebox.showinfo("Exploding Kittens Game", "It is now com 2 turn again because you played a attack card")
+            CCP.attack_card_played = False 
+            C2B.decied_card_to_play()
+
+        else:
+            # Tells the player that its there turn
+            messagebox.showinfo("Exploding Kittens Game", "Com 2 has drawn, it's now currently your turn") 
+            Game_REWRITE.player_turn = True 
+            Game_REWRITE.com1_turn = False
+            Game_REWRITE.com2_turn = False
 
     # Checks if DTCP.com2_card5 is equal to ""
     elif DTCP.com2_card5 == "":
-        DTCP.com2_card5 = random.choice(Game_REWRITE.cards)
-        DTCP.com2_cards[4] = DTCP.com2_card5
+        # Checks if com 1, com 2 or the player has played a see the future
+        if CCP.first_card != " ":
+            # Adds the cards to com 2's hand
+            DTCP.com2_card5 = CCP.first_card
+            DTCP.com2_cards[4] = DTCP.com2_card5
 
-        messagebox.showinfo("Exploding Kittens Game", "Com 2 has drawn, it's now currently your turn") 
-        Game_REWRITE.player_turn = True 
-        Game_REWRITE.com1_turn = False
-        Game_REWRITE.com2_turn = False
+            CCD.check_card(DTCP.com1_card5)
 
-        CCD.check_card(DTCP.com2_cards)
+            CCP.first_card = " "
+
+        elif CCP.second_card != " ":
+            # Adds the cards to com 2's hand
+            DTCP.com2_card6 = CCP.first_card
+            DTCP.com2_cards[4] = DTCP.com2_card5
+
+            CCD.check_card(DTCP.com1_card4)
+
+            CCP.second_card = " "
+
+        elif CCP.third_card != " ":
+            # Adds the cards to com 2's hand
+            DTCP.com2_card5 = CCP.first_card
+            DTCP.com2_cards[4] = DTCP.com2_card5
+
+            CCD.check_card(DTCP.com1_card5)
+
+            CCP.third_card = " "
+
+        else:  
+            # Draws card from draw pile then adds to com 2's hand
+            DTCP.com2_card5 = random.choice(Game_REWRITE.cards)
+            DTCP.com2_cards[4] = DTCP.com2_card5
+            CCD.check_card(DTCP.com2_card5)
 
         # Checks if the player played an attack card
         if CCP.attack_card_played == True:
             messagebox.showinfo("Exploding Kittens Game", "It is now com 2 turn again because you played a attack card")
             CCP.attack_card_played = False 
             C2B.decied_card_to_play()
+
+        else:
+            # Tells the player that its there turn
+            messagebox.showinfo("Exploding Kittens Game", "Com 2 has drawn, it's now currently your turn") 
+            Game_REWRITE.player_turn = True 
+            Game_REWRITE.com1_turn = False
+            Game_REWRITE.com2_turn = False
     
     # Checks if DTCP.com2_card6 is equal to ""
     elif DTCP.com2_card6 == "":
-        DTCP.com2_card6 = random.choice(Game_REWRITE.cards)
-        DTCP.com2_cards[5] = DTCP.com2_card5
+        # Checks if com 1, com 2 or the player has played a see the future
+        if CCP.first_card != " ":
+            # Adds the cards to com 2's hand
+            DTCP.com2_card6 = CCP.first_card
+            DTCP.com2_cards[5] = DTCP.com2_card6
 
-        messagebox.showinfo("Exploding Kittens Game", "Com 2 has drawn, it's now currently your turn") 
-        Game_REWRITE.player_turn = True 
-        Game_REWRITE.com1_turn = False
-        Game_REWRITE.com2_turn = False
+            CCD.check_card(DTCP.com1_card4)
 
-        CCD.check_card(DTCP.com2_cards)
+            CCP.first_card = " "
+
+        elif CCP.second_card != " ":
+            # Adds the cards to com 2's hand
+            DTCP.com2_card6 = CCP.first_card
+            DTCP.com2_cards[5] = DTCP.com2_card6
+
+            CCD.check_card(DTCP.com1_card4)
+
+            CCP.second_card = " "
+
+        elif CCP.third_card != " ":
+            # Adds the cards to com 2's hand
+            DTCP.com2_card6 = CCP.first_card
+            DTCP.com2_cards[5] = DTCP.com2_card6
+
+            CCD.check_card(DTCP.com1_card4)
+
+            CCP.third_card = " "
+
+        else:  
+            # Draws card from draw pile then adds to com 2's hand
+            DTCP.com2_card6 = random.choice(Game_REWRITE.cards)
+            DTCP.com2_cards[5] = DTCP.com2_card6
+            CCD.check_card(DTCP.com2_card6)
 
         # Checks if the player played an attack card
         if CCP.attack_card_played == True:
             messagebox.showinfo("Exploding Kittens Game", "It is now com 2 turn again because you played a attack card")
             CCP.attack_card_played = False 
             C2B.decied_card_to_play()
+
+        else:
+            # Tells the player that its there turn
+            messagebox.showinfo("Exploding Kittens Game", "Com 2 has drawn, it's now currently your turn") 
+            Game_REWRITE.player_turn = True 
+            Game_REWRITE.com1_turn = False
+            Game_REWRITE.com2_turn = False
 
     # Checks if DTCP.com2_card7 is equal to ""
     elif DTCP.com2_card7 == "":
-        DTCP.com2_card7 = random.choice(Game_REWRITE.cards)
-        DTCP.com2_cards[6] = DTCP.com2_card5
+        # Checks if com 1, com 2 or the player has played a see the future
+        if CCP.first_card != " ":
+            # Adds the cards to com 2's hand
+            DTCP.com2_card7 = CCP.first_card
+            DTCP.com2_cards[6] = DTCP.com2_card7
 
-        messagebox.showinfo("Exploding Kittens Game", "Com 2 has drawn, it's now currently your turn") 
-        Game_REWRITE.player_turn = True 
-        Game_REWRITE.com1_turn = False
-        Game_REWRITE.com2_turn = False
+            CCD.check_card(DTCP.com1_card4)
 
-        CCD.check_card(DTCP.com2_cards)
+            CCP.first_card = " "
+
+        elif CCP.second_card != " ":
+            # Adds the cards to com 2's hand
+            DTCP.com2_card7 = CCP.first_card
+            DTCP.com2_cards[6] = DTCP.com2_card7
+
+            CCD.check_card(DTCP.com1_card4)
+
+            CCP.second_card = " "
+
+        elif CCP.third_card != " ":
+            # Adds the cards to com 2's hand
+            DTCP.com2_card7 = CCP.first_card
+            DTCP.com2_cards[6] = DTCP.com2_card7
+
+            CCD.check_card(DTCP.com1_card4)
+
+            CCP.third_card = " "
+
+        else:  
+            # Draws card from draw pile then adds to com 2's hand
+            DTCP.com2_card7 = random.choice(Game_REWRITE.cards)
+            DTCP.com2_cards[6] = DTCP.com2_card7
+            CCD.check_card(DTCP.com2_card7)
 
         # Checks if the player played an attack card
         if CCP.attack_card_played == True:
             messagebox.showinfo("Exploding Kittens Game", "It is now com 2 turn again because you played a attack card")
             CCP.attack_card_played = False 
             C2B.decied_card_to_play()
+
+        else:
+            # Tells the player that its there turn
+            messagebox.showinfo("Exploding Kittens Game", "Com 2 has drawn, it's now currently your turn") 
+            Game_REWRITE.player_turn = True 
+            Game_REWRITE.com1_turn = False
+            Game_REWRITE.com2_turn = False
 
     print("After Drawn: " + str(DTCP.com2_cards))
     Game_REWRITE.player_turn = True
