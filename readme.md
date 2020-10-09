@@ -12,9 +12,9 @@ fill free to clone it, but it would be appreciate if you gave credit
 - Open up you preferred editor, I used [VS Code](https://code.visualstudio.com/)
 - Run `python Title_Screen_REWRITE.py` to run 
 
-Overview:
-```
-   git clone https://github.com/NERBLER09/Exploding-Kittens-In-Python
-   # Open your preferred editor, vs code or atom and start working!
-   python Title_Screen_REWRITE.py 
-```
+## Versions
+Currently there are 7 releases of Exploding Kittens In Python available for download.
+
+You can download all versions for Windows. For now you can't download Exploding Kittens In Python for linux, but 
+a Snapcraft download will be available soon. A MacOS download wont be available.
+ 
