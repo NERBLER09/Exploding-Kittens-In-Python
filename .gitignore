@@ -129,7 +129,7 @@ dmypy.json
 .pyre/
 
 /__pycache__
-/Exploding Kittens Prototype Setup Files
+/Exploding Kittens Setup Files
 /Practist Files
 /.vscode
 *.ini
@@ -137,3 +137,4 @@ dmypy.json
 *.exe
 *.txt
 *.jpg
+/Exploding-Kittens-Builds
