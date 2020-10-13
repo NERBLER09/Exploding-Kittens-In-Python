@@ -200,6 +200,15 @@ def com1_amount3():
     com1_card7 = random.choice(Game_REWRITE.cards)
     CCD.check_card(com1_card7)
 
+    # Assigns the parts in the com1_cards list to the matching card drawn
+    com1_cards[0] = com1_card1
+    com1_cards[1] = com1_card2
+    com1_cards[2] = com1_card3
+    com1_cards[3] = com1_card4
+    com1_cards[4] = com1_card5
+    com1_cards[5] = com1_card6
+    com1_cards[6] = com1_card7
+
     # Creates and displays com 1's cards
     show_com1_card1 = tk.Button(Game_REWRITE.gameScreen, text = "     ", font = "15", command = lambda: com_card_command(com1_card1, "com1"))
     show_com1_card1.place(y =420, x = 80) # Creates and places the card at x = 80, y = 420
@@ -291,6 +300,15 @@ def com2_amount3():
     com2_card7 = random.choice(Game_REWRITE.cards)
     CCD.check_card(com2_card7)
 
+    # Assigns the parts in the com1_cards list to the matching card drawn
+    com2_cards[0] = com2_card1
+    com2_cards[1] = com2_card2
+    com2_cards[2] = com2_card3
+    com2_cards[3] = com2_card4
+    com2_cards[4] = com2_card5
+    com2_cards[5] = com2_card6
+    com2_cards[6] = com2_card7
+
     # Creates and displays com 2's cards
     show_com2_card1 = tk.Button(Game_REWRITE.gameScreen, text = "     ", font = "15", command = lambda: com_card_command(com1_card1, "com1"))
     show_com2_card1.place(y =30, x = 650) # Creates and places the card at x = 650, y = 30 
@@ -330,6 +348,15 @@ def com3_amount3():
 
     com3_card7 = random.choice(Game_REWRITE.cards)
     CCD.check_card(com3_card7)
+
+    # Assigns the parts in the com1_cards list to the matching card drawn
+    com3_cards[0] = com3_card1
+    com3_cards[1] = com3_card2
+    com3_cards[2] = com3_card3
+    com3_cards[3] = com3_card4
+    com3_cards[4] = com3_card5
+    com3_cards[5] = com3_card6
+    com3_cards[6] = com3_card7
 
     # Creates and displays com 's cards
     show_com3_card1 = tk.Button(Game_REWRITE.gameScreen, text = "     ", font = "15", command = lambda: com_card_command(com2_card1, "com3"))
