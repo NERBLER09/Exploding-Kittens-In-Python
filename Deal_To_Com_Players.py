@@ -332,17 +332,17 @@ def com3_amount3():
     CCD.check_card(com3_card7)
 
     # Creates and displays com 's cards
-    show_com3_card1 = tk.Button(Game_REWRITE.gameScreen, text = "     ", font = "15", command = lambda: com_card_command(com2_card1, "com2"))
+    show_com3_card1 = tk.Button(Game_REWRITE.gameScreen, text = "     ", font = "15", command = lambda: com_card_command(com2_card1, "com3"))
     show_com3_card1.place(y =420, x = 1210) # Creates and places the card at x = 1210, y = 420
-    show_com3_card2 = tk.Button(Game_REWRITE.gameScreen, text = "     ", font = "15", command = lambda: com_card_command(com2_card2, "com2"))
+    show_com3_card2 = tk.Button(Game_REWRITE.gameScreen, text = "     ", font = "15", command = lambda: com_card_command(com2_card2, "com3"))
     show_com3_card2.place(y =470, x = 1210) # Creates and places the card at x = 1210, y = 470
-    show_com3_card3 = tk.Button(Game_REWRITE.gameScreen, text = "     ", font = "15", command = lambda: com_card_command(com2_card3, "com2"))
+    show_com3_card3 = tk.Button(Game_REWRITE.gameScreen, text = "     ", font = "15", command = lambda: com_card_command(com2_card3, "com3"))
     show_com3_card3.place(y =520, x = 1210) # Creates and places the card at x = 1210, y = 520
-    show_com3_card4 = tk.Button(Game_REWRITE.gameScreen, text = "     ", font = "15", command = lambda: com_card_command(com2_card4, "com2"))
+    show_com3_card4 = tk.Button(Game_REWRITE.gameScreen, text = "     ", font = "15", command = lambda: com_card_command(com2_card4, "com3"))
     show_com3_card4.place(y =570, x = 1210) # Creates and places the card at x = 1210, y = 570
-    show_com3_card5 = tk.Button(Game_REWRITE.gameScreen, text = "     ", font = "15", command = lambda: com_card_command(com2_card5, "com2"))
+    show_com3_card5 = tk.Button(Game_REWRITE.gameScreen, text = "     ", font = "15", command = lambda: com_card_command(com2_card5, "com3"))
     show_com3_card5.place(y =270, x = 1210) # Creates and places the card at x = 1210, y = 270
-    show_com3_card6 = tk.Button(Game_REWRITE.gameScreen, text = "     ", font = "15", command = lambda: com_card_command(com2_card6, "com2"))
+    show_com3_card6 = tk.Button(Game_REWRITE.gameScreen, text = "     ", font = "15", command = lambda: com_card_command(com2_card6, "com3"))
     show_com3_card6.place(y =320, x = 1210) # Creates and places the card at x = 1210, y = 320
-    show_com3_card7 = tk.Button(Game_REWRITE.gameScreen, text = "     ", font = "15", command = lambda: com_card_command(com2_card7, "com2"))
+    show_com3_card7 = tk.Button(Game_REWRITE.gameScreen, text = "     ", font = "15", command = lambda: com_card_command(com2_card7, "com3"))
     show_com3_card7.place(y =370, x = 1210) # Creates and places the card at x = 1210, y = 370
