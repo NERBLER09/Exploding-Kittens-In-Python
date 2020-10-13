@@ -103,6 +103,13 @@ def draw_card():
             else:
                 C1B.decied_card_to_play()
 
+        elif wt.com_number == 3:
+            Game_REWRITE.com1_turn = True
+            Game_REWRITE.com2_turn = True
+            Game_REWRITE.com3_turn = True
+
+            C1B.decied_card_to_play()
+
     # Checks if it's the players turn, but they have not played any cards
     elif Game_REWRITE.player_turn == True:
         Game_REWRITE.add_to_reserve_cards() # Adds a card to the players reserve hand
@@ -135,6 +142,13 @@ def draw_card():
                 C2B.card_to_play = ""
             else:
                 C1B.decied_card_to_play()
+                
+        elif wt.com_number == 3:
+            Game_REWRITE.com1_turn = True
+            Game_REWRITE.com2_turn = True
+            Game_REWRITE.com3_turn = True
+
+            C1B.decied_card_to_play()
 
     # Checks if it's not the player's turn
     elif Game_REWRITE.player_turn == False:

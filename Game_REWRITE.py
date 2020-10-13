@@ -35,6 +35,7 @@ card7_played = False
 
 com1_turn  = False
 com2_turn = False
+com3_turn = False
 player_turn = True
 
 reserve_cards = [" ", " ", " ", " ", " ", " ", " ", " "]
