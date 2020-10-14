@@ -33,6 +33,7 @@ com3_card7 = ""
 
 com1_cards = [" ", " ", " ", " ", " ", " ", " "]
 com2_cards = [" ", " ", " ", " ", " ", " ", " "]
+com3_cards = [" ", " ", " ", " ", " ", " ", " "]
 
 # Creates a function to be used when the player clicked on one of the com player cards
 def com_card_command(com_card, com_player):
