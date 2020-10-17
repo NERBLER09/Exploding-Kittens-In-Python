@@ -3,6 +3,8 @@ from tkinter import messagebox
 import Deal_To_Com_Players as DTCP
 import random
 
+card_to_play = ""
+
 # Function to removes the card com 2 played from there hands
 def get_rid_of_card(card_to_remove):
     if card_to_remove == DTCP.com3_card1:
@@ -38,6 +40,24 @@ def get_rid_of_card(card_to_remove):
 
     print("Com 2's hand after remove: " + str(DTCP.com3_cards))
 
+# Function to check the card com 3 is going to play to check that there not playing an already played card
+def check_card_to_play(card_to_check):
+    global card_to_play
+
+    if card_to_check == "":
+        card_to_play = random.choice(DTCP.com2_cards)
+
+        print(card_to_check)
+
+        check_card_to_play(card_to_play)
+    
+    elif card_to_check == "nope":
+        card_to_play = random.choice(DTCP.com2_cards)
+
+        print(card_to_check)
+
+        check_card_to_play(card_to_play)
+
 # Main function that decides the card com 3 should play
 def decied_card_to_play():
     if Game_REWRITE.com3_turn == True:
@@ -48,3 +68,7 @@ def decied_card_to_play():
         card_to_play = random.choice(DTCP.com3_cards)
 
         print("Card Com 3's going to play " + str(card_to_play))
+
+        get_rid_of_card(card_to_play)
+        check_card_to_play()
+
