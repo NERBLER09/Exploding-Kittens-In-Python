@@ -2,6 +2,7 @@ import Game_REWRITE
 from tkinter import messagebox
 import Deal_To_Com_Players as DTCP
 import random
+import Check_Com3_Card_Played as CC3CP
 
 card_to_play = ""
 
@@ -60,6 +61,8 @@ def check_card_to_play(card_to_check):
 
 # Main function that decides the card com 3 should play
 def decied_card_to_play():
+    global card_to_play
+
     if Game_REWRITE.com3_turn == True:
         messagebox.showinfo("Exploding Kittens Game", "It is currently com 3's turn.")
 
@@ -70,5 +73,6 @@ def decied_card_to_play():
         print("Card Com 3's going to play " + str(card_to_play))
 
         get_rid_of_card(card_to_play)
-        check_card_to_play()
+        check_card_to_play(card_to_play)
 
+        CC3CP.check_card_played()
