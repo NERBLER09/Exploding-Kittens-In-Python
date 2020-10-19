@@ -86,7 +86,7 @@ def check_card_played():
 
         print("Com 3 has played a " + C3B.card_to_play + " card")
 
-    messagebox.showinfo("Exploding Kittens Game", "Com 3 has played a card, it's now your turn (to see the card com 3 has played, see the terminal)")
+        # TODO steal card
 
     Game_REWRITE.com1_turn = False
     Game_REWRITE.com2_turn = False
