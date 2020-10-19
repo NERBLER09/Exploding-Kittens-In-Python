@@ -3,6 +3,7 @@ import time
 from tkinter import messagebox
 import Game_REWRITE
 import random
+import Check_Card_Played as CCP
 
 def check_card_played():
     # Checks if com 3 has played an skip card
@@ -62,6 +63,23 @@ def check_card_played():
         time.sleep(1)
 
         print("Com 3 has played a see the future card")
+
+        # Assigns the top 3 cards to a random choice, this will be used to be find the top 3 cards
+        CCP.first_card = random.choice(Game_REWRITE.cards)
+        CCP.second_card = random.choice(Game_REWRITE.cards)
+        CCP.third_card = random.choice(Game_REWRITE.cards)
+
+        # Prints the top 3 card assigned above
+        print("--------------")
+        print(CCP.first_card)
+        print(CCP.second_card)
+        print(CCP.third_card)
+        print("--------------")
+
+        messagebox.showinfo("Exploding Kittens Game", "Com 3 has played a see the future")
+        Game_REWRITE.discard_pile_text.set(C3B.card_to_play + "\n \n \n")
+
+        messagebox.showinfo("Exploding Kittens Game", "Com 3 has played a see the future card, it's now currently you turn")
 
     elif C3B.card_to_play == 'potato cat' or 'taco cat' or 'rainbow ralphing cat' or 'beard cat' or 'cattermellon':
         time.sleep(1)
