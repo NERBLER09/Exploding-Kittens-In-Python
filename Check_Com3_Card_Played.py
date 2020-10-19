@@ -2,6 +2,7 @@ import Com3_Behavior as C3B
 import time
 from tkinter import messagebox
 import Game_REWRITE
+import random
 
 def check_card_played():
     # Checks if com 3 has played an skip card
@@ -45,6 +46,16 @@ def check_card_played():
         time.sleep(1)
 
         print("Com 3 has played a shuffle card")
+
+        random.shuffle(Game_REWRITE.cards)
+        random.shuffle(Game_REWRITE.cards)
+        random.shuffle(Game_REWRITE.cards)
+        random.shuffle(Game_REWRITE.cards)
+        random.shuffle(Game_REWRITE.cards)
+        random.shuffle(Game_REWRITE.cards)
+        random.shuffle(Game_REWRITE.cards)
+
+        messagebox.showinfo("Exploding Kittens Game", "Com 3 has shuffled the deck, it's now your turn")
 
     # Checks if com 3 has played an see the future card
     elif C3B.card_to_play == "see the future":
