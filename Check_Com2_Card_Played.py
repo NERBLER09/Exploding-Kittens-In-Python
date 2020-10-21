@@ -435,6 +435,8 @@ def add_favor_or_stolen_card(card_to_add):
 
 # Function lets com 2 play 2 matching cat cards and than steal a card from the player or com 2, than adds it to there hand
 def get_cat_card(com2_cat_card):
+    looped_on_card = ""
+
     # Enters a for loop checking if the card pass through in the argument equals to a card in com 2's hand
     for cards_in_com2_hand in DTCP.com2_cards:
         # Checks if cards_in_com1_hand is equal to the argument passed
@@ -456,8 +458,10 @@ def get_cat_card(com2_cat_card):
         else:
             print("Theres not currently a match")
 
+        looped_on_card = cards_in_com2_hand
+
     # Tells the played that com 2 hasn't played 2 matching cat cards
-    if cards_in_com2_hand != com2_cat_card:
+    if looped_on_card != com2_cat_card:
         messagebox.showerror("Exploding Kittens Game", 'Com 2 has not successfully played 2 cat cards')
 
 def check_card_played():
