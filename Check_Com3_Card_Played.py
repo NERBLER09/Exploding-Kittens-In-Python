@@ -4,6 +4,35 @@ from tkinter import messagebox
 import Game_REWRITE
 import random
 import Check_Card_Played as CCP
+import Deal_To_Com_Players as DTCP
+
+# Steals card from player when com 3 plays a cat
+def steal_cat_card(cat_card):
+    looped_on_card = ""
+
+    # Loops through com 3's hand for matching card
+    for cards_in_com3_hand in DTCP.com3_cards:
+        looped_on_card = cards_in_com3_hand
+
+        # Checks if the looped on card match the played card
+        if cards_in_com3_hand == cat_card:
+            print("Com 3 has played 2 " + cat_card + " cards")
+
+            messagebox.showinfo("Exploding Kittens Game", "Com 3 has played 2 matching "  + cat_card +  " cards")
+
+            steal_card = random.choice(Game_REWRITE.player_cards) # Gets a card from the player that com 3 is going to steal
+
+            print(steal_card)
+
+            # TODO Add card to com 3's card
+
+        else:
+            print("Com 3 hasn't played 2 " + cat_card + "cards")
+
+    print("Looped card is " + looped_on_card)
+
+    if looped_on_card != cat_card:
+        messagebox.showerror("Exploding Kittens Game", 'Com 3 has not successfully played 2 cat cards')
 
 def check_card_played():
     # Checks if com 3 has played an skip card
@@ -86,7 +115,7 @@ def check_card_played():
 
         print("Com 3 has played a " + C3B.card_to_play + " card")
 
-        # TODO steal card
+        steal_cat_card(C3B.card_to_play)
 
     Game_REWRITE.com1_turn = False
     Game_REWRITE.com2_turn = False

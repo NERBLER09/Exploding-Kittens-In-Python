@@ -439,6 +439,8 @@ def get_cat_card(com2_cat_card):
 
     # Enters a for loop checking if the card pass through in the argument equals to a card in com 2's hand
     for cards_in_com2_hand in DTCP.com2_cards:
+        looped_on_card = cards_in_com2_hand
+        
         # Checks if cards_in_com1_hand is equal to the argument passed
         if cards_in_com2_hand == com2_cat_card:
             print("Theres a match")
@@ -458,7 +460,7 @@ def get_cat_card(com2_cat_card):
         else:
             print("Theres not currently a match")
 
-        looped_on_card = cards_in_com2_hand
+    print("Looped card is " + looped_on_card)
 
     # Tells the played that com 2 hasn't played 2 matching cat cards
     if looped_on_card != com2_cat_card:
