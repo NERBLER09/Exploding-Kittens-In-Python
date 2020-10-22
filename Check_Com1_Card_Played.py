@@ -10,7 +10,10 @@ import Check_Card_Drawn as CCD
 import Game_REWRITE
 import random
 import Com2_Behavior as C2B
+import WelcomeTEST as wt
  
+com1_played_attack = False
+
 # Function makes com 1 draw a card and adds that card to com 1 hands
 def draw_card():
     sleep(1)
@@ -513,6 +516,8 @@ def get_cat_card(com1_cat_card):
 
 # Checks what card com 1 has played so it can do it's respected function
 def check_com1_card():
+    global com1_played_attack
+
     print(C1B.card_to_play) # Prints what com 1 has chosen to play
 
     # Checks if com 1 has played an attack card
@@ -531,15 +536,22 @@ def check_com1_card():
     # Checks if com 1 has played an attack card
     elif C1B.card_to_play == "attack":
         sleep(1) # Sleeps the program for 1 second (Makes it like com 1 is choosing a card to play)
-        messagebox.showinfo("Exploding Kittens Game", "Com1 has played an attack. Com1 has skiped there turn\nand made you have 2 turns") # Tells the player that com 1 has played an attack card and made you have 2 turns
+       
         Game_REWRITE.discard_pile_text.set(C1B.card_to_play + "\n \n \n") # Sets the discard text to "attack"
-        Game_REWRITE.player_turn = True # Makes it be the players turn
         Game_REWRITE.com1_turn = False # Makes it not be com 1's turn
 
-        if Game_REWRITE.com2_turn == True:
+        if wt.com_number == 1:
+            Game_REWRITE.com1_turn = False
+            Game_REWRITE.player_turn = True
+            messagebox.showinfo("Exploding Kittens Game", "Com1 has played an attack. Com1 has skiped there turn\nand made you have 2 turns") # Tells the player that com 1 has played an attack card and made you have 2 turns
+            com1_played_attack = True
+        elif wt.com_number == 2 or 3:
             Game_REWRITE.com2_turn = True
+            Game_REWRITE.com1_turn = False 
+            com1_played_attack = True
+            messagebox.showinfo("Exploding Kittens Game", "Com1 has played an attack. Com1 has skiped there turn\nand made con 2 have 2 turns")
             C2B.decied_card_to_play()
-
+        
     # Checks if com 1 has play a favor card
     elif C1B.card_to_play == "favor":
         sleep(1) # Sleeps the program for 1 second (Makes it like com 1 is choosing a card to play)

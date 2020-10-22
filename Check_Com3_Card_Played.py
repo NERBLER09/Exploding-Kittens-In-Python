@@ -52,7 +52,7 @@ def check_card_played():
         time.sleep(1)
 
         print("Com 3 has played a attack card")
-        messagebox.showinfo("Exploding Kittens Game", "Com 3 has played an attack. Com 3Com 2 has played an attack. Com 2 has skiped there turn and made you have 2 turns has skiped there turn and made you have 2 turns")
+        messagebox.showinfo("Exploding Kittens Game", "Com 3 has played an attack and make you have 2 turns")
         Game_REWRITE.discard_pile_text.set(C3B.card_to_play + "\n\n\n")
         Game_REWRITE.com3_turn = False
         Game_REWRITE.com2_turn = False
