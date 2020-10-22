@@ -49,16 +49,17 @@ def check_card_to_play(card_to_check):
     if card_to_check == "":
         card_to_play = random.choice(DTCP.com2_cards)
 
-        print(card_to_check)
+        print(card_to_play)
 
         check_card_to_play(card_to_play)
     
     elif card_to_check == "nope":
         card_to_play = random.choice(DTCP.com2_cards)
 
-        print(card_to_check)
+        print(card_to_play)
 
         check_card_to_play(card_to_play)
+
 
 # Main function that decides the card com 2 should play
 def decied_card_to_play():
