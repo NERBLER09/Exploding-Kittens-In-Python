@@ -6,6 +6,48 @@ import random
 import Check_Card_Played as CCP
 import Deal_To_Com_Players as DTCP
 
+# Add cards gotten from favor or cat cards to com 3's hand
+def add_card_to_hand(card_to_add_to_hand):
+    # Adds the card to there 1st card slot
+    if DTCP.card3_card1 == "":
+        DTCP.card3_card1 = card_to_add_to_hand 
+        DTCP.card3_cards[0] = DTCP.card3_card1
+
+    # Adds the card to there 2st card slot
+    elif DTCP.card3_card2 == "":
+        DTCP.card3_card2 = card_to_add_to_hand 
+        DTCP.card3_cards[0] = DTCP.card3_card2
+
+    # Adds the card to there 3st card slot
+    elif DTCP.card3_card3 == "":
+        DTCP.card3_card3 = card_to_add_to_hand 
+        DTCP.card3_cards[0] = DTCP.card3_card3
+
+    # Adds the card to there 4st card slot
+    elif DTCP.card3_card4 == "":
+        DTCP.card3_card4 = card_to_add_to_hand 
+        DTCP.card3_cards[0] = DTCP.card3_card4
+
+    # Adds the card to there 5st card slot
+    elif DTCP.card3_card5 == "":
+        DTCP.card3_card5 = card_to_add_to_hand 
+        DTCP.card3_cards[0] = DTCP.card3_card5
+
+    # Adds the card to there 6st card slot
+    elif DTCP.card3_card6 == "":
+        DTCP.card3_card6 = card_to_add_to_hand 
+        DTCP.card3_cards[0] = DTCP.card3_card6
+
+    # Adds the card to there 7st card slot
+    elif DTCP.card3_card7 == "":
+        DTCP.card3_card7 = card_to_add_to_hand 
+        DTCP.card3_cards[0] = DTCP.card3_card7
+
+    else:
+        print("An error has been encountered.")
+
+    messagebox.showinfo("Exploding Kittens Game", "Com 3 has drawn, it's now your turn")
+
 # Steals card from player when com 3 plays a cat
 def steal_cat_card(cat_card):
     looped_on_card = ""
@@ -22,10 +64,12 @@ def steal_cat_card(cat_card):
 
             steal_card = random.choice(Game_REWRITE.player_cards) # Gets a card from the player that com 3 is going to steal
 
+            while steal_card == "":
+                steal_card = random.choice(Game_REWRITE.player_cards) # Gets a card from the player that com 3 is going to steal
+
             print(steal_card)
 
-            # TODO Add card to com 3's card
-
+            add_card_to_hand(steal_card)
         else:
             print("Com 3 hasn't played 2 " + cat_card + "cards")
 
@@ -43,7 +87,7 @@ def check_card_played():
         messagebox.showinfo("Exploding Kittens Game", "Com 3 has skiped there turn, it's now currently your turn")
         Game_REWRITE.discard_pile_text.set(C3B.card_to_play + "\n\n\n")
         Game_REWRITE.com3_turn = False
-        Game_REWRITE.com2_turn = False
+        Game_REWRITE.card3_turn = False
         Game_REWRITE.com1_turn = False
         Game_REWRITE.player_turn = True
 
@@ -55,7 +99,7 @@ def check_card_played():
         messagebox.showinfo("Exploding Kittens Game", "Com 3 has played an attack and make you have 2 turns")
         Game_REWRITE.discard_pile_text.set(C3B.card_to_play + "\n\n\n")
         Game_REWRITE.com3_turn = False
-        Game_REWRITE.com2_turn = False
+        Game_REWRITE.card3_turn = False
         Game_REWRITE.com1_turn = False
         Game_REWRITE.player_turn = True
 
@@ -67,7 +111,7 @@ def check_card_played():
         messagebox.showinfo("Exploding Kittens Game", "Com 3 has played a favor card, it's now currently your turn.")
         Game_REWRITE.discard_pile_text.set(C3B.card_to_play + "\n\n\n")
         Game_REWRITE.com3_turn = False
-        Game_REWRITE.com2_turn = False
+        Game_REWRITE.card3_turn = False
         Game_REWRITE.com1_turn = False
         Game_REWRITE.player_turn = True
 
@@ -118,6 +162,6 @@ def check_card_played():
         steal_cat_card(C3B.card_to_play)
 
     Game_REWRITE.com1_turn = False
-    Game_REWRITE.com2_turn = False
+    Game_REWRITE.card3_turn = False
     Game_REWRITE.com3_turn = False
     Game_REWRITE.player_turn = True
