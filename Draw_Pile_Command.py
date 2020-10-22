@@ -204,7 +204,7 @@ def display_card(card_to_display):
                     C2B.card_to_play = ""
 
                     show_card1.destroy()
-                    player_cards[0] = ""
+                    Game_REWRITE.player_cards[0] = ""
 
                     CC2CP.draw_card()
 
@@ -273,7 +273,7 @@ def display_card(card_to_display):
                     C2B.card_to_play = ""
 
                     show_card2.destroy()
-                    player_cards[1] = ""
+                    Game_REWRITE.player_cards[1] = ""
 
                     CC2CP.draw_card()
 
@@ -341,7 +341,7 @@ def display_card(card_to_display):
                     C2B.card_to_play = ""
 
                     show_card3.destroy()
-                    player_cards[2] = ""
+                    Game_REWRITE.player_cards[2] = ""
 
                     CC2CP.draw_card()
 
@@ -410,7 +410,7 @@ def display_card(card_to_display):
                     C2B.card_to_play = ""
 
                     show_card4.destroy()
-                    player_cards[3] = ""
+                    Game_REWRITE.player_cards[3] = ""
 
                     CC2CP.draw_card()
 
@@ -477,7 +477,7 @@ def display_card(card_to_display):
                     C2B.card_to_play = ""
 
                     show_card5.destroy()
-                    player_cards[4] = ""
+                    Game_REWRITE.player_cards[4] = ""
 
                     CC2CP.draw_card()
 
@@ -546,7 +546,7 @@ def display_card(card_to_display):
                     C2B.card_to_play = ""
 
                     show_card6.destroy()
-                    player_cards[5] = ""
+                    Game_REWRITE.player_cards[5] = ""
 
                 else:
                     messagebox.showerror("Exploding Kittens Game", "You have not given your card to com 2")
@@ -614,7 +614,7 @@ def display_card(card_to_display):
                     C2B.card_to_play = ""
 
                     show_card7.destroy()
-                    player_cards[6] = ""
+                    Game_REWRITE.player_cards[6] = ""
 
                     CC2CP.draw_card()
 
