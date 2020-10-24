@@ -58,21 +58,6 @@ def draw_card():
 
             CCD.check_card(DTCP.com1_card1) # Removes the card from the deck
 
-        # Checks if the player played an attack card
-        if CCP.attack_card_played == True:
-            messagebox.showinfo("Exploding Kittens Game", "It is now Com1 turn again because you played a attack card") # Tells the player that it's com 1's turn again because they played an attack card
-            CCP.attack_card_played = False # Re-assigns the bollen to be false
-            C1B.decied_card_to_play() # Calls the function
-
-        # Checks if the player selected 2 com players
-        elif Game_REWRITE.com2_turn == True:
-            C2B.decied_card_to_play()
-
-        else:
-            messagebox.showinfo("Exploding Kittens Game", "Com1 has drawn, it's now currently your turn") # Tells the player that com 1 has drawn and that it's there turn
-            Game_REWRITE.player_turn = True # Makes it the players turns
-            Game_REWRITE.com1_turn = False # Makes it not be com 1's turns
-
         print(DTCP.com1_cards) # Prints com 1's hand 
 
     # Checks if card 2 is equal to ""
@@ -114,22 +99,6 @@ def draw_card():
             DTCP.com1_cards[1] = DTCP.com1_card2 # Assigns the part in the list to the drawn card
 
             CCD.check_card(DTCP.com1_card2) # Removes the card from the deck
-
-
-        # Checks if the player played an attack card
-        if CCP.attack_card_played == True:
-            messagebox.showinfo("Exploding Kittens Game", "It is now Com1 turn again because you played a attack card") # Tells the player that it's com 1's turn again because they played an attack card
-            CCP.attack_card_played = False # Re-assigns the bollen to be false
-            C1B.decied_card_to_play() # Calls the function
-        
-        # Checks if the player selected 2 com players
-        elif Game_REWRITE.com2_turn == True:
-            C2B.decied_card_to_play()
-        
-        else:
-            messagebox.showinfo("Exploding Kittens Game", "Com1 has drawn, it's now currently your turn") # Tells the player that com 1 has drawn and that it's there turn
-            Game_REWRITE.player_turn = True # Makes it the players turns
-            Game_REWRITE.com1_turn = False # Makes it not be com 1's turns
 
         print(DTCP.com1_cards) # Prints com 1's hand
 
@@ -173,22 +142,6 @@ def draw_card():
 
             CCD.check_card(DTCP.com1_card3) # Removes the card from the deck
 
-
-        # Checks if the player played an attack card
-        if CCP.attack_card_played == True:
-            messagebox.showinfo("Exploding Kittens Game", "It is now Com1 turn again because you played a attack card") # Tells the player that it's com 1's turn again because they played an attack card
-            CCP.attack_card_played = False # Re-assigns the bollen to be false
-            C1B.decied_card_to_play() # Calls the function
-        
-        # Checks if the player selected 2 com players
-        elif Game_REWRITE.com2_turn == True:
-            C2B.decied_card_to_play()
-        
-        else:
-            messagebox.showinfo("Exploding Kittens Game", "Com1 has drawn, it's now currently your turn") # Tells the player that com 1 has drawn and that it's there turn
-            Game_REWRITE.player_turn = True # Makes it the players turns
-            Game_REWRITE.com1_turn = False # Makes it not be com 1's turns
-
         print(DTCP.com1_cards) # Prints com 1's hand
 
     # Checks if card 4 is equal to ""
@@ -230,21 +183,6 @@ def draw_card():
             DTCP.com1_cards[3] = DTCP.com1_card4 # Assigns the part in the list to the drawn card
 
             CCD.check_card(DTCP.com1_card4) # Removes the card from the deck
-
-        # Checks if the player played an attack card
-        if CCP.attack_card_played == True:
-            messagebox.showinfo("Exploding Kittens Game", "It is now Com1 turn again because you played a attack card") # Tells the player that it's com 1's turn again because they played an attack card
-            CCP.attack_card_played = False # Re-assigns the bollen to be false
-            C1B.decied_card_to_play() # Calls the function
-        
-        # Checks if the player selected 2 com players
-        elif Game_REWRITE.com2_turn == True:
-            C2B.decied_card_to_play()
-        
-        else:
-            messagebox.showinfo("Exploding Kittens Game", "Com1 has drawn, it's now currently your turn") # Tells the player that com 1 has drawn and that it's there turn
-            Game_REWRITE.player_turn = True # Makes it the players turns
-            Game_REWRITE.com1_turn = False # Makes it not be com 1's turns
 
         print(DTCP.com1_cards) # Prints com 1's hand
 
@@ -288,22 +226,6 @@ def draw_card():
 
             CCD.check_card(DTCP.com1_card5) # Removes the card from the deck
 
-
-        # Checks if the player played an attack card
-        if CCP.attack_card_played == True:
-            messagebox.showinfo("Exploding Kittens Game", "It is now Com1 turn again because you played a attack card") # Tells the player that it's com 1's turn again because they played an attack card
-            CCP.attack_card_played = False # Re-assigns the bollen to be false
-            C1B.decied_card_to_play() # Calls the function
-        
-        # Checks if the player selected 2 com players
-        elif Game_REWRITE.com2_turn == True:
-            C2B.decied_card_to_play()
-
-        else:
-            messagebox.showinfo("Exploding Kittens Game", "Com1 has drawn, it's now currently your turn") # Tells the player that com 1 has drawn and that it's there turn
-            Game_REWRITE.player_turn = True # Makes it the players turns
-            Game_REWRITE.com1_turn = False # Makes it not be com 1's turns
-
         print(DTCP.com1_cards) # Prints com 1's hand
 
     # Checks if card 6 is equal to ""
@@ -345,21 +267,6 @@ def draw_card():
             DTCP.com1_cards[5] = DTCP.com1_card6 # Assigns the part in the list to the drawn card
 
             CCD.check_card(DTCP.com1_card6) # Removes the card from the deck
-
-        # Checks if the player played an attack card
-        if CCP.attack_card_played == True:
-            messagebox.showinfo("Exploding Kittens Game", "It is now Com1 turn again because you played a attack card") # Tells the player that it's com 1's turn again because they played an attack card
-            CCP.attack_card_played = False # Re-assigns the bollen to be false
-            C1B.decied_card_to_play() # Calls the function
-        
-        # Checks if the player selected 2 com players
-        elif Game_REWRITE.com2_turn == True:
-            C2B.decied_card_to_play()
-
-        else:
-            messagebox.showinfo("Exploding Kittens Game", "Com1 has drawn, it's now currently your turn") # Tells the player that com 1 has drawn and that it's there turn
-            Game_REWRITE.player_turn = True # Makes it the players turns
-            Game_REWRITE.com1_turn = False # Makes it not be com 1's turns
 
         print(DTCP.com1_cards) # Prints com 1's hand
 
@@ -403,21 +310,6 @@ def draw_card():
 
             CCD.check_card(DTCP.com1_card7) # Removes the card from the deck
 
-        # Checks if the player played an attack card
-        if CCP.attack_card_played == True:
-            messagebox.showinfo("Exploding Kittens Game", "It is now Com1 turn again because you played a attack card") # Tells the player that it's com 1's turn again because they played an attack card
-            CCP.attack_card_played = False # Re-assigns the bollen to be false
-            C1B.decied_card_to_play() # Calls the function
-        
-        # Checks if the player selected 2 com players
-        elif Game_REWRITE.com2_turn == True:
-            C2B.decied_card_to_play()
-
-        else:
-            messagebox.showinfo("Exploding Kittens Game", "Com1 has drawn, it's now currently your turn") # Tells the player that com 1 has drawn and that it's there turn
-            Game_REWRITE.player_turn = True # Makes it the players turns
-            Game_REWRITE.com1_turn = False # Makes it not be com 1's turns
-
         print(DTCP.com1_cards) # Prints com 1's hand
     
     else:
@@ -425,6 +317,21 @@ def draw_card():
         messagebox.showinfo("Exploding Kittens Game", "Com1 has drawn, it's now currently your turn") # Tells the player that com 1 has drawn and that its there turn
         Game_REWRITE.player_turn = True # Makes its the players turn
         Game_REWRITE.com1_turn = False # Makes it not be com 1's turn
+
+    # Checks if the player played an attack card
+    if CCP.attack_card_played == True:
+        messagebox.showinfo("Exploding Kittens Game", "It is now Com1 turn again because you played a attack card") # Tells the player that it's com 1's turn again because they played an attack card
+        CCP.attack_card_played = False # Re-assigns the bollen to be false
+        C1B.decied_card_to_play() # Calls the function
+
+    # Checks if the player selected 2 com players
+    elif Game_REWRITE.com2_turn == True:
+        C2B.decied_card_to_play()
+
+    else:
+        messagebox.showinfo("Exploding Kittens Game", "Com1 has drawn, it's now currently your turn") # Tells the player that com 1 has drawn and that it's there turn
+        Game_REWRITE.player_turn = True # Makes it the players turns
+        Game_REWRITE.com1_turn = False # Makes it not be com 1's turns
 
     C1B.card_to_play = "" # Assigns card_to_play to ""
 
