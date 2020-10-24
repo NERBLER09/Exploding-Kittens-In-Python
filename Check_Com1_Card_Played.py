@@ -523,13 +523,19 @@ def check_com1_card():
     # Checks if com 1 has played an attack card
     if C1B.card_to_play == "skip":
         sleep(1) # Sleeps the program for 1 second (Makes it like com 1 is choosing a card to play)
-        messagebox.showinfo("Exploding Kittens Game", "Com1 has skip there turn") # Tells the player that con 1 has skiped there turn
-        messagebox.showinfo("Exploding Kittens Game", "It is currently your turn") # Tells the player that it's not there turn
-        Game_REWRITE.discard_pile_text.set(C1B.card_to_play + "\n \n \n") # Changes the display text of the draw pile
-        Game_REWRITE.player_turn = True # Sets the players turn to be true
-        Game_REWRITE.com1_turn = False # Sets com 1's turn to be false
+        
+        if wt.com_number == 1:
+            messagebox.showinfo("Exploding Kittens Game", "Com1 has skip there turn, it is currently your turn") # Tells the player that con 1 has skiped there turn
+            Game_REWRITE.discard_pile_text.set(C1B.card_to_play + "\n \n \n") # Changes the display text of the draw pile
+            Game_REWRITE.player_turn = True # Sets the players turn to be true
+            Game_REWRITE.com1_turn = False # Sets com 1's turn to be false
 
-        if Game_REWRITE.com2_turn == True:
+        elif wt.com_number == 2 or 3:
+            messagebox.showinfo("Exploding Kittens Game", "Com1 has skip there turn, it is now com 2's turn") # Tells the player that con 1 has skiped there turn
+            Game_REWRITE.discard_pile_text.set(C1B.card_to_play + "\n \n \n") # Changes the display text of the draw pile
+            Game_REWRITE.com2_turn = True 
+            Game_REWRITE.com1_turn = False # Sets com 1's turn to be false
+
             Game_REWRITE.com2_turn = True
             C2B.decied_card_to_play()
 
