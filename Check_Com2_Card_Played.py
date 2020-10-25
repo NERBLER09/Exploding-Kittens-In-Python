@@ -1,4 +1,5 @@
 import time
+from typing import Type
 import Game_REWRITE
 import Com2_Behavior as C2B
 import Check_Card_Played as CCP
@@ -9,6 +10,8 @@ from tkinter import messagebox
 import Com3_Behavior as C3B
 import WelcomeTEST as wt
 import Check_Com1_Card_Played as CC1CP
+
+com2_played_attack = False
 
 # Function makes com 2 draw a card and adds that card to there hand
 def draw_card():
@@ -282,10 +285,19 @@ def draw_card():
             Game_REWRITE.player_turn = True
 
     else:
-        Game_REWRITE.com1_turn = False
-        Game_REWRITE.com2_turn = False
-        Game_REWRITE.com3_turn = True
-        C3B.decied_card_to_play()
+        if CC1CP.com1_played_attack == True:
+            messagebox.showinfo("Exploding Kittens Game", "It's com 2 turn again because com 1 has played an attack card")
+
+            CC1CP.com1_played_attack = False
+
+            C2B.decied_card_to_play()
+
+        else:
+            messagebox.showinfo("Exploding Kittens Game", "Com 2 has drawn, it's now currently your turn")
+            Game_REWRITE.com1_turn = False
+            Game_REWRITE.com2_turn = False
+            Game_REWRITE.com3_turn = True
+            C3B.decied_card_to_play()
 
     print("After Drawn: " + str(DTCP.com2_cards))
     Game_REWRITE.player_turn = True
@@ -364,6 +376,8 @@ def get_cat_card(com2_cat_card):
         messagebox.showerror("Exploding Kittens Game", 'Com 2 has not successfully played 2 cat cards')
 
 def check_card_played():
+    global com2_played_attack
+
     # Checks if com 2 has played an skip card
     if C2B.card_to_play == "skip":
         time.sleep(1)
@@ -383,6 +397,8 @@ def check_card_played():
             Game_REWRITE.player_turn = True
             Game_REWRITE.com1_turn = False
             Game_REWRITE.com2_turn = False
+            Game_REWRITE.com3_turn = True
+            C3B.decied_card_to_play()
 
     # Checks if com 2 has played an attack card
     elif C2B.card_to_play == "attack":
@@ -395,6 +411,7 @@ def check_card_played():
             Game_REWRITE.player_turn = True
             Game_REWRITE.com1_turn = False
             Game_REWRITE.com2_turn = False
+            com2_played_attack = True
 
         else:
             # Tells that com 2 has played an attack card and make com 3 have 2 turns
@@ -403,7 +420,11 @@ def check_card_played():
             Game_REWRITE.player_turn = True
             Game_REWRITE.com1_turn = False
             Game_REWRITE.com2_turn = False
-    
+            Game_REWRITE.com3_turn = True
+            com2_played_attack = True
+
+            C3B.decied_card_to_play()
+
     # Checks if com 2 has played an favor card
     elif C2B.card_to_play == "favor":
         time.sleep(1)
