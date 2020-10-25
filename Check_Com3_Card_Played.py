@@ -5,10 +5,265 @@ import Game_REWRITE
 import random
 import Check_Card_Played as CCP
 import Deal_To_Com_Players as DTCP
+import Check_Card_Drawn as CCD
 
 # Function draws a card for com 3
 def draw_card():
-    pass
+    # Checks if DTCP.com3_card1 is equal to ""
+    if DTCP.com3_card1 == "":
+        # Checks if com 1, com 2 or the player has played a see the future
+        if CCP.first_card != " ":
+            # Adds the cards to com 2's hand
+            DTCP.com3_card1 = CCP.first_card
+            DTCP.com3_cards[0] = DTCP.com3_card1
+
+            CCD.check_card(DTCP.com3_card1)
+
+            CCP.first_card = " "
+
+        elif CCP.second_card != " ":
+            # Adds the cards to com 2's hand
+            DTCP.com3_card1 = CCP.first_card
+            DTCP.com3_cards[0] = DTCP.com3_card1
+
+            CCD.check_card(DTCP.com3_card1)
+
+            CCP.second_card = " "
+
+        elif CCP.third_card != " ":
+            # Adds the cards to com 2's hand
+            DTCP.com3_card1 = CCP.first_card
+            DTCP.com3_cards[0] = DTCP.com3_card1
+
+            CCD.check_card(DTCP.com3_card1)
+
+            CCP.third_card = " "
+
+        else:  
+            # Draws card from draw pile then adds to com 2's hand
+            DTCP.com3_card1 = random.choice(Game_REWRITE.cards)
+            DTCP.com3_cards[0] = DTCP.com3_card1
+            CCD.check_card(DTCP.com3_card1)
+
+    # Checks if DTCP.com3_card2 is equal to ""
+    elif DTCP.com3_card2 == "":
+        # Checks if com 1, com 2 or the player has played a see the future
+        if CCP.first_card != " ":
+            # Adds the cards to com 2's hand
+            DTCP.com3_card2 = CCP.first_card
+            DTCP.com3_cards[1] = DTCP.com3_card2
+
+            CCD.check_card(DTCP.com3_card2)
+
+            CCP.first_card = " "
+
+        elif CCP.second_card != " ":
+            # Adds the cards to com 2's hand
+            DTCP.com3_card2 = CCP.first_card
+            DTCP.com3_cards[1] = DTCP.com3_card2
+
+            CCD.check_card(DTCP.com1_card2)
+
+            CCP.second_card = " "
+
+        elif CCP.third_card != " ":
+            # Adds the cards to com 2's hand
+            DTCP.com3_card2 = CCP.first_card
+            DTCP.com3_cards[1] = DTCP.com3_card2
+
+            CCD.check_card(DTCP.com1_card2)
+
+            CCP.third_card = " "
+
+        else:  
+            # Draws card from draw pile then adds to com 2's hand
+            DTCP.com3_card2 = random.choice(Game_REWRITE.cards)
+            DTCP.com3_cards[1] = DTCP.com3_card2
+            CCD.check_card(DTCP.com3_card2)
+
+    # Checks if DTCP.com3_card3 is equal to ""
+    elif DTCP.com3_card3 == "":
+        # Checks if com 1, com 2 or the player has played a see the future
+        if CCP.first_card != " ":
+            # Adds the cards to com 2's hand
+            DTCP.com3_card1 = CCP.first_card
+            DTCP.com3_cards[0] = DTCP.com3_card1
+
+            CCD.check_card(DTCP.com1_card1)
+
+            CCP.first_card = " "
+
+        elif CCP.second_card != " ":
+            # Adds the cards to com 2's hand
+            DTCP.com3_card1 = CCP.first_card
+            DTCP.com3_cards[0] = DTCP.com3_card1
+
+            CCD.check_card(DTCP.com1_card1)
+
+            CCP.second_card = " "
+
+        elif CCP.third_card != " ":
+            # Adds the cards to com 2's hand
+            DTCP.com3_card1 = CCP.first_card
+            DTCP.com3_cards[0] = DTCP.com3_card1
+
+            CCD.check_card(DTCP.com1_card1)
+
+            CCP.third_card = " "
+
+        else:  
+            # Draws card from draw pile then adds to com 2's hand
+            DTCP.com3_card1 = random.choice(Game_REWRITE.cards)
+            DTCP.com3_cards[0] = DTCP.com3_card1
+            CCD.check_card(DTCP.com3_card1)
+
+    # Checks if DTCP.com3_card4 is equal to ""
+    elif DTCP.com3_card4 == "":
+        # Checks if com 1, com 2 or the player has played a see the future
+        if CCP.first_card != " ":
+            # Adds the cards to com 2's hand
+            DTCP.com3_card4 = CCP.first_card
+            DTCP.com3_cards[3] = DTCP.com3_card4
+
+            CCD.check_card(DTCP.com1_card4)
+
+            CCP.first_card = " "
+
+        elif CCP.second_card != " ":
+            # Adds the cards to com 2's hand
+            DTCP.com3_card4 = CCP.first_card
+            DTCP.com3_cards[3] = DTCP.com3_card4
+
+            CCD.check_card(DTCP.com1_card4)
+
+            CCP.second_card = " "
+
+        elif CCP.third_card != " ":
+            # Adds the cards to com 2's hand
+            DTCP.com3_card4 = CCP.first_card
+            DTCP.com3_cards[3] = DTCP.com3_card4
+
+            CCD.check_card(DTCP.com1_card4)
+
+            CCP.third_card = " "
+
+        else:  
+            # Draws card from draw pile then adds to com 2's hand
+            DTCP.com3_card4 = random.choice(Game_REWRITE.cards)
+            DTCP.com3_cards[3] = DTCP.com3_card4
+            CCD.check_card(DTCP.com3_card4)
+
+    # Checks if DTCP.com3_card5 is equal to ""
+    elif DTCP.com3_card5 == "":
+        # Checks if com 1, com 2 or the player has played a see the future
+        if CCP.first_card != " ":
+            # Adds the cards to com 2's hand
+            DTCP.com3_card5 = CCP.first_card
+            DTCP.com3_cards[4] = DTCP.com3_card5
+
+            CCD.check_card(DTCP.com1_card5)
+
+            CCP.first_card = " "
+
+        elif CCP.second_card != " ":
+            # Adds the cards to com 2's hand
+            DTCP.com3_card6 = CCP.first_card
+            DTCP.com3_cards[4] = DTCP.com3_card5
+
+            CCD.check_card(DTCP.com1_card4)
+
+            CCP.second_card = " "
+
+        elif CCP.third_card != " ":
+            # Adds the cards to com 2's hand
+            DTCP.com3_card5 = CCP.first_card
+            DTCP.com3_cards[4] = DTCP.com3_card5
+
+            CCD.check_card(DTCP.com1_card5)
+
+            CCP.third_card = " "
+
+        else:  
+            # Draws card from draw pile then adds to com 2's hand
+            DTCP.com3_card5 = random.choice(Game_REWRITE.cards)
+            DTCP.com3_cards[4] = DTCP.com3_card5
+            CCD.check_card(DTCP.com3_card5)
+
+    # Checks if DTCP.com3_card6 is equal to ""
+    elif DTCP.com3_card6 == "":
+        # Checks if com 1, com 2 or the player has played a see the future
+        if CCP.first_card != " ":
+            # Adds the cards to com 2's hand
+            DTCP.com3_card6 = CCP.first_card
+            DTCP.com3_cards[5] = DTCP.com3_card6
+
+            CCD.check_card(DTCP.com1_card4)
+
+            CCP.first_card = " "
+
+        elif CCP.second_card != " ":
+            # Adds the cards to com 2's hand
+            DTCP.com3_card6 = CCP.first_card
+            DTCP.com3_cards[5] = DTCP.com3_card6
+
+            CCD.check_card(DTCP.com1_card4)
+
+            CCP.second_card = " "
+
+        elif CCP.third_card != " ":
+            # Adds the cards to com 2's hand
+            DTCP.com3_card6 = CCP.first_card
+            DTCP.com3_cards[5] = DTCP.com3_card6
+
+            CCD.check_card(DTCP.com1_card4)
+
+            CCP.third_card = " "
+
+        else:  
+            # Draws card from draw pile then adds to com 2's hand
+            DTCP.com3_card6 = random.choice(Game_REWRITE.cards)
+            DTCP.com3_cards[5] = DTCP.com3_card6
+            CCD.check_card(DTCP.com3_card6)
+
+    # Checks if DTCP.com3_card7 is equal to ""
+    elif DTCP.com3_card7 == "":
+        # Checks if com 1, com 2 or the player has played a see the future
+        if CCP.first_card != " ":
+            # Adds the cards to com 2's hand
+            DTCP.com3_card7 = CCP.first_card
+            DTCP.com3_cards[6] = DTCP.com3_card7
+
+            CCD.check_card(DTCP.com1_card4)
+
+            CCP.first_card = " "
+
+        elif CCP.second_card != " ":
+            # Adds the cards to com 2's hand
+            DTCP.com3_card7 = CCP.first_card
+            DTCP.com3_cards[6] = DTCP.com3_card7
+
+            CCD.check_card(DTCP.com1_card4)
+
+            CCP.second_card = " "
+
+        elif CCP.third_card != " ":
+            # Adds the cards to com 2's hand
+            DTCP.com3_card7 = CCP.first_card
+            DTCP.com3_cards[6] = DTCP.com3_card7
+
+            CCD.check_card(DTCP.com1_card4)
+
+            CCP.third_card = " "
+
+        else:  
+            # Draws card from draw pile then adds to com 2's hand
+            DTCP.com3_card7 = random.choice(Game_REWRITE.cards)
+            DTCP.com3_cards[6] = DTCP.com3_card7
+            CCD.check_card(DTCP.com3_card7)
+
+    messagebox.showinfo("Exploding Kittens Game", "Com 3 has drawn, it's now your turn")
+
+    # TODO Check if com 2 has played a attack card
 
 # Add cards gotten from favor or cat cards to com 3's hand
 def add_card_to_hand(card_to_add_to_hand):
@@ -74,6 +329,7 @@ def steal_cat_card(cat_card):
             print(steal_card)
 
             add_card_to_hand(steal_card)
+
         else:
             print("Com 3 hasn't played 2 " + cat_card + "cards")
 
@@ -133,7 +389,7 @@ def check_card_played():
         random.shuffle(Game_REWRITE.cards)
         random.shuffle(Game_REWRITE.cards)
 
-        messagebox.showinfo("Exploding Kittens Game", "Com 3 has shuffled the deck, it's now your turn")
+        draw_card()
 
     # Checks if com 3 has played an see the future card
     elif C3B.card_to_play == "see the future":
@@ -156,7 +412,7 @@ def check_card_played():
         messagebox.showinfo("Exploding Kittens Game", "Com 3 has played a see the future")
         Game_REWRITE.discard_pile_text.set(C3B.card_to_play + "\n \n \n")
 
-        messagebox.showinfo("Exploding Kittens Game", "Com 3 has played a see the future card, it's now currently you turn")
+        draw_card()
 
     elif C3B.card_to_play == 'potato cat' or 'taco cat' or 'rainbow ralphing cat' or 'beard cat' or 'cattermellon':
         time.sleep(1)
@@ -164,6 +420,8 @@ def check_card_played():
         print("Com 3 has played a " + C3B.card_to_play + " card")
 
         steal_cat_card(C3B.card_to_play)
+
+        draw_card()
 
     Game_REWRITE.com1_turn = False
     Game_REWRITE.com3_turn = False
