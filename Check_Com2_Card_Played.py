@@ -386,6 +386,7 @@ def check_card_played():
     elif C2B.card_to_play == "attack":
         time.sleep(1)
 
+        # Checks if the player selected 2 com players
         if wt.com_number == 2:
             messagebox.showinfo("Exploding Kittens Game", "Com 2 has played an attack. Com 2 has skiped there turn and made you have 2 turns")
             Game_REWRITE.discard_pile_text.set(C2B.card_to_play + "\n\n\n")
@@ -394,6 +395,7 @@ def check_card_played():
             Game_REWRITE.com2_turn = False
 
         else:
+            # Tells that com 2 has played an attack card and make com 3 have 2 turns
             messagebox.showinfo("Exploding Kittens Game", "Com 2 has played an attack. Com 2 has skiped there turn and made com 3 have 2 turns")
             Game_REWRITE.discard_pile_text.set(C2B.card_to_play + "\n\n\n")
             Game_REWRITE.player_turn = True
