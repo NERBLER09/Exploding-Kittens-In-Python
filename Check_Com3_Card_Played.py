@@ -6,6 +6,10 @@ import random
 import Check_Card_Played as CCP
 import Deal_To_Com_Players as DTCP
 
+# Function draws a card for com 3
+def draw_card():
+    pass
+
 # Add cards gotten from favor or cat cards to com 3's hand
 def add_card_to_hand(card_to_add_to_hand):
     # Adds the card to there 1st card slot
