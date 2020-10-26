@@ -317,8 +317,6 @@ def add_card_to_hand(card_to_add_to_hand):
     else:
         print("An error has been encountered.")
 
-    messagebox.showinfo("Exploding Kittens Game", "Com 3 has drawn, it's now your turn")
-
 # Steals card from player when com 3 plays a cat
 def steal_cat_card(cat_card):
     looped_on_card = ""
@@ -340,7 +338,11 @@ def steal_cat_card(cat_card):
 
             print(steal_card)
 
+            messagebox.showinfo("Exploding Kittens Game", "Com 3 has stolen your " + steal_card + " card")
+
             add_card_to_hand(steal_card)
+
+            break
 
         else:
             print("Com 3 hasn't played 2 " + cat_card + "cards")
