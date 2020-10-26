@@ -6,6 +6,7 @@ import random
 import Check_Card_Played as CCP
 import Deal_To_Com_Players as DTCP
 import Check_Card_Drawn as CCD
+import Check_Com2_Card_Played as CC2CP
 
 # Function draws a card for com 3
 def draw_card():
@@ -261,9 +262,20 @@ def draw_card():
             DTCP.com3_cards[6] = DTCP.com3_card7
             CCD.check_card(DTCP.com3_card7)
 
-    messagebox.showinfo("Exploding Kittens Game", "Com 3 has drawn, it's now your turn")
 
-    # TODO Check if com 2 has played a attack card
+    if CC2CP.com2_played_attack == True:
+        messagebox.showinfo("Exploding Kittens Game", "It's com 3's turn again because com 2 has played an attack card")
+
+        CC2CP.com2_played_attack = False
+        
+        C3B.decied_card_to_play()
+    else:
+        messagebox.showinfo("Exploding Kittens Game", "Com 3 has drawn, it's now your turn")
+
+        Game_REWRITE.com1_turn = False
+        Game_REWRITE.com2_turn = False
+        Game_REWRITE.com3_turn = False
+        Game_REWRITE.player_turn = True    
 
 # Add cards gotten from favor or cat cards to com 3's hand
 def add_card_to_hand(card_to_add_to_hand):
@@ -278,9 +290,9 @@ def add_card_to_hand(card_to_add_to_hand):
         DTCP.com3_cards[0] = DTCP.com3_card2
 
     # Adds the card to there 3st card slot
-    elif DTCP.com3_com3 == "":
-        DTCP.com3_com3 = card_to_add_to_hand 
-        DTCP.com3_cards[0] = DTCP.com3_com3
+    elif DTCP.com3_card3 == "":
+        DTCP.com3_card3 = card_to_add_to_hand 
+        DTCP.com3_cards[0] = DTCP.com3_card3
 
     # Adds the card to there 4st card slot
     elif DTCP.com3_card4 == "":
