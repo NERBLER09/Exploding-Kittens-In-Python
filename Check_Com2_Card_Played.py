@@ -1,5 +1,4 @@
 import time
-from typing import Type
 import Game_REWRITE
 import Com2_Behavior as C2B
 import Check_Card_Played as CCP
