@@ -136,10 +136,10 @@ def draw_card():
             Game_REWRITE.com2_turn = True
 
             # Checks if com 2 played an attack card
-            if C2B.card_to_play == "attack":
+            if CC2CP.com2_played_attack == True:
                 messagebox.showerror("Exploding Kittens Game", "It is your turn again since com2  has played an attack card")
                 Game_REWRITE.player_turn = True
-                C2B.card_to_play = ""
+                CC2CP.com2_played_attack = False
             else:
                 C1B.decied_card_to_play()
                 
