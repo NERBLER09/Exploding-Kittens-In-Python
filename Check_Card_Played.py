@@ -558,11 +558,11 @@ def displayed_stolen_card(stolen_card):
                 # Checks if the player clicked on yes
                 if favoraction == True:
                     messagebox.showinfo("Exploding Kittens Game", "You have given com1 your " + Game_REWRITE.CARDS_IN_HAND1)
-                    card1_played = True
+                    Game_REWRITE.card1_played = True
                     C2B.card_to_play = ""
 
                     show_card1.destroy()
-                    player_cards[0] = ""
+                    Game_REWRITE.player_cards[0] = ""
 
                     CC2CP.add_favor_or_stolen_card(Game_REWRITE.CARDS_IN_HAND1)
 
@@ -627,11 +627,11 @@ def displayed_stolen_card(stolen_card):
                 # Checks if the player clicked on yes
                 if favoraction == True:
                     messagebox.showinfo("Exploding Kittens Game", "You have given com1 your " + Game_REWRITE.CARDS_IN_HAND2)
-                    card2_played = True
+                    Game_REWRITE.card2_played = True
                     C2B.card_to_play = ""
 
                     show_card2.destroy()
-                    player_cards[1] = ""
+                    Game_REWRITE.player_cards[1] = ""
 
                     CC2CP.add_favor_or_stolen_card(Game_REWRITE.CARDS_IN_HAND2)
 
@@ -696,11 +696,11 @@ def displayed_stolen_card(stolen_card):
                 # Checks if the player clicked on yes
                 if favoraction == True:
                     messagebox.showinfo("Exploding Kittens Game", "You have given com1 your " + Game_REWRITE.CARDS_IN_HAND3)
-                    card3_played = True
+                    Game_REWRITE.card3_played = True
                     C2B.card_to_play = ""
 
                     show_card3.destroy()
-                    player_cards[2] = ""
+                    Game_REWRITE.player_cards[2] = ""
 
                     CC2CP.add_favor_or_stolen_card(Game_REWRITE.CARDS_IN_HAND3)
 
@@ -765,11 +765,11 @@ def displayed_stolen_card(stolen_card):
                 # Checks if the player clicked on yes
                 if favoraction == True:
                     messagebox.showinfo("Exploding Kittens Game", "You have given com1 your " + Game_REWRITE.CARDS_IN_HAND4)
-                    card4_played = True
+                    Game_REWRITE.card4_played = True
                     C2B.card_to_play = ""
 
                     show_card4.destroy()
-                    player_cards[3] = ""
+                    Game_REWRITE.player_cards[3] = ""
 
                     CC2CP.add_favor_or_stolen_card(Game_REWRITE.CARDS_IN_HAND4)
 
@@ -832,11 +832,11 @@ def displayed_stolen_card(stolen_card):
                 # Checks if the player clicked on yes
                 if favoraction == True:
                     messagebox.showinfo("Exploding Kittens Game", "You have given com1 your " + Game_REWRITE.CARDS_IN_HAND5)
-                    card5_played = True
+                    Game_REWRITE.card5_played = True
                     C2B.card_to_play = ""
 
                     show_card5.destroy()
-                    player_cards[4] = ""
+                    Game_REWRITE.player_cards[4] = ""
 
                     CC2CP.add_favor_or_stolen_card(Game_REWRITE.CARDS_IN_HAND5)
 
@@ -902,11 +902,11 @@ def displayed_stolen_card(stolen_card):
                 # Checks if the player clicked on yes
                 if favoraction == True:
                     messagebox.showinfo("Exploding Kittens Game", "You have given com1 your " + Game_REWRITE.CARDS_IN_HAND6)
-                    card6_played = True
+                    Game_REWRITE.card6_played = True
                     C2B.card_to_play = ""
 
                     show_card6.destroy()
-                    player_cards[5] = ""
+                    Game_REWRITE.player_cards[5] = ""
 
                     CC2CP.add_favor_or_stolen_card(Game_REWRITE.CARDS_IN_HAND6)
 
@@ -970,11 +970,11 @@ def displayed_stolen_card(stolen_card):
                 # Checks if the player clicked on yes
                 if favoraction == True:
                     messagebox.showinfo("Exploding Kittens Game", "You have given com1 your " + Game_REWRITE.CARDS_IN_HAND7)
-                    card7_played = True
+                    Game_REWRITE.card7_played = True
                     C2B.card_to_play = ""
 
                     show_card7.destroy()
-                    player_cards[6] = ""
+                    Game_REWRITE.player_cards[6] = ""
 
                     CC2CP.add_favor_or_stolen_card(Game_REWRITE.CARDS_IN_HAND7)
 
