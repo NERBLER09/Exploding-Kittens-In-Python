@@ -18,3 +18,9 @@ Currently there are 7 releases of Exploding Kittens In Python available for down
 You can download all versions for Windows. For now you can't download Exploding Kittens In Python for linux, but 
 a Snapcraft download will be available soon. A MacOS download wont be available.
  
+## Is The Setup File Safe To Download?
+If you are downloading anyone on the setup files on a Chromium based browser, Chrome, Firefox or IE(Internet Explorer) it reports the setup file as dangerous. The setup file you downloaded is not malicious and is safe to run on your own system
+
+If it was unsafe I would be trying to hide the file in layers of folders, but all the files are on the top level. 
+
+The issue will be resolve by the next release!
