@@ -26,7 +26,7 @@ def web_clicked():
 
 def show_about():
     # Shows the about messagebox
-    messagebox.showinfo("About", "Exploding Kittens Game, recreated in python by Noah Beaudin\nVersion: Alpha Build 2\nGithub Page: github.com/nerbler09\nCheck the licence for sharing and use of the source code")
+    messagebox.showinfo("About", "Exploding Kittens Game, recreated in python by Noah Beaudin\nVersion: Alpha Build 3\nGithub Page: github.com/nerbler09\nCheck the licence for sharing and use of the source code")
 
 def show_licence_file():
     # Opens the licence.html File In The Webbrowser
