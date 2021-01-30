@@ -7,3 +7,10 @@
 .text {
     font-family: sans-serif;
 }
+
+body {
+    margin: auto;
+    max-width: 38rem;
+    padding: 2rem;
+    text-align: center;
+}
