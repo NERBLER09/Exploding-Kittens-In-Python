@@ -15,6 +15,7 @@ card_amounts = {
     'rainbow ralphing cat': 5,
     'beard cat': 5,
     'cattermellon': 5,
+    "diffuse": 6
 }
 
 # Creates a function to check the the card that com player(s) or the player has drawn to get removed from the deck
@@ -117,3 +118,10 @@ def check_card(card_to_check):
         if card_amounts['cattermellon'] == 0:
             Game_REWRITE.cards.remove('cattermellon') # Removes the card from the cards list 
             print("There is no cattermellon cards") # Prints "There is no cattermellon cards" (For Debuging)
+
+    # Removes a given or drawn a diffuse card
+    elif card_to_check == "diffuse":
+        card_amounts["diffuse"] -= 1
+        
+        if card_amounts["diffuse"] == 0:
+            Game_REWRITE.cards.remove("diffuse")

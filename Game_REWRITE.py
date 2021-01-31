@@ -760,6 +760,8 @@ show_card7.place(x = 490, y = 600)
 diffuse_card = tk.Button(gameScreen, text="Diffuse", font="20", command=play_diffuse_card)
 diffuse_card.place(x = 650, y = 560)
 
+CCD.check_card("diffuse")
+
 ## Shows draw and discard piles
 draw_pile = tk.Button(gameScreen, text = "Draw \n \n Pile", font = "Arial 50" , bg  = "red", command = DPC.draw_card)
 draw_pile.place(x = 400, y = 200)
