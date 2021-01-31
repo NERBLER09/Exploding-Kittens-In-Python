@@ -42,6 +42,8 @@ player_turn = True
 
 reserve_cards = [" ", " ", " ", " ", " ", " ", " ", " "]
 
+exploding_kittens_card_drawn = False # Stores is a exploding kitten card is drawn
+
 # Functions Needed
 def exit_app():
     # Exits the app
@@ -664,6 +666,17 @@ def card7_command():
     else:
         messagebox.showerror('Exploding Kittens Game', "Sorry, it's not your turn") # Tells the player that it's not there turn
 
+# Function for the players diffuse card
+def play_diffuse_card():
+    global exploding_kittens_card_drawn
+
+    if exploding_kittens_card_drawn == False:
+        messagebox.showerror("Exploding Kittens Game", "You cant play you diffuse card unless you have drawn an Exploding Kittens card")
+    else:
+        messagebox.showinfo("Exploding Kittens Game", "You have diffused the Exploding Kitten card!")
+
+        exploding_kittens_card_drawn = True
+
 def show_com_players():
     if WT.com_number == 1:
         display_com_1 = tk.Label(gameScreen, text = "COM 1", font = "15")
@@ -744,7 +757,7 @@ show_card7 = tk.Button(gameScreen, text = CARDS_IN_HAND7, font = "20", command =
 show_card7.place(x = 490, y = 600)
 
 # Displays the diffuse card to the player
-diffuse_card = tk.Button(gameScreen, text="Diffuse", font="20")
+diffuse_card = tk.Button(gameScreen, text="Diffuse", font="20", command=play_diffuse_card)
 diffuse_card.place(x = 650, y = 560)
 
 ## Shows draw and discard piles
