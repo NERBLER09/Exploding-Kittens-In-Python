@@ -17,3 +17,7 @@ Currently there are 7 releases of Exploding Kittens In Python available for down
 
 You can download all versions for Windows. For now you can't download Exploding Kittens In Python for linux, but 
 a Snapcraft download will be available soon. A MacOS download wont be available.
+
+---
+
+Exploding Kittens In Python is no longer being worked on by myself and all future efforts are being focused to [Exploding Kittens In Electron]("https://github.com/NERBLER09/Exploding-Kittens-In-Electron.git")
