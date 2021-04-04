@@ -20,4 +20,4 @@ a Snapcraft download will be available soon. A MacOS download wont be available.
 
 ---
 
-Exploding Kittens In Python is no longer being worked on by myself and all future efforts are being focused to [Exploding Kittens In Electron]("https://github.com/NERBLER09/Exploding-Kittens-In-Electron.git")
+Exploding Kittens In Python is no longer being worked on by myself and all future efforts are being focused to [Exploding Kittens In Electron]("https://github.com/NERBLER09/Exploding-Kittens-In-Electron")
